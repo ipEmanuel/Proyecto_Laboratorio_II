@@ -1,0 +1,105 @@
+# depslib dependency file v1.0
+1715261758 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1715299323 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\fecha.h
+	<ctime>
+
+1715692246 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\main.cpp
+	<iostream>
+	"AppManager.h"
+
+1715343992 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\persona.cpp
+	"Persona.h"
+	"iostream"
+
+1715344774 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\persona.h
+	"Fecha.h"
+	<cstring>
+
+1715344638 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\cliente.h
+	"Persona.h"
+
+1715300828 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\cliente.cpp
+	"Cliente.h"
+
+1716427999 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\cliente.cpp
+	"Cliente.h"
+	"iostream"
+	<limits>
+
+1716377697 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\cliente.h
+	"Persona.h"
+
+1716469099 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\persona.h
+	"Fecha.h"
+	"cstring"
+
+1715817081 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\fecha.h
+	<ctime>
+	<string>
+
+1715821212 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1716214436 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\appmanager.h
+	"AutoparteManager.h"
+	"ClienteManager.h"
+
+1715735702 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartemanager.h
+	"Autoparte.h"
+	"AutoparteArchivo.h"
+
+1715816809 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autoparte.h
+	<string>
+	"Fecha.h"
+
+1716339151 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartearchivo.h
+	"Autoparte.h"
+
+1716426317 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\appmanager.cpp
+	<iostream>
+	"AppManager.h"
+
+1715816868 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autoparte.cpp
+	<cstring>
+	"Autoparte.h"
+
+1716469060 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\persona.cpp
+	"iostream"
+	"Persona.h"
+
+1716339155 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartearchivo.cpp
+	"AutoparteArchivo.h"
+
+1715819536 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartemanager.cpp
+	<iostream>
+	"AutoparteManager.h"
+
+1716425830 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientemanager.h
+	"Cliente.h"
+	"ClienteArchivo.h"
+
+1716213922 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleado.cpp
+	"Empleado.h"
+
+1716213922 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleado.h
+
+1716213949 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedor.cpp
+	"Proveedor.h"
+
+1716213949 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedor.h
+
+1716428156 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientemanager.cpp
+	<iostream>
+	"ClienteManager.h"
+
+1716376846 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientearchivo.h
+	"Cliente.h"
+
+1716377731 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientearchivo.cpp
+	<iostream>
+	"ClienteArchivo.h"
+

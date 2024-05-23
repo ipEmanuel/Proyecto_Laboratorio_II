@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ProyectoLabo" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="Debug">
+				<Option output="bin/Debug/ProyectoLabo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Debug/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-g" />
+					<Add directory="include" />
+				</Compiler>
+			</Target>
+			<Target title="Release">
+				<Option output="bin/Release/ProyectoLabo" prefix_auto="1" extension_auto="1" />
+				<Option object_output="obj/Release/" />
+				<Option type="1" />
+				<Option compiler="gcc" />
+				<Compiler>
+					<Add option="-O2" />
+					<Add directory="include" />
+				</Compiler>
+				<Linker>
+					<Add option="-s" />
+				</Linker>
+			</Target>
+		</Build>
+		<Compiler>
+			<Add option="-Wall" />
+			<Add option="-fexceptions" />
+		</Compiler>
+		<Unit filename="include/AppManager.h" />
+		<Unit filename="include/Autoparte.h" />
+		<Unit filename="include/AutoparteArchivo.h" />
+		<Unit filename="include/AutoparteManager.h" />
+		<Unit filename="include/Cliente.h" />
+		<Unit filename="include/ClienteArchivo.h" />
+		<Unit filename="include/ClienteManager.h" />
+		<Unit filename="include/Fecha.h" />
+		<Unit filename="include/Persona.h" />
+		<Unit filename="include/Proveedor.h" />
+		<Unit filename="main.cpp" />
+		<Unit filename="src/AppManager.cpp" />
+		<Unit filename="src/Autoparte.cpp" />
+		<Unit filename="src/AutoparteArchivo.cpp" />
+		<Unit filename="src/AutoparteManager.cpp" />
+		<Unit filename="src/Cliente.cpp" />
+		<Unit filename="src/ClienteArchivo.cpp" />
+		<Unit filename="src/ClienteManager.cpp" />
+		<Unit filename="src/Fecha.cpp" />
+		<Unit filename="src/Persona.cpp" />
+		<Unit filename="src/Proveedor.cpp" />
+		<Extensions>
+			<lib_finder disable_auto="1" />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

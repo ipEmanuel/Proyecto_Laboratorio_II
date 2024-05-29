@@ -1,15 +1,26 @@
-#ifndef EMPLEADO_H
-#define EMPLEADO_H
+#pragma once
+#include "Persona.h"
+#include "Fecha.h"
+class Empleado : public Persona{
+    private:
+		int _id_empleado;
+		float _sueldo;
+        Fecha _ingreso;
 
-
-class Empleado
-{
     public:
         Empleado();
 
-    protected:
+        //Setters
+        void setIdEmpleado(int id){_id_empleado=id;};
+        void setSueldo(float sueldo){_sueldo=sueldo;};
+        void setIngreso(Fecha ingreso){_ingreso=ingreso;};
 
-    private:
+        //Getters
+        int getIdEmpleado(){return _id_empleado;} ;
+        float getSueldo() {return _sueldo;};
+        Fecha getIngreso() {_ingreso.mostrar();};
+
+        void cargar(int id);
+        void mostrar();
+        void modificar();
 };
-
-#endif // EMPLEADO_H

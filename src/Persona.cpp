@@ -9,18 +9,26 @@ Persona::Persona(){
 void Persona::cargar() {
     cout << "DNI: ";
     cin >> _dni;
-    cout<<"NOMBRE: ";
-    cin>>_nombre;
-    cout<<"APELLIDO: ";
-    cin>>_apellido;
-    cout<<"EMAIL: ";
-    cin>>_email;
-    cout<<"TELEFONO: ";
-    cin>>_telefono;
-    cout<<"DOMICILIO: ";
-    cin>>_domicilio;
-    cout << "FECHA NACIMIENTO: " <<endl;
+    cin.ignore();  // Ignorar el carácter de nueva línea residual
+
+    cout << "NOMBRE: ";
+    cin.getline(_nombre, 60);
+
+    cout << "APELLIDO: ";
+    cin.getline(_apellido, 60);
+
+    cout << "EMAIL: ";
+    cin.getline(_email, 60);
+
+    cout << "TELEFONO: ";
+    cin.getline(_telefono, 60);
+
+    cout << "DOMICILIO: ";
+    cin.getline(_domicilio, 60);
+
+    cout << "FECHA NACIMIENTO: " << endl;
     _fechaNacimiento.cargar();
+
     _estado = true;
 }
 

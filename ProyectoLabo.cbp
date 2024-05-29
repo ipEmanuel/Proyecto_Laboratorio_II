@@ -41,7 +41,13 @@
 		<Unit filename="include/Cliente.h" />
 		<Unit filename="include/ClienteArchivo.h" />
 		<Unit filename="include/ClienteManager.h" />
+		<Unit filename="include/Empleado.h" />
+		<Unit filename="include/EmpleadoArchivo.h" />
+		<Unit filename="include/EmpleadoManager.h" />
 		<Unit filename="include/Fecha.h" />
+		<Unit filename="include/Marca.h" />
+		<Unit filename="include/MarcaArchivo.h" />
+		<Unit filename="include/MarcaManager.h" />
 		<Unit filename="include/Persona.h" />
 		<Unit filename="include/Proveedor.h" />
 		<Unit filename="main.cpp" />
@@ -52,7 +58,13 @@
 		<Unit filename="src/Cliente.cpp" />
 		<Unit filename="src/ClienteArchivo.cpp" />
 		<Unit filename="src/ClienteManager.cpp" />
+		<Unit filename="src/Empleado.cpp" />
+		<Unit filename="src/EmpleadoArchivo.cpp" />
+		<Unit filename="src/EmpleadoManager.cpp" />
 		<Unit filename="src/Fecha.cpp" />
+		<Unit filename="src/Marca.cpp" />
+		<Unit filename="src/MarcaArchivo.cpp" />
+		<Unit filename="src/MarcaManager.cpp" />
 		<Unit filename="src/Persona.cpp" />
 		<Unit filename="src/Proveedor.cpp" />
 		<Extensions>

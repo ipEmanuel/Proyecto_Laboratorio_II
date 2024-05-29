@@ -93,7 +93,7 @@ void ClienteManager::mostrar_clientes(Cliente reg){
 void ClienteManager::modificar_cliente(){
     int id_cliente, index;
     Cliente cliente;
-    cout << "Ingrese id del producto a modificar: ";
+    cout << "Ingrese id del cliente a modificar: ";
     cin >> id_cliente;
     index = _clientes_archivo.buscarByID(id_cliente);
     if(index != -1){
@@ -133,10 +133,10 @@ void ClienteManager::eliminar_cliente(){
             if(_clientes_archivo.guardar(index, cliente)){
                 cout << "Se elimino con exito!" << endl;            }
             else{
-                cout << "No se pudo eliminar el producto!" << endl;
+                cout << "No se pudo eliminar el cliente!" << endl;
             }
         }else{
-            cout << "El producto no fue eliminado!" << endl;
+            cout << "El cliente no fue eliminado!" << endl;
         }
     }else{
         cout << "No se encuentra el cliente!" << endl;

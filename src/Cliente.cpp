@@ -1,6 +1,7 @@
-#include "Cliente.h"
-#include "iostream"
 #include <limits>
+#include "iostream"
+using namespace std;
+#include "Cliente.h"
 
 Cliente::Cliente(){
     _id_cliente = -1;
@@ -9,27 +10,27 @@ Cliente::Cliente(){
 }
 
 void Cliente::modificar(){
-    std::cout<<"------------------------------"<<std::endl;
-    std::cout<<"------DATOS DEL CLIENTE-------"<<std::endl;
-    std::cout<<"------------------------------"<<std::endl;
+    cout<<"------------------------------"<<endl;
+    cout<<"------DATOS DEL CLIENTE-------"<<endl;
+    cout<<"------------------------------"<<endl;
     Persona::cargar();
-    std::cout<<"------------------------------"<<std::endl;
-    std::cout<<"INGRESAR DESCUENTO: ";
-    std::cin>>_descuento;
-    while (std::cin.fail() || _descuento < 0.0f) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "DESCUENTO INVALIDO. INGRESE NUEVAMENTE: ";
-        std::cin >> _descuento;
+    cout<<"------------------------------"<<endl;
+    cout<<"INGRESAR DESCUENTO: ";
+    cin>>_descuento;
+    while (cin.fail() || _descuento < 0.0f) {
+        cin.clear();
+        cin.ignore(numeric_limits< streamsize>::max(), '\n');
+        cout << "DESCUENTO INVALIDO. INGRESE NUEVAMENTE: ";
+        cin >> _descuento;
     }
 
-    std::cout<<"INGRESAR CATEGORIA: ";
-    std::cin>>_categoria;
-    while (std::cin.fail() || _categoria < 0) {
-        std::cin.clear();
-        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
-        std::cout << "CATEGORIA INVALIDA. INGRESE NUEVAMENTE: ";
-        std::cin >> _categoria;
+    cout<<"INGRESAR CATEGORIA: ";
+    cin>>_categoria;
+    while (cin.fail() || _categoria < 0) {
+        cin.clear();
+        cin.ignore(numeric_limits < streamsize>::max(), '\n');
+        cout << "CATEGORIA INVALIDA. INGRESE NUEVAMENTE: ";
+        cin >> _categoria;
     }
 
 
@@ -42,10 +43,10 @@ void Cliente::cargar(int id){
 
 void Cliente::mostrar(){
     if(_estado==true){
-        std::cout<<"ID CLIENTE "<<_id_cliente<<std::endl;
-        std::cout<<"DESCUENTO: "<<_descuento<<std::endl;
-        std::cout<<"CATEGORIA "<<_categoria<<std::endl;
-        std::cout<<"------------------------------"<<std::endl;
+        cout<<"ID CLIENTE "<<_id_cliente<<endl;
+        cout<<"DESCUENTO: "<<_descuento<<endl;
+        cout<<"CATEGORIA "<<_categoria<<endl;
+        cout<<"------------------------------"<<endl;
         Persona::mostrar();
     }
 }

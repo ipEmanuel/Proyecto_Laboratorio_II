@@ -24,10 +24,10 @@
 1715300828 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\cliente.cpp
 	"Cliente.h"
 
-1716427999 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\cliente.cpp
-	"Cliente.h"
-	"iostream"
+1716924163 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\cliente.cpp
 	<limits>
+	"iostream"
+	"Cliente.h"
 
 1716377697 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\cliente.h
 	"Persona.h"
@@ -44,9 +44,12 @@
 	"Fecha.h"
 	<iostream>
 
-1716214436 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\appmanager.h
+1716927959 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\appmanager.h
 	"AutoparteManager.h"
 	"ClienteManager.h"
+	"EmpleadoManager.h"
+	"MarcaManager.h"
+	"ProveedorManager.h"
 
 1715735702 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartemanager.h
 	"Autoparte.h"
@@ -59,7 +62,7 @@
 1716339151 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartearchivo.h
 	"Autoparte.h"
 
-1716426317 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\appmanager.cpp
+1716922121 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\appmanager.cpp
 	<iostream>
 	"AppManager.h"
 
@@ -67,32 +70,37 @@
 	<cstring>
 	"Autoparte.h"
 
-1716469060 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\persona.cpp
+1716854944 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\persona.cpp
 	"iostream"
 	"Persona.h"
 
-1716339155 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartearchivo.cpp
+1716854910 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartearchivo.cpp
 	"AutoparteArchivo.h"
 
-1715819536 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartemanager.cpp
+1716854872 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartemanager.cpp
 	<iostream>
 	"AutoparteManager.h"
 
-1716425830 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientemanager.h
+1716855772 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientemanager.h
 	"Cliente.h"
 	"ClienteArchivo.h"
 
-1716213922 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleado.cpp
+1716855297 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleado.cpp
+	"iostream"
 	"Empleado.h"
 
-1716213922 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleado.h
+1716855306 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleado.h
+	"Persona.h"
+	"Fecha.h"
 
-1716213949 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedor.cpp
+1716939084 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedor.cpp
+	"iostream"
 	"Proveedor.h"
 
-1716213949 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedor.h
+1716927848 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedor.h
+	<cstring>
 
-1716428156 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientemanager.cpp
+1716927730 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientemanager.cpp
 	<iostream>
 	"ClienteManager.h"
 
@@ -102,4 +110,59 @@
 1716377731 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientearchivo.cpp
 	<iostream>
 	"ClienteArchivo.h"
+
+1716862352 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleadoarchivo.cpp
+	<iostream>
+	"EmpleadoArchivo.h"
+
+1716862301 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleadoarchivo.h
+	"Empleado.h"
+
+1716862438 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleadomanager.cpp
+	<iostream>
+	"EmpleadoManager.h"
+
+1716862287 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleadomanager.h
+	"EmpleadoArchivo.h"
+	"Empleado.h"
+
+1716938055 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marca.cpp
+	"cstring"
+	<iostream>
+	"Marca.h"
+
+1716862636 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marca.h
+	"cstring"
+
+1716862811 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marcamanager.h
+	"Marca.h"
+	"MarcaArchivo.h"
+
+1716863015 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marcaarchivo.h
+	"Marca.h"
+
+1716862984 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marcaarchivo.cpp
+	<iostream>
+	"MarcaArchivo.h"
+
+1716938055 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marcamanager.cpp
+	"MarcaManager.h"
+	"Marca.h"
+	"cstring"
+	<iostream>
+
+1716928048 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedormanager.h
+	"Proveedor.h"
+	"ProveedorArchivo.h"
+
+1716925811 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedorarchivo.h
+	"Proveedor.h"
+
+1716939203 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedorarchivo.cpp
+	<iostream>
+	"ProveedorArchivo.h"
+
+1716928098 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedormanager.cpp
+	<iostream>
+	"ProveedorManager.h"
 

@@ -1,14 +1,5 @@
 #include "AutoparteArchivo.h"
 
-/**
-   ab -- agregar
-   wb -- borra todo y te permite agregar
-   rb -- lee
-
-   rb+ -- lee y modifica (no agrega)
-   ab+ -- agrega y lee
-*/
-
 bool AutoparteArchivo::guardar(Autoparte reg){
    bool result;
    FILE *pFile;

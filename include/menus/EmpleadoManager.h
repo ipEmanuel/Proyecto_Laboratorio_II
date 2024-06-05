@@ -1,10 +1,14 @@
 #pragma once
+
+#include "MenuItem.h"
+
 #include "EmpleadoArchivo.h"
 #include "Empleado.h"
 
-class EmpleadoManager{
+class EmpleadoManager: public MenuItem {
     public:
-         void menu();
+        EmpleadoManager();
+        int execute();
       private:
         void agregar_empleado();
         Empleado crear_empleado();

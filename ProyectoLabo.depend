@@ -166,3 +166,227 @@
 	<iostream>
 	"ProveedorManager.h"
 
+1717557347 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
+	<iostream>
+	"Menu.h"
+	"AppManager.h"
+	"AutoparteManager.h"
+	"ClienteManager.h"
+	"EmpleadoManager.h"
+	"MarcaManager.h"
+	"ProveedorManager.h"
+	"Exit.h"
+
+1717555161 e:\carpetas\c++\proyecto_laboratorio_ii\include\appmanager.h
+	"MenuItem.h"
+	"AutoparteManager.h"
+	"ClienteManager.h"
+	"EmpleadoManager.h"
+	"MarcaManager.h"
+	"ProveedorManager.h"
+
+1717552341 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartemanager.h
+	"MenuItem.h"
+	"Autoparte.h"
+	"AutoparteArchivo.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
+	<string>
+	"Fecha.h"
+
+1717336418 e:\carpetas\c++\proyecto_laboratorio_ii\include\fecha.h
+	<ctime>
+	<string>
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
+	"Autoparte.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientemanager.h
+	"Cliente.h"
+	"ClienteArchivo.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\cliente.h
+	"Persona.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\persona.h
+	"Fecha.h"
+	"cstring"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientearchivo.h
+	"Cliente.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleadomanager.h
+	"EmpleadoArchivo.h"
+	"Empleado.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleadoarchivo.h
+	"Empleado.h"
+
+1717337013 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleado.h
+	"Persona.h"
+	"Fecha.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcamanager.h
+	"Marca.h"
+	"MarcaArchivo.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marca.h
+	"cstring"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcaarchivo.h
+	"Marca.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedormanager.h
+	"Proveedor.h"
+	"ProveedorArchivo.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedor.h
+	<cstring>
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
+	"Proveedor.h"
+
+1717557675 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
+	"AppManager.h"
+	<iostream>
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
+	<cstring>
+	"Autoparte.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
+	"AutoparteArchivo.h"
+
+1717552351 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartemanager.cpp
+	<iostream>
+	"AutoparteManager.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\cliente.cpp
+	<limits>
+	"iostream"
+	"Cliente.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientearchivo.cpp
+	<iostream>
+	"ClienteArchivo.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientemanager.cpp
+	<iostream>
+	"ClienteManager.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
+	"iostream"
+	"Empleado.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\persona.cpp
+	"iostream"
+	"Persona.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedor.cpp
+	"iostream"
+	"Proveedor.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
+	"cstring"
+	<iostream>
+	"Marca.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcaarchivo.cpp
+	<iostream>
+	"MarcaArchivo.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcamanager.cpp
+	"MarcaManager.h"
+	"Marca.h"
+	"cstring"
+	<iostream>
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
+	<iostream>
+	"EmpleadoArchivo.h"
+
+1717337086 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadomanager.cpp
+	<iostream>
+	"EmpleadoManager.h"
+
+1717552105 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
+	<iostream>
+	<string.h>
+
+1717558728 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menu.cpp
+	"Menu.h"
+
+1717336449 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
+	<MenuItem.h>
+
+1717552452 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menuitem.cpp
+	"MenuItem.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedormanager.cpp
+	<iostream>
+	"ProveedorManager.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedorarchivo.cpp
+	<iostream>
+	"ProveedorArchivo.h"
+
+1717557457 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\autopartemanager.h
+	"MenuItem.h"
+	"Autoparte.h"
+	"AutoparteArchivo.h"
+
+1717557514 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\clientemanager.h
+	"MenuItem.h"
+	"Cliente.h"
+	"ClienteArchivo.h"
+
+1717557539 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\empleadomanager.h
+	"MenuItem.h"
+	"EmpleadoArchivo.h"
+	"Empleado.h"
+
+1717558787 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\marcamanager.h
+	"MenuItem.h"
+	"Marca.h"
+	"MarcaArchivo.h"
+
+1717558786 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\proveedormanager.h
+	"MenuItem.h"
+	"Proveedor.h"
+	"ProveedorArchivo.h"
+
+1717557513 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\clientemanager.cpp
+	<iostream>
+	"ClienteManager.h"
+
+1717557532 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
+	<iostream>
+	"EmpleadoManager.h"
+
+1717558802 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
+	"cstring"
+	<iostream>
+	"MenuItem.h"
+	"MarcaManager.h"
+	"Marca.h"
+
+1717558796 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\proveedormanager.cpp
+	<iostream>
+	"MenuItem.h"
+	"ProveedorManager.h"
+
+1717557683 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
+	<iostream>
+	"AutoparteManager.h"
+
+1717557058 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
+	"Exit.h"
+	"MenuItem.h"
+
+1717557047 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\exit.h
+	"MenuItem.h"
+

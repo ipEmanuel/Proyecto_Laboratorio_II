@@ -1,11 +1,14 @@
 #pragma once
+
+#include "MenuItem.h"
+
 #include "Proveedor.h"
 #include "ProveedorArchivo.h"
 
-class ProveedorManager
-{
+class ProveedorManager: public MenuItem {
     public:
-         void menu();
+        ProveedorManager();
+        int execute();
       private:
         void agregar_proveedor();
         Proveedor crear_proveedor();

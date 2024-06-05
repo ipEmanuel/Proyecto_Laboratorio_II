@@ -1,9 +1,14 @@
+#include "AppManager.h"
+
 #include <iostream>
 using namespace std;
-#include "AppManager.h"
+
+AppManager::AppManager(): MenuItem("Ventas") {
+}
 
 void AppManager::menu(){
     int option;
+    /*
     do{
         system("cls");
         cout << "-----------------------------" << endl;
@@ -47,4 +52,5 @@ void AppManager::menu(){
             break;
         }
     }while(option != 0);
+    */
 }

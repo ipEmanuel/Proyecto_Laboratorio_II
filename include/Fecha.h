@@ -2,25 +2,27 @@
 #include <ctime>
 #include <string>
 
+using namespace std;
+
 class Fecha {
 private:
     int dia, mes, anio;
 public:
     ///constructor
     Fecha() {
-       /* time_t t = time(nullptr);
+        time_t t = time(nullptr);
         tm* fS = localtime(&t);
         dia = fS->tm_mday;
         mes = fS->tm_mon + 1;
-        anio = fS->tm_year + 1900;*/
-
+        anio = fS->tm_year + 1900;
+/*
         time_t t = time(nullptr);
         struct tm fS;
         localtime_s(&fS, &t);
         dia = fS.tm_mday;
         mes = fS.tm_mon + 1;
         anio = fS.tm_year + 1900;
-
+*/
     }
     Fecha(int d, int m, int a){
         dia = d;

@@ -1,8 +1,14 @@
 #include <iostream>
+
 using namespace std;
+
+#include "MenuItem.h"
+
 #include "ProveedorManager.h"
 
-void ProveedorManager::menu(){
+ProveedorManager::ProveedorManager(): MenuItem("Proveedores") {}
+
+int ProveedorManager::execute(){
     int option;
     do{
         system("cls");

@@ -1,9 +1,14 @@
 #pragma once
+
+#include "MenuItem.h"
+
 #include "Marca.h"
 #include "MarcaArchivo.h"
-class MarcaManager{
-public:
-    void menu();
+
+class MarcaManager: public MenuItem {
+    public:
+        MarcaManager();
+        int execute();
     private:
         Marca crear_marca();
         void listar_marcas();

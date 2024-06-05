@@ -1,6 +1,10 @@
 #include <iostream>
-using namespace std;
+
 #include "AutoparteManager.h"
+
+using namespace std;
+
+AutoparteManager::AutoparteManager(): MenuItem("Autopartes") {}
 
 Autoparte AutoparteManager::crearAutoparte(){
     int id, stock, stockMinimo, tipo;
@@ -164,7 +168,7 @@ void AutoparteManager::eliminarAutoparte(){
     }
 }
 
-void AutoparteManager::menu(){
+int AutoparteManager::execute(){
     int option;
     do{
         system("cls");
@@ -207,5 +211,6 @@ void AutoparteManager::menu(){
                 system("pause");
              break;
         }
-    }while(option != 0);
+    } while(option != 0);
+    return 0;
 }

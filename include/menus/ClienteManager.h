@@ -1,9 +1,14 @@
 #pragma once
+
+#include "MenuItem.h"
+
 #include "Cliente.h"
 #include "ClienteArchivo.h"
-class ClienteManager{
+
+class ClienteManager: public MenuItem {
       public:
-         void menu();
+        ClienteManager();
+        int execute();
       private:
         void agregar_cliente();
         Cliente crear_cliente();

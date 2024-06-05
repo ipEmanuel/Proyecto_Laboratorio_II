@@ -1,8 +1,12 @@
 #include <iostream>
+
 using namespace std;
+
 #include "EmpleadoManager.h"
 
-void EmpleadoManager::menu(){
+EmpleadoManager::EmpleadoManager(): MenuItem("Empleados") {}
+
+int EmpleadoManager::execute(){
     int option;
     do{
         system("cls");
@@ -41,6 +45,7 @@ void EmpleadoManager::menu(){
             break;
         }
     }while(option != 0);
+    return 0;
 }
 
 Empleado EmpleadoManager::crear_empleado(){
@@ -143,7 +148,7 @@ void EmpleadoManager::eliminar_empleado(){
 void EmpleadoManager::listar_por_id(){
     int id_empleado, index;
     Empleado empleado;
-    bool eliminar;
+    //bool eliminar;
 
     cout << "Ingrese id del empleado: ";
     cin >> id_empleado;

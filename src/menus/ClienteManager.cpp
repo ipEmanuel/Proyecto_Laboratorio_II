@@ -2,9 +2,11 @@
 using namespace std;
 #include "ClienteManager.h"
 
-void ClienteManager::menu(){
+ClienteManager::ClienteManager(): MenuItem("Clientes") {}
+
+int ClienteManager::execute(){
     int option;
-    do{
+    do {
         system("cls");
         cout << "-----------------------------" << endl;
         cout << "----- MENU DE CLIENTES ------ " << endl;
@@ -41,8 +43,9 @@ void ClienteManager::menu(){
             break;
 
         }
-    }
-    while(option != 0);
+    } while(option != 0);
+
+    return 0;
 }
 
 Cliente ClienteManager::crear_cliente(){

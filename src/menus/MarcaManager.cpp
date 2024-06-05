@@ -1,10 +1,16 @@
-#include "MarcaManager.h"
-#include "Marca.h"
 #include "cstring"
 #include <iostream>
+
 using namespace std;
 
-void MarcaManager::menu(){
+#include "MenuItem.h"
+
+#include "MarcaManager.h"
+#include "Marca.h"
+
+MarcaManager::MarcaManager(): MenuItem("Marcas") {}
+
+int MarcaManager::execute(){
 int option;
     do{
         system("cls");

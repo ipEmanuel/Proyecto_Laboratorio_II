@@ -18,7 +18,9 @@ class Empleado : public Persona{
         //Getters
         int getIdEmpleado(){return _id_empleado;} ;
         float getSueldo() {return _sueldo;};
-        Fecha getIngreso() {_ingreso.mostrar();};
+        void getIngreso() {
+            _ingreso.mostrar();
+        };
 
         void cargar(int id);
         void mostrar();

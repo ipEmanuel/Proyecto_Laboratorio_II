@@ -1,9 +1,6 @@
 #include <iostream>
-
 using namespace std;
-
 #include "MenuItem.h"
-
 #include "ProveedorManager.h"
 
 ProveedorManager::ProveedorManager(): MenuItem("Proveedores") {}

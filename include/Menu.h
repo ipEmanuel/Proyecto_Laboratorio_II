@@ -1,7 +1,6 @@
-#ifndef MENU_H
-#define MENU_H
-
+#pragma once
 #include <MenuItem.h>
+<<<<<<< HEAD
 #include <RolesManager.h>
 
 using namespace std;
@@ -20,6 +19,11 @@ class Menu
 
     protected:
 
+=======
+using namespace std;
+
+class Menu{
+>>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
     private:
         MenuItem **_options;
         int _optionsQuantity;
@@ -27,8 +31,20 @@ class Menu
         string _header;
         int executeOption(int option);
         void printHeader();
+<<<<<<< HEAD
         void askForRole();
         RolesManager _roleManager;
 };
+=======
+    public:
+        Menu();
+        virtual ~Menu();
+        void printMenu();
+        int waitForOption();
+        bool checkIfOptionIsValid(int option);
+        void createMenuLoop(bool oneTime = false);
+        void addMenuItem(MenuItem menuItem[]);
+        void setHeader(string header);
+>>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
 
-#endif // MENU_H
+};

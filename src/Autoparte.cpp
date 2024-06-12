@@ -1,104 +1,102 @@
+#include <iostream>
+using namespace std;
 #include <cstring>
 #include "Autoparte.h"
 
-Autoparte::Autoparte(): _fechaVencimiento(1,1,1)
+Autoparte::Autoparte()
 {
-   _id = 0;
-   strcpy(_nombre, "");
-   _precio = 0.0f;
+   _id_autoparte = 0;
+   _id_proveedor = 0;
+   _precio_compra = 0.0f;
+   _precio_venta = 0.0f;
    _stock = 0;
-   _stockMinimo = 0;
-   _tipo = 0;
-   _eliminado = 0;
+   _cod_marca = 0;
+   _estado = false;
+   memset(_nombre, 0, sizeof(_nombre));
+
 }
 
-Autoparte::Autoparte(int id, std::string nombre, float precio, int stock, int stockMinimo, int tipo, Fecha fechaVencimiento, bool eliminado)
-: _fechaVencimiento(1,1,1)
-{
-   setID(id);
-   setNombre(nombre);
-   setPrecio(precio);
+Autoparte::Autoparte(int id_autoparte, int id_proveedor, const char* nombre, float precio_compra, float precio_venta, int stock, int cod_marca, bool estado){
+   setIDAutoparte(id_autoparte);
+   setIDProveedor(id_proveedor);
+   setPrecioCompra(precio_compra);
+   setPrecioVenta(precio_venta);
    setStock(stock);
-   setStockMinimo(stockMinimo);
-   setTipo(tipo);
-   setEliminado(eliminado);
-   setFechaVencimiento(fechaVencimiento);
-  // setIDCategoria(idcategoria);
+   setCodMarca(cod_marca);
+   setEstado(estado);
+   setNombre(nombre);
 }
 
-int Autoparte::getID(){
-   return _id;
+// SETTERS
+void Autoparte::setIDAutoparte(int id_autoparte) {
+    _id_autoparte = id_autoparte;
 }
 
-void Autoparte::setID(int id){
-   _id = id;
+void Autoparte::setIDProveedor(int id_proveedor) {
+    _id_proveedor = id_proveedor;
 }
 
-std::string Autoparte::getNombre(){
-   return _nombre;
+void Autoparte::setNombre(const char* nombre) {
+    if (std::strlen(nombre) < sizeof(_nombre)) {
+        std::strncpy(_nombre, nombre, sizeof(_nombre) - 1);
+        _nombre[sizeof(_nombre) - 1] = '\0';
+    } else {
+        std::strncpy(_nombre, "SIN DATOS", sizeof(_nombre) - 1);
+        _nombre[sizeof(_nombre) - 1] = '\0';
+    }
 }
 
-void Autoparte::setNombre(std::string nombre){
-   if(nombre.size() <= 100){
-      strcpy(_nombre, nombre.c_str());
-   }
-   else{
-      strcpy(_nombre, "SIN DATOS");
-   }
+void Autoparte::setPrecioCompra(float precio_compra) {
+    _precio_compra = precio_compra;
 }
 
-float Autoparte::getPrecio(){
-   return _precio;
-}
-void Autoparte::setPrecio(float precio){
-   _precio = precio;
+void Autoparte::setPrecioVenta(float precio_venta) {
+    _precio_venta = precio_venta;
 }
 
-int Autoparte::getStock(){
-   return _stock;
-}
-void Autoparte::setStock(int stock){
-   _stock = stock;
+void Autoparte::setStock(int stock) {
+    _stock = stock;
 }
 
-int Autoparte::getStockMinimo(){
-   return _stockMinimo;
+void Autoparte::setCodMarca(int cod_marca) {
+    _cod_marca = cod_marca;
 }
 
-void Autoparte::setStockMinimo(int stockMinimo){
-   _stockMinimo = stockMinimo;
+void Autoparte::setEstado(bool estado) {
+    _estado = estado;
 }
 
-int Autoparte::getTipo(){
-   return _tipo;
+// GETTERS
+int Autoparte::getIDAutoparte() {
+    return _id_autoparte;
 }
 
-void Autoparte::setTipo(int tipo){
-   _tipo = tipo;
+int Autoparte::getIDProveedor() {
+    return _id_proveedor;
 }
 
-bool Autoparte::getEliminado(){
-   return _eliminado;
+const char* Autoparte::getNombre() {
+    return _nombre;
 }
 
-void Autoparte::setEliminado(bool eliminado){
-   _eliminado = eliminado;
+float Autoparte::getPrecioCompra() {
+    return _precio_compra;
 }
 
-Fecha Autoparte::getFechaVencimiento(){
-   return _fechaVencimiento;
+float Autoparte::getPrecioVenta() {
+    return _precio_venta;
 }
 
-void Autoparte::setFechaVencimiento(Fecha fechaVencimiento){
-   _fechaVencimiento = fechaVencimiento;
+int Autoparte::getStock() {
+    return _stock;
 }
 
-/*
-void Autoparte::setIDCategoria(int idcategoria){
-   _idCategoria = idcategoria;
+int Autoparte::getCodMarca() {
+    return _cod_marca;
 }
 
-int Autoparte::getIDCategoria(){
-   return _idCategoria;
+bool Autoparte::getEstado() {
+    return _estado;
 }
-*/
+
+

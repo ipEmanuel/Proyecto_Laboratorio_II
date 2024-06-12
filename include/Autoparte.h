@@ -1,41 +1,39 @@
 #pragma once
-#include <string>
+#include <cstring>
 #include "Fecha.h"
 
-class Autoparte
-{
+class Autoparte{
     private:
-        int _id;
+        int _id_autoparte;
+        int _id_proveedor;
         char _nombre[100];
-        float _precio;
+        float _precio_compra;
+        float _precio_venta;
         int _stock;
-        int _stockMinimo;
-        int _tipo;
-        bool _eliminado;
-        Fecha _fechaVencimiento;
-        //int _idCategoria;
+        int _cod_marca;
+        bool _estado;
 
     public:
         Autoparte();
-        Autoparte(int id, std::string nombre, float precio, int stock, int stockMinimo, int tipo, Fecha fechaVencimiento, bool eliminado);
+        Autoparte(int id_autoparte, int id_proveedor, const char* nombre, float precio_compra, float precio_venta, int stock, int cod_marca, bool estado);
 
-        void setID(int id);
-        void setNombre(std::string nombre);
-        void setPrecio(float precio);
+        // Setters
+        void setIDAutoparte(int id_autoparte);
+        void setIDProveedor(int id_proveedor);
+        void setNombre(const char* nombre);
+        void setPrecioCompra(float precio_compra);
+        void setPrecioVenta(float precio_venta);
         void setStock(int stock);
-        void setStockMinimo(int stockMinimo);
-        void setTipo(int tipo);
-        void setEliminado(bool eliminado);
-        void setFechaVencimiento(Fecha fechaVencimiento);
-        //void setIDCategoria(int idcategoria);
+        void setCodMarca(int cod_marca);
+        void setEstado(bool estado);
 
-        int getID();
-        std::string getNombre();
-        float getPrecio();
+        // Getters
+        int getIDAutoparte();
+        int getIDProveedor();
+        const char* getNombre();
+        float getPrecioCompra();
+        float getPrecioVenta();
         int getStock();
-        int getStockMinimo();
-        int getTipo();
-        bool getEliminado();
-        Fecha getFechaVencimiento();
-        //int getIDCategoria();
+        int getCodMarca();
+        bool getEstado();
 };

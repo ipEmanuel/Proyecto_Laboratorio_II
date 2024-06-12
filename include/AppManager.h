@@ -1,7 +1,5 @@
 #pragma once
-
 #include "MenuItem.h"
-
 #include "AutoparteManager.h"
 #include "ClienteManager.h"
 #include "EmpleadoManager.h"

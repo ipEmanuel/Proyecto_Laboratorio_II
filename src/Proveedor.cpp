@@ -16,6 +16,7 @@ void Proveedor::modificar(){
     cout << "EMAIL: ";
     cin.getline(_email, 60);
     cout << "TELEFONO: ";
+
     cin.getline(_telefono, 60);
     cout << "DOMICILIO: ";
     cin.getline(_domicilio, 60);

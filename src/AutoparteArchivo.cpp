@@ -34,7 +34,7 @@ int AutoparteArchivo::buscarByID(int id){
         return -1;
     }
     while(fread(&reg, sizeof(Autoparte), 1, pFile)){
-        if(reg.getID() == id){
+        if(reg.getIDAutoparte() == id){
             fclose(pFile);
             return pos;
         }
@@ -85,7 +85,7 @@ int AutoparteArchivo::getCantidadRegistros(){
 int AutoparteArchivo::getNuevoID(){
     int cantidad = getCantidadRegistros();
     if(cantidad>0){
-        return leer(cantidad-1).getID()+1;
+        return leer(cantidad-1).getIDAutoparte()+1;
     }
     else{
         return 1;

@@ -5,7 +5,7 @@ using namespace std;
 
 
 Marca::Marca(){
-    _IDmarca = -1;
+    _IDmarca = 0;
     _Estado=false;
 }
 void Marca::cargar(int ID){
@@ -24,7 +24,7 @@ void Marca::modificar(){
     cout<<"------------------------------"<<endl;
     cout<<"------------------------------"<<endl;
 
-    cout<<"Nombre: ";
-    cin.ignore();
+    cout<<"NOMBRE: ";
     cin.getline(_Nombre, 30);
+    _Estado = true;
 }

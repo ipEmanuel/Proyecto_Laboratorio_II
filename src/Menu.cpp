@@ -26,6 +26,7 @@ void Menu::printMenu() {
     return;
 }
 
+<<<<<<< HEAD
 void Menu::addMenuItem(MenuItem *menuItem) {
     if (_currentOptions == _optionsQuantity) {
         MenuItem** _newOptions = new MenuItem*[_optionsQuantity * 2];
@@ -36,6 +37,10 @@ void Menu::addMenuItem(MenuItem *menuItem) {
         _options = _newOptions;
         _optionsQuantity = _optionsQuantity * 2;
     }
+=======
+void Menu::addMenuItem(MenuItem menuItem[]) {
+    _options[_currentOptions] = menuItem;
+>>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
     menuItem->setCode(_currentOptions);
     _options[_currentOptions] = menuItem;
     _currentOptions++;
@@ -50,7 +55,7 @@ int Menu::waitForOption() {
     cin >> option;
 
     while (!checkIfOptionIsValid(option)) {
-        cout << "Por favor ingresar una opción valida:" << endl;
+        cout << "Por favor ingresar una opcion valida:" << endl;
         fflush(stdin);
         cin.clear();
         cin >> option;

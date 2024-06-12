@@ -1,10 +1,7 @@
 #include "cstring"
 #include <iostream>
-
 using namespace std;
-
 #include "MenuItem.h"
-
 #include "MarcaManager.h"
 #include "Marca.h"
 
@@ -112,7 +109,6 @@ void MarcaManager::modificar_marca(){
         cout << "No se encuentra la marca!" << endl;
     }
 }
-
 
 void MarcaManager::modificar(Marca &registro){
     registro.modificar();

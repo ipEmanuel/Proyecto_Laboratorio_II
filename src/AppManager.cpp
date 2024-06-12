@@ -1,10 +1,8 @@
 #include "AppManager.h"
-
 #include <iostream>
 using namespace std;
 
-AppManager::AppManager(): MenuItem("Ventas") {
-}
+AppManager::AppManager(): MenuItem("Ventas") {}
 
 void AppManager::menu(){
     int option;

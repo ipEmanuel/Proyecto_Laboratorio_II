@@ -32,3 +32,6 @@
 *.app
 
 obj/*
+
+*.exe
+*.depend

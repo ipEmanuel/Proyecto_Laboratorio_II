@@ -9,7 +9,6 @@ using namespace std;
 class RolesManager: public MenuItem {
     public:
         RolesManager(int defaultRole = -1);
-        virtual ~RolesManager();
         void askForRole();
         bool hasRoleSet();
         bool roleIsValid(int otherRole);

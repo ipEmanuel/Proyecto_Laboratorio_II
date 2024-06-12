@@ -21,10 +21,10 @@ class MenuItem {
         virtual int execute();
 
     protected:
+        string _decorator;
 
     private:
         string _title;
-        string _decorator;
         int _code;
         int _role;
 };

@@ -7,10 +7,10 @@ using namespace std;
 
 RolesManager::RolesManager(int defaultRole): MenuItem("Cambiar rol", -1) {
     _currentRole = defaultRole;
-}
-
-RolesManager::~RolesManager() {
-    //dtor
+    _roleOperador = 1;
+    _roleManager = 2;
+    _roleOperadorDescription = "OPERADOR";
+    _roleManagerDescription = "MANAGER";
 }
 
 void RolesManager::askForRole() {
@@ -31,8 +31,12 @@ void RolesManager::askForRole() {
         cin >> role;
     }
 
-    cout << role;
-    system("pause");
+    if (role == _roleOperador) {
+        _decorator = " - ROL ACTUAL: " + _roleOperadorDescription;
+    } else {
+        _decorator = " - ROL ACTUAL: " + _roleManagerDescription;
+    }
+
     _currentRole = role;
     system("cls");
 }

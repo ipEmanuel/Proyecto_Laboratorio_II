@@ -11,11 +11,13 @@ using namespace std;
 
 class MenuItem {
     public:
-        MenuItem(string title, string decorator = "");
+        MenuItem();
+        MenuItem(string title, int role = -1, string decorator = "");
         string getTitleToShow();
         void setDecorator(string decorator);
         void setCode(int code);
         int getCode();
+        int getRole();
         virtual int execute();
 
     protected:
@@ -24,6 +26,7 @@ class MenuItem {
         string _title;
         string _decorator;
         int _code;
+        int _role;
 };
 
 #endif // MENUITEM_H

@@ -1,16 +1,15 @@
 #include "Menu.h"
 
-Menu::Menu() {
-    _optionsQuantity = 10;
+Menu::Menu(int defaultRole) {
+    _optionsQuantity = 5;
     _options = new MenuItem*[_optionsQuantity];
     _header = string("");
+    _roleManager = RolesManager(defaultRole);
+    this->addMenuItem(&_roleManager);
 }
 
 Menu::~Menu() {
-    for (int i=0; i < _currentOptions; i++) {
-        delete _options[i];
-    }
-    delete _options;
+    delete[] _options;
 }
 
 void Menu::setHeader(string header) {
@@ -20,14 +19,25 @@ void Menu::setHeader(string header) {
 void Menu::printMenu() {
     printHeader();
     for (int i = 0; i < _currentOptions; i++) {
-        cout << _options[i]->getTitleToShow() << endl;
+        if (_roleManager.roleIsValid(_options[i]->getRole())) {
+            cout << _options[i]->getTitleToShow() << endl;
+        }
     }
     return;
 }
 
-void Menu::addMenuItem(MenuItem* menuItem) {
-    _options[_currentOptions] = menuItem;
+void Menu::addMenuItem(MenuItem *menuItem) {
+    if (_currentOptions == _optionsQuantity) {
+        MenuItem** _newOptions = new MenuItem*[_optionsQuantity * 2];
+        for (int i = 0; i < _currentOptions; i++) {
+            _newOptions[i] = _options[i];
+        }
+        delete[] _options;
+        _options = _newOptions;
+        _optionsQuantity = _optionsQuantity * 2;
+    }
     menuItem->setCode(_currentOptions);
+    _options[_currentOptions] = menuItem;
     _currentOptions++;
 }
 
@@ -53,7 +63,12 @@ bool Menu::checkIfOptionIsValid(int option) {
 
     if (cin.good()) {
         for (int i  = 0; i < _currentOptions && !isValid; i++) {
-            isValid = _options[i]->getCode() == option;
+            if (
+                _roleManager.roleIsValid(_options[i]->getRole()) &&
+                _options[i]->getCode() == option
+                ) {
+                return true;
+            }
         }
     }
     return isValid;
@@ -71,14 +86,20 @@ int Menu::executeOption(int option) {
 }
 
 void Menu::createMenuLoop(bool oneTime) {
+
+    if (!_roleManager.hasRoleSet()) {
+        _roleManager.askForRole();
+    }
+
     this->printMenu();
     int option = this->waitForOption();
     int shouldContinue = this->executeOption(option);
-
+    system("cls");
     while(!oneTime && shouldContinue == 0) {
         this->printMenu();
         int option = this->waitForOption();
         shouldContinue = this->executeOption(option);
+        system("cls");
     }
 }
 

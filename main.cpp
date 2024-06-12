@@ -9,19 +9,25 @@
 #include "ProveedorManager.h"
 #include "Exit.h"
 
-int main()
-{
+int main() {
+
     Menu menu;
 
     menu.setHeader("-----------------------------\n------ MENU PRINCIPAL ------- \n-----------------------------");
 
-    //menu.addMenuItem(new AppManager());
-    menu.addMenuItem(new AutoparteManager());
-    menu.addMenuItem(new ClienteManager());
-    menu.addMenuItem(new EmpleadoManager());
-    menu.addMenuItem(new MarcaManager());
-    menu.addMenuItem(new ProveedorManager());
-    menu.addMenuItem(new Exit());
+    AutoparteManager autoparteManager;
+    ClienteManager clienteManager;
+    EmpleadoManager empleadoManager;
+    MarcaManager marcaManager;
+    ProveedorManager proveedorManager;
+    Exit exit;
+
+    menu.addMenuItem(&autoparteManager);
+    menu.addMenuItem(&clienteManager);
+    menu.addMenuItem(&empleadoManager);
+    menu.addMenuItem(&marcaManager);
+    menu.addMenuItem(&proveedorManager);
+    menu.addMenuItem(&exit);
 
     menu.createMenuLoop();
     //AppManager app;

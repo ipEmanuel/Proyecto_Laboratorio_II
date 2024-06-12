@@ -1,13 +1,24 @@
 #include "MenuItem.h"
 
-MenuItem::MenuItem(string title, string decorator) {
+MenuItem::MenuItem() {
+    _code = 0;
+    _title = string("");
+    _decorator = string("");
+}
+
+MenuItem::MenuItem(string title, int role, string decorator) {
     _code = 0;
     _title = title;
+    _role = role;
     _decorator = decorator;
 }
 
 string MenuItem::getTitleToShow() {
     return to_string(_code) + ": " + _title + _decorator;
+}
+
+int MenuItem::getRole() {
+    return _role;
 }
 
 void MenuItem::setDecorator(string decorator) {
@@ -24,5 +35,6 @@ int MenuItem::getCode() {
 
 int MenuItem::execute() {
     cout << "Not implemented";
+    system("pause");
     return 0;
 }

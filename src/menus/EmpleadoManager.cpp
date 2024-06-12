@@ -4,7 +4,7 @@ using namespace std;
 
 #include "EmpleadoManager.h"
 
-EmpleadoManager::EmpleadoManager(): MenuItem("Empleados") {}
+EmpleadoManager::EmpleadoManager(): MenuItem("Empleados", 2) {}
 
 int EmpleadoManager::execute(){
     int option;

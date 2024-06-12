@@ -166,7 +166,7 @@
 	<iostream>
 	"ProveedorManager.h"
 
-1718211536 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
 	<iostream>
 	"Menu.h"
 	"AppManager.h"
@@ -177,7 +177,7 @@
 	"ProveedorManager.h"
 	"Exit.h"
 
-1717555161 e:\carpetas\c++\proyecto_laboratorio_ii\include\appmanager.h
+1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\appmanager.h
 	"MenuItem.h"
 	"AutoparteManager.h"
 	"ClienteManager.h"
@@ -190,15 +190,15 @@
 	"Autoparte.h"
 	"AutoparteArchivo.h"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
-	<string>
+1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
+	<cstring>
 	"Fecha.h"
 
 1717336418 e:\carpetas\c++\proyecto_laboratorio_ii\include\fecha.h
 	<ctime>
 	<string>
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
+1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
 	"Autoparte.h"
 
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientemanager.h
@@ -246,15 +246,16 @@
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
 	"Proveedor.h"
 
-1717557675 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
 	"AppManager.h"
 	<iostream>
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
+	<iostream>
 	<cstring>
 	"Autoparte.h"
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
 	"AutoparteArchivo.h"
 
 1717552351 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartemanager.cpp
@@ -286,11 +287,11 @@
 	"iostream"
 	"Persona.h"
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedor.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedor.cpp
 	"iostream"
 	"Proveedor.h"
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
 	"cstring"
 	<iostream>
 	"Marca.h"
@@ -313,18 +314,18 @@
 	<iostream>
 	"EmpleadoManager.h"
 
-1718227222 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
+1718230053 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
 	<iostream>
 	<string.h>
 
 1718226482 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menu.cpp
 	"Menu.h"
 
-1718226244 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
+1718230157 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
 	<MenuItem.h>
 	<RolesManager.h>
 
-1718211905 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menuitem.cpp
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menuitem.cpp
 	"MenuItem.h"
 
 1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedormanager.cpp
@@ -335,10 +336,12 @@
 	<iostream>
 	"ProveedorArchivo.h"
 
-1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\autopartemanager.h
+1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\autopartemanager.h
 	"MenuItem.h"
 	"Autoparte.h"
 	"AutoparteArchivo.h"
+	"ProveedorArchivo.h"
+	"MarcaArchivo.h"
 
 1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\clientemanager.h
 	"MenuItem.h"
@@ -364,34 +367,35 @@
 	<iostream>
 	"ClienteManager.h"
 
-1718211983 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
 	<iostream>
 	"EmpleadoManager.h"
 
-1717558802 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
 	"cstring"
 	<iostream>
 	"MenuItem.h"
 	"MarcaManager.h"
 	"Marca.h"
 
-1717558796 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\proveedormanager.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\proveedormanager.cpp
 	<iostream>
 	"MenuItem.h"
 	"ProveedorManager.h"
 
-1717557683 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
 	<iostream>
 	"AutoparteManager.h"
 
-1718211186 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
 	"Exit.h"
 	"MenuItem.h"
 
 1717557047 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\exit.h
 	"MenuItem.h"
 
-<<<<<<< HEAD
+1717557047 D
+
 1718226436 e:\carpetas\c++\proyecto_laboratorio_ii\include\rolesmanager.h
 	<string>
 	<MenuItem.h>
@@ -401,11 +405,12 @@
 	<iostream>
 	<MenuItem.h>
 
-1718227003 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
+1718229787 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
 	<string>
 	<MenuItem.h>
 
-=======
+1718227003 h>
+
 1717712933 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\main.cpp
 	<iostream>
 	"Menu.h"
@@ -774,4 +779,10 @@
 	<iostream>
 	"ProveedorArchivo.h"
 
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
+1717627939 ccd0c06ae47e068321c061817273f2baf1763
+
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\rolesmanager.cpp
+	"RolesManager.h"
+	<iostream>
+	<MenuItem.h>
+

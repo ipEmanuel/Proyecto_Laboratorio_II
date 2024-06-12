@@ -313,7 +313,7 @@
 	<iostream>
 	"EmpleadoManager.h"
 
-1718211905 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
+1718227222 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
 	<iostream>
 	<string.h>
 
@@ -400,7 +400,7 @@
 	<iostream>
 	<MenuItem.h>
 
-1718226436 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
+1718227003 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
 	<string>
 	<MenuItem.h>
 

@@ -1,4 +1,6 @@
 #include "iostream"
+#include <cstring>
+#include <limits>
 using namespace std;
 #include "Empleado.h"
 Empleado::Empleado(){
@@ -16,8 +18,14 @@ void Empleado::modificar(){
     cout<<"------------------------------"<<endl;
     cout<<"------DATOS DEL EMPLEADO-------"<<endl;
     cout<<"------------------------------"<<endl;
-    cout<<"INRESE EL SUELDO DEL EMPLEADO: ";
-    cin>>_sueldo;
+    cout << "INGRESE EL SUELDO DEL EMPLEADO: ";
+        cin >> _sueldo;
+        while (cin.fail() || _sueldo == 0) {
+        cin.clear();
+        cin.ignore(numeric_limits<streamsize>::max(), '\n');
+        cout << "SUELDO NO VALIDO. POR FAVOR INTENTE DE NUEVO." << endl;
+        cout << "INGRESE EL SUELDO DEL EMPLEADO: ";
+        cin >> _sueldo;}
     Persona::cargar();
     cout<<"------------------------------"<<endl;
 }
@@ -25,4 +33,5 @@ void Empleado::modificar(){
 void Empleado::cargar(int id){
     _id_empleado=id;
     modificar();
+
 }

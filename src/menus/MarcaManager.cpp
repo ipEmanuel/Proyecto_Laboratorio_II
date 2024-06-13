@@ -5,7 +5,7 @@ using namespace std;
 #include "MarcaManager.h"
 #include "Marca.h"
 
-MarcaManager::MarcaManager(): MenuItem("Marcas") {}
+MarcaManager::MarcaManager(): MenuItem("Marcas", 2) {}
 
 int MarcaManager::execute(){
 int option;

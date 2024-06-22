@@ -1,4 +1,5 @@
 #pragma once
+#include "string"
 #include "MenuItem.h"
 #include "Autoparte.h"
 #include "AutoparteArchivo.h"
@@ -10,8 +11,8 @@ class AutoparteManager: public MenuItem {
         AutoparteManager();
         int execute();
     private:
-        char* obtenerNombreMarca(int cod_marca);
-        char* obtenerNombreProveedor(int id_proveedor);
+        string obtenerNombreMarca(int cod_marca);
+        string obtenerNombreProveedor(int id_proveedor);
         void agregarAutoparte();
         void listarAutoparte(bool ordenadoPorPrecio = false);
         Autoparte crearAutoparte();

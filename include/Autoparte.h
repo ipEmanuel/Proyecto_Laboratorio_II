@@ -1,4 +1,5 @@
 #pragma once
+#include "string"
 #include <cstring>
 #include "Fecha.h"
 
@@ -20,7 +21,7 @@ class Autoparte{
         // Setters
         void setIDAutoparte(int id_autoparte);
         void setIDProveedor(int id_proveedor);
-        void setNombre(const char* nombre);
+        void setNombre(string nombre);
         void setPrecioCompra(float precio_compra);
         void setPrecioVenta(float precio_venta);
         void setStock(int stock);
@@ -30,7 +31,7 @@ class Autoparte{
         // Getters
         int getIDAutoparte();
         int getIDProveedor();
-        const char* getNombre();
+        string getNombre();
         float getPrecioCompra();
         float getPrecioVenta();
         int getStock();

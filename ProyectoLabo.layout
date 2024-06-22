@@ -2,288 +2,40 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-<<<<<<< HEAD
-	<File name="include\menus\MarcaManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\Menu.cpp" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="186" topLine="0" />
-=======
-	<File name="src\menus\ClienteManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1406" topLine="0" />
+			<Cursor1 position="106" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\AutoparteArchivo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\menus\RolesManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="366" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Autoparte.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\ClienteArchivo.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="33" />
+			<Cursor1 position="465" topLine="1" />
 		</Cursor>
 	</File>
 	<File name="src\AutoparteArchivo.cpp" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="2036" topLine="4" />
+			<Cursor1 position="77" topLine="0" />
 		</Cursor>
 		<Folding>
-			<Collapse line="2" />
 			<Collapse line="14" />
-			<Collapse line="18" />
-			<Collapse line="46" />
-			<Collapse line="60" />
-			<Collapse line="71" />
-		</Folding>
-	</File>
-	<File name="include\AppManager.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="34" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\MenuItem.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="89" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Autoparte.cpp" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="265" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Menu.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1395" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="15" />
-			<Collapse line="19" />
 			<Collapse line="27" />
-			<Collapse line="72" />
-			<Collapse line="84" />
+			<Collapse line="46" />
+			<Collapse line="83" />
 		</Folding>
-	</File>
-	<File name="include\menus\ProveedorManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Empleado.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="528" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="include\menus\Exit.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="149" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\menus\Exit.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\menus\ClienteManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="199" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Fecha.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2111" topLine="39" />
-		</Cursor>
-		<Folding>
-			<Collapse line="50" />
-		</Folding>
-	</File>
-	<File name="include\Proveedor.h" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="242" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\menus\EmpleadoManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="191" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\menus\ProveedorManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="92" topLine="126" />
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
-		</Cursor>
-	</File>
-	<File name="src\Fecha.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2111" topLine="39" />
-		</Cursor>
-		<Folding>
-			<Collapse line="50" />
-		</Folding>
-	</File>
-	<File name="include\EmpleadoArchivo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="53" topLine="0" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="include\Menu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="124" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\menus\ProveedorManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="202" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Autoparte.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="491" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\menus\ProveedorManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="177" topLine="0" />
-=======
-	<File name="src\Persona.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\Cliente.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="426" topLine="17" />
-		</Cursor>
-	</File>
-	<File name="src\menus\AutoparteManager.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="612" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="6" />
-			<Collapse line="73" />
-			<Collapse line="95" />
-			<Collapse line="99" />
-			<Collapse line="144" />
-		</Folding>
-	</File>
-	<File name="include\MenuItem.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="323" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="src\EmpleadoArchivo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="2401" topLine="73" />
-		</Cursor>
 	</File>
 	<File name="include\Cliente.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="637" topLine="0" />
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
 		</Cursor>
 	</File>
-	<File name="include\AppManager.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\menus\ClienteManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="189" topLine="6" />
+			<Cursor1 position="552" topLine="1" />
 		</Cursor>
 	</File>
-	<File name="src\EmpleadoArchivo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\EmpleadoArchivo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-<<<<<<< HEAD
-			<Cursor1 position="2401" topLine="73" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="288" topLine="0" />
-=======
-			<Cursor1 position="1415" topLine="0" />
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
-		</Cursor>
-	</File>
-	<File name="src\AppManager.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-<<<<<<< HEAD
-			<Cursor1 position="2159" topLine="0" />
-		</Cursor>
-		<Folding>
-			<Collapse line="2" />
-			<Collapse line="14" />
-			<Collapse line="18" />
-			<Collapse line="27" />
-			<Collapse line="46" />
-			<Collapse line="60" />
-			<Collapse line="71" />
-			<Collapse line="84" />
-		</Folding>
-	</File>
-	<File name="src\menus\EmpleadoManager.cpp" open="0" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1415" topLine="42" />
-		</Cursor>
-	</File>
-	<File name="src\ClienteArchivo.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="33" />
-		</Cursor>
-	</File>
-	<File name="include\Fecha.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="179" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="include\menus\AutoparteManager.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="194" topLine="3" />
-		</Cursor>
-	</File>
-	<File name="src\AppManager.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="174" topLine="0" />
-=======
-			<Cursor1 position="23" topLine="26" />
-		</Cursor>
-	</File>
-	<File name="main.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="439" topLine="7" />
-		</Cursor>
-	</File>
-	<File name="src\menus\MarcaManager.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="135" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\menus\MarcaManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="186" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\menus\AutoparteManager.h" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="561" topLine="0" />
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
-		</Cursor>
-	</File>
-	<File name="src\Marca.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="9" />
-		</Cursor>
-	</File>
-<<<<<<< HEAD
-	<File name="src\menus\Exit.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="67" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\MenuItem.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="415" topLine="7" />
+			<Cursor1 position="53" topLine="0" />
 		</Cursor>
 	</File>
 	<File name="src\Cliente.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -291,49 +43,9 @@
 			<Cursor1 position="1074" topLine="17" />
 		</Cursor>
 	</File>
-	<File name="src\menus\MarcaManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Autoparte.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1393" topLine="45" />
-		</Cursor>
-	</File>
-	<File name="include\Cliente.h" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="637" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Proveedor.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="242" topLine="3" />
-=======
-	<File name="include\Persona.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Menu.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="110" topLine="0" />
->>>>>>> 2e9ccd0c06ae47e068321c061817273f2baf1763
-		</Cursor>
-	</File>
-	<File name="src\Menu.cpp" open="1" top="1" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="1886" topLine="59" />
-		</Cursor>
-	</File>
-	<File name="include\Empleado.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="528" topLine="5" />
-		</Cursor>
-	</File>
-	<File name="src\Persona.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="21" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="include\Persona.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="0" topLine="0" />
+			<Cursor1 position="973" topLine="13" />
 		</Cursor>
 	</File>
 	<File name="include\menus\Exit.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -341,39 +53,160 @@
 			<Cursor1 position="149" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\menus\ClienteManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Proveedor.h" open="0" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1406" topLine="36" />
+			<Cursor1 position="242" topLine="3" />
+		</Cursor>
+	</File>
+	<File name="include\menus\MarcaManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="513" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\menus\MarcaManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1393" topLine="45" />
+		</Cursor>
+	</File>
+	<File name="include\Persona.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="406" topLine="16" />
+		</Cursor>
+	</File>
+	<File name="src\ClienteArchivo.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="74" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="14" />
+			<Collapse line="26" />
+			<Collapse line="39" />
+			<Collapse line="49" />
+			<Collapse line="62" />
+			<Collapse line="74" />
+		</Folding>
+	</File>
+	<File name="include\menus\EmpleadoManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="565" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="src\menus\EmpleadoManager.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2687" topLine="74" />
 		</Cursor>
 	</File>
 	<File name="src\MenuItem.cpp" open="0" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="387" topLine="3" />
+			<Cursor1 position="225" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="src\menus\AutoparteManager.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Fecha.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="5244" topLine="158" />
+			<Cursor1 position="179" topLine="7" />
 		</Cursor>
 	</File>
-	<File name="include\menus\EmpleadoManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\menus\RolesManager.cpp" open="0" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="191" topLine="0" />
+			<Cursor1 position="972" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="src\Autoparte.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="include\Empleado.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="102" topLine="0" />
+			<Cursor1 position="543" topLine="0" />
 		</Cursor>
 	</File>
-	<File name="include\menus\ClienteManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="src\EmpleadoArchivo.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="199" topLine="0" />
+			<Cursor1 position="2401" topLine="73" />
+		</Cursor>
+	</File>
+	<File name="main.cpp" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="896" topLine="14" />
+		</Cursor>
+	</File>
+	<File name="src\Marca.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="9" />
 		</Cursor>
 	</File>
 	<File name="include\AutoparteArchivo.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="366" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Empleado.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="243" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\AppManager.h" open="0" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="310" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\menus\AutoparteManager.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="5870" topLine="155" />
+		</Cursor>
+	</File>
+	<File name="src\Autoparte.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1655" topLine="57" />
+		</Cursor>
+	</File>
+	<File name="src\menus\ClienteManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="4120" topLine="114" />
+		</Cursor>
+	</File>
+	<File name="include\menus\AutoparteManager.h" open="0" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="23" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\MenuItem.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="396" topLine="2" />
+		</Cursor>
+	</File>
+	<File name="src\AppManager.cpp" open="0" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="174" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\Menu.h" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="550" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="src\menus\ProveedorManager.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="177" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="include\menus\ProveedorManager.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="579" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Fecha.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2111" topLine="39" />
+		</Cursor>
+		<Folding>
+			<Collapse line="50" />
+		</Folding>
+	</File>
+	<File name="src\menus\Exit.cpp" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="111" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="src\Persona.cpp" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="707" topLine="25" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>

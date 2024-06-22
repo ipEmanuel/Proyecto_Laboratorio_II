@@ -1,171 +1,4 @@
 # depslib dependency file v1.0
-1715261758 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\fecha.cpp
-	"Fecha.h"
-	<iostream>
-
-1715299323 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\fecha.h
-	<ctime>
-
-1715692246 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\main.cpp
-	<iostream>
-	"AppManager.h"
-
-1715343992 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\persona.cpp
-	"Persona.h"
-	"iostream"
-
-1715344774 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\persona.h
-	"Fecha.h"
-	<cstring>
-
-1715344638 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\cliente.h
-	"Persona.h"
-
-1715300828 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\cliente.cpp
-	"Cliente.h"
-
-1716924163 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\cliente.cpp
-	<limits>
-	"iostream"
-	"Cliente.h"
-
-1716377697 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\cliente.h
-	"Persona.h"
-
-1716469099 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\persona.h
-	"Fecha.h"
-	"cstring"
-
-1715817081 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\fecha.h
-	<ctime>
-	<string>
-
-1715821212 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\fecha.cpp
-	"Fecha.h"
-	<iostream>
-
-1716927959 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\appmanager.h
-	"AutoparteManager.h"
-	"ClienteManager.h"
-	"EmpleadoManager.h"
-	"MarcaManager.h"
-	"ProveedorManager.h"
-
-1715735702 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartemanager.h
-	"Autoparte.h"
-	"AutoparteArchivo.h"
-
-1715816809 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autoparte.h
-	<string>
-	"Fecha.h"
-
-1716339151 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\autopartearchivo.h
-	"Autoparte.h"
-
-1716922121 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\appmanager.cpp
-	<iostream>
-	"AppManager.h"
-
-1715816868 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autoparte.cpp
-	<cstring>
-	"Autoparte.h"
-
-1716854944 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\persona.cpp
-	"iostream"
-	"Persona.h"
-
-1716854910 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartearchivo.cpp
-	"AutoparteArchivo.h"
-
-1716854872 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\autopartemanager.cpp
-	<iostream>
-	"AutoparteManager.h"
-
-1716855772 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientemanager.h
-	"Cliente.h"
-	"ClienteArchivo.h"
-
-1716855297 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleado.cpp
-	"iostream"
-	"Empleado.h"
-
-1716855306 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleado.h
-	"Persona.h"
-	"Fecha.h"
-
-1716939084 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedor.cpp
-	"iostream"
-	"Proveedor.h"
-
-1716927848 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedor.h
-	<cstring>
-
-1716927730 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientemanager.cpp
-	<iostream>
-	"ClienteManager.h"
-
-1716376846 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\clientearchivo.h
-	"Cliente.h"
-
-1716377731 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\clientearchivo.cpp
-	<iostream>
-	"ClienteArchivo.h"
-
-1716862352 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleadoarchivo.cpp
-	<iostream>
-	"EmpleadoArchivo.h"
-
-1716862301 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleadoarchivo.h
-	"Empleado.h"
-
-1716862438 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\empleadomanager.cpp
-	<iostream>
-	"EmpleadoManager.h"
-
-1716862287 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\empleadomanager.h
-	"EmpleadoArchivo.h"
-	"Empleado.h"
-
-1716938055 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marca.cpp
-	"cstring"
-	<iostream>
-	"Marca.h"
-
-1716862636 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marca.h
-	"cstring"
-
-1716862811 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marcamanager.h
-	"Marca.h"
-	"MarcaArchivo.h"
-
-1716863015 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\marcaarchivo.h
-	"Marca.h"
-
-1716862984 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marcaarchivo.cpp
-	<iostream>
-	"MarcaArchivo.h"
-
-1716938055 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\marcamanager.cpp
-	"MarcaManager.h"
-	"Marca.h"
-	"cstring"
-	<iostream>
-
-1716928048 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedormanager.h
-	"Proveedor.h"
-	"ProveedorArchivo.h"
-
-1716925811 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\include\proveedorarchivo.h
-	"Proveedor.h"
-
-1716939203 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedorarchivo.cpp
-	<iostream>
-	"ProveedorArchivo.h"
-
-1716928098 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyectolabo\src\proveedormanager.cpp
-	<iostream>
-	"ProveedorManager.h"
-
 1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
 	<iostream>
 	"Menu.h"
@@ -177,6 +10,18 @@
 	"ProveedorManager.h"
 	"Exit.h"
 
+1718230157 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
+	<MenuItem.h>
+	<RolesManager.h>
+
+1718230053 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
+	<iostream>
+	<string.h>
+
+1718229787 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
+	<string>
+	<MenuItem.h>
+
 1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\appmanager.h
 	"MenuItem.h"
 	"AutoparteManager.h"
@@ -185,12 +30,16 @@
 	"MarcaManager.h"
 	"ProveedorManager.h"
 
-1717552341 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartemanager.h
+1718318767 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\autopartemanager.h
+	"string"
 	"MenuItem.h"
 	"Autoparte.h"
 	"AutoparteArchivo.h"
+	"ProveedorArchivo.h"
+	"MarcaArchivo.h"
 
-1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
+1718319533 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
+	"string"
 	<cstring>
 	"Fecha.h"
 
@@ -201,21 +50,35 @@
 1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
 	"Autoparte.h"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientemanager.h
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
+	"Proveedor.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedor.h
+	<cstring>
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcaarchivo.h
+	"Marca.h"
+
+1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marca.h
+	"cstring"
+
+1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\clientemanager.h
+	"MenuItem.h"
 	"Cliente.h"
 	"ClienteArchivo.h"
 
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\cliente.h
 	"Persona.h"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\persona.h
+1718319953 e:\carpetas\c++\proyecto_laboratorio_ii\include\persona.h
 	"Fecha.h"
 	"cstring"
 
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientearchivo.h
 	"Cliente.h"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleadomanager.h
+1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\empleadomanager.h
+	"MenuItem.h"
 	"EmpleadoArchivo.h"
 	"Empleado.h"
 
@@ -225,133 +88,6 @@
 1717337013 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleado.h
 	"Persona.h"
 	"Fecha.h"
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcamanager.h
-	"Marca.h"
-	"MarcaArchivo.h"
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marca.h
-	"cstring"
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcaarchivo.h
-	"Marca.h"
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedormanager.h
-	"Proveedor.h"
-	"ProveedorArchivo.h"
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedor.h
-	<cstring>
-
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
-	"Proveedor.h"
-
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
-	"AppManager.h"
-	<iostream>
-
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
-	<iostream>
-	<cstring>
-	"Autoparte.h"
-
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
-	"AutoparteArchivo.h"
-
-1717552351 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartemanager.cpp
-	<iostream>
-	"AutoparteManager.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\cliente.cpp
-	<limits>
-	"iostream"
-	"Cliente.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientearchivo.cpp
-	<iostream>
-	"ClienteArchivo.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientemanager.cpp
-	<iostream>
-	"ClienteManager.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
-	"iostream"
-	"Empleado.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\fecha.cpp
-	"Fecha.h"
-	<iostream>
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\persona.cpp
-	"iostream"
-	"Persona.h"
-
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedor.cpp
-	"iostream"
-	"Proveedor.h"
-
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
-	"cstring"
-	<iostream>
-	"Marca.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcaarchivo.cpp
-	<iostream>
-	"MarcaArchivo.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcamanager.cpp
-	"MarcaManager.h"
-	"Marca.h"
-	"cstring"
-	<iostream>
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
-	<iostream>
-	"EmpleadoArchivo.h"
-
-1717337086 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadomanager.cpp
-	<iostream>
-	"EmpleadoManager.h"
-
-1718230053 e:\carpetas\c++\proyecto_laboratorio_ii\include\menuitem.h
-	<iostream>
-	<string.h>
-
-1718226482 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menu.cpp
-	"Menu.h"
-
-1718230157 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
-	<MenuItem.h>
-	<RolesManager.h>
-
-1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menuitem.cpp
-	"MenuItem.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedormanager.cpp
-	<iostream>
-	"ProveedorManager.h"
-
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedorarchivo.cpp
-	<iostream>
-	"ProveedorArchivo.h"
-
-1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\autopartemanager.h
-	"MenuItem.h"
-	"Autoparte.h"
-	"AutoparteArchivo.h"
-	"ProveedorArchivo.h"
-	"MarcaArchivo.h"
-
-1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\clientemanager.h
-	"MenuItem.h"
-	"Cliente.h"
-	"ClienteArchivo.h"
-
-1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\empleadomanager.h
-	"MenuItem.h"
-	"EmpleadoArchivo.h"
-	"Empleado.h"
 
 1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\marcamanager.h
 	"MenuItem.h"
@@ -363,6 +99,61 @@
 	"Proveedor.h"
 	"ProveedorArchivo.h"
 
+1717557047 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\exit.h
+	"MenuItem.h"
+
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
+	"AppManager.h"
+	<iostream>
+
+1718319635 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
+	<iostream>
+	<cstring>
+	"Autoparte.h"
+
+1718318143 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
+	"AutoparteArchivo.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\cliente.cpp
+	<limits>
+	"iostream"
+	"Cliente.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientearchivo.cpp
+	<iostream>
+	"ClienteArchivo.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
+	"iostream"
+	"Empleado.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
+	<iostream>
+	"EmpleadoArchivo.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
+	"cstring"
+	<iostream>
+	"Marca.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcaarchivo.cpp
+	<iostream>
+	"MarcaArchivo.h"
+
+1718230189 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menu.cpp
+	"Menu.h"
+
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menuitem.cpp
+	"MenuItem.h"
+
+1718319284 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
+	<iostream>
+	"AutoparteManager.h"
+
 1717557513 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\clientemanager.cpp
 	<iostream>
 	"ClienteManager.h"
@@ -370,6 +161,10 @@
 1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
 	<iostream>
 	"EmpleadoManager.h"
+
+1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
+	"Exit.h"
+	"MenuItem.h"
 
 1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
 	"cstring"
@@ -383,406 +178,20 @@
 	"MenuItem.h"
 	"ProveedorManager.h"
 
-1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
-	<iostream>
-	"AutoparteManager.h"
-
-1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
-	"Exit.h"
-	"MenuItem.h"
-
-1717557047 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\exit.h
-	"MenuItem.h"
-
-1717557047 D
-
-1718226436 e:\carpetas\c++\proyecto_laboratorio_ii\include\rolesmanager.h
-	<string>
-	<MenuItem.h>
-
-1718226443 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\rolesmanager.cpp
-	"RolesManager.h"
-	<iostream>
-	<MenuItem.h>
-
-1718229787 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\rolesmanager.h
-	<string>
-	<MenuItem.h>
-
-1718227003 h>
-
-1717712933 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\main.cpp
-	<iostream>
-	"Menu.h"
-	"AppManager.h"
-	"AutoparteManager.h"
-	"ClienteManager.h"
-	"EmpleadoManager.h"
-	"MarcaManager.h"
-	"ProveedorManager.h"
-	"Exit.h"
-
-1717714675 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menu.h
-	<MenuItem.h>
-
-1717712652 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menuitem.h
-	<iostream>
-	<string.h>
-
-1717874880 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\appmanager.h
-	"MenuItem.h"
-	"AutoparteManager.h"
-	"ClienteManager.h"
-	"EmpleadoManager.h"
-	"MarcaManager.h"
-	"ProveedorManager.h"
-
-1717880994 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\autopartemanager.h
-	"MenuItem.h"
-	"Autoparte.h"
-	"AutoparteArchivo.h"
-	"ProveedorArchivo.h"
-	"MarcaArchivo.h"
-
-1717878434 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\autoparte.h
-	<cstring>
-	"Fecha.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\fecha.h
-	<ctime>
-	<string>
-
-1717873943 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\autopartearchivo.h
-	"Autoparte.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\clientemanager.h
-	"MenuItem.h"
-	"Cliente.h"
-	"ClienteArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\cliente.h
-	"Persona.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\persona.h
-	"Fecha.h"
-	"cstring"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\clientearchivo.h
-	"Cliente.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\empleadomanager.h
-	"MenuItem.h"
-	"EmpleadoArchivo.h"
-	"Empleado.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\empleadoarchivo.h
-	"Empleado.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\empleado.h
-	"Persona.h"
-	"Fecha.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\marcamanager.h
-	"MenuItem.h"
-	"Marca.h"
-	"MarcaArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\marca.h
-	"cstring"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\marcaarchivo.h
-	"Marca.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\proveedormanager.h
-	"MenuItem.h"
-	"Proveedor.h"
-	"ProveedorArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\proveedor.h
-	<cstring>
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\proveedorarchivo.h
-	"Proveedor.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\include\menus\exit.h
-	"MenuItem.h"
-
-1717874103 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\appmanager.cpp
-	"AppManager.h"
-	<iostream>
-
-1717722413 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\autoparte.cpp
-	<iostream>
-	<cstring>
-	"Autoparte.h"
-
-1717722400 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\autopartearchivo.cpp
-	"AutoparteArchivo.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\cliente.cpp
-	<limits>
-	"iostream"
-	"Cliente.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\clientearchivo.cpp
-	<iostream>
-	"ClienteArchivo.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\empleado.cpp
-	"iostream"
-	"Empleado.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\fecha.cpp
-	"Fecha.h"
-	<iostream>
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\persona.cpp
-	"iostream"
-	"Persona.h"
-
-1717886937 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\proveedor.cpp
-	"iostream"
-	"Proveedor.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\empleadoarchivo.cpp
-	<iostream>
-	"EmpleadoArchivo.h"
-
-1717880642 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\marca.cpp
-	"cstring"
-	<iostream>
-	"Marca.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\marcaarchivo.cpp
-	<iostream>
-	"MarcaArchivo.h"
-
-1717715062 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menu.cpp
-	"Menu.h"
-
-1717715640 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menuitem.cpp
-	"MenuItem.h"
-
-1717886977 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\autopartemanager.cpp
-	<iostream>
-	"AutoparteManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\clientemanager.cpp
-	<iostream>
-	"ClienteManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\empleadomanager.cpp
-	<iostream>
-	"EmpleadoManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\exit.cpp
-	"Exit.h"
-	"MenuItem.h"
-
-1717880652 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\marcamanager.cpp
-	"cstring"
-	<iostream>
-	"MenuItem.h"
-	"MarcaManager.h"
-	"Marca.h"
-
-1717712697 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\menus\proveedormanager.cpp
-	<iostream>
-	"MenuItem.h"
-	"ProveedorManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main\src\proveedorarchivo.cpp
-	<iostream>
-	"ProveedorArchivo.h"
-
-1717712933 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\main.cpp
-	<iostream>
-	"Menu.h"
-	"AppManager.h"
-	"AutoparteManager.h"
-	"ClienteManager.h"
-	"EmpleadoManager.h"
-	"MarcaManager.h"
-	"ProveedorManager.h"
-	"Exit.h"
-
-1717714675 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menu.h
-	<MenuItem.h>
-
-1717712652 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menuitem.h
-	<iostream>
-	<string.h>
-
-1717874880 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\appmanager.h
-	"MenuItem.h"
-	"AutoparteManager.h"
-	"ClienteManager.h"
-	"EmpleadoManager.h"
-	"MarcaManager.h"
-	"ProveedorManager.h"
-
-1717880994 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\autopartemanager.h
-	"MenuItem.h"
-	"Autoparte.h"
-	"AutoparteArchivo.h"
-	"ProveedorArchivo.h"
-	"MarcaArchivo.h"
-
-1717878434 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\autoparte.h
-	<cstring>
-	"Fecha.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\fecha.h
-	<ctime>
-	<string>
-
-1717873943 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\autopartearchivo.h
-	"Autoparte.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\proveedorarchivo.h
-	"Proveedor.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\proveedor.h
-	<cstring>
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\marcaarchivo.h
-	"Marca.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\marca.h
-	"cstring"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\clientemanager.h
-	"MenuItem.h"
-	"Cliente.h"
-	"ClienteArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\cliente.h
-	"Persona.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\persona.h
-	"Fecha.h"
-	"cstring"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\clientearchivo.h
-	"Cliente.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\empleadomanager.h
-	"MenuItem.h"
-	"EmpleadoArchivo.h"
-	"Empleado.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\empleadoarchivo.h
-	"Empleado.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\empleado.h
-	"Persona.h"
-	"Fecha.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\marcamanager.h
-	"MenuItem.h"
-	"Marca.h"
-	"MarcaArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\proveedormanager.h
-	"MenuItem.h"
-	"Proveedor.h"
-	"ProveedorArchivo.h"
-
-1717627939 c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\include\menus\exit.h
-	"MenuItem.h"
-
-1717874103 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\appmanager.cpp
-	"AppManager.h"
-	<iostream>
-
-1717722413 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\autoparte.cpp
-	<iostream>
-	<cstring>
-	"Autoparte.h"
-
-1717722400 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\autopartearchivo.cpp
-	"AutoparteArchivo.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\cliente.cpp
-	<limits>
-	"iostream"
-	"Cliente.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\clientearchivo.cpp
-	<iostream>
-	"ClienteArchivo.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\empleado.cpp
-	"iostream"
-	"Empleado.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\empleadoarchivo.cpp
-	<iostream>
-	"EmpleadoArchivo.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\fecha.cpp
-	"Fecha.h"
-	<iostream>
-
-1717880642 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\marca.cpp
-	"cstring"
-	<iostream>
-	"Marca.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\marcaarchivo.cpp
-	<iostream>
-	"MarcaArchivo.h"
-
-1717715062 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menu.cpp
-	"Menu.h"
-
-1717715640 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menuitem.cpp
-	"MenuItem.h"
-
-1717886977 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\autopartemanager.cpp
-	<iostream>
-	"AutoparteManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\clientemanager.cpp
-	<iostream>
-	"ClienteManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\empleadomanager.cpp
-	<iostream>
-	"EmpleadoManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\exit.cpp
-	"Exit.h"
-	"MenuItem.h"
-
-1717880652 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\marcamanager.cpp
-	"cstring"
-	<iostream>
-	"MenuItem.h"
-	"MarcaManager.h"
-	"Marca.h"
-
-1717712697 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\menus\proveedormanager.cpp
-	<iostream>
-	"MenuItem.h"
-	"ProveedorManager.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\persona.cpp
-	"iostream"
-	"Persona.h"
-
-1717886937 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\proveedor.cpp
-	"iostream"
-	"Proveedor.h"
-
-1717627939 source:c:\users\administrador\documents\documentos\2024\laboratorio\proyectos\proyecto_laboratorio_ii-main - copia\src\proveedorarchivo.cpp
-	<iostream>
-	"ProveedorArchivo.h"
-
-1717627939 ccd0c06ae47e068321c061817273f2baf1763
-
 1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\rolesmanager.cpp
 	"RolesManager.h"
 	<iostream>
 	<MenuItem.h>
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\persona.cpp
+	"iostream"
+	"Persona.h"
+
+1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedor.cpp
+	"iostream"
+	"Proveedor.h"
+
+1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedorarchivo.cpp
+	<iostream>
+	"ProveedorArchivo.h"
 

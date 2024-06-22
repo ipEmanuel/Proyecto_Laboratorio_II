@@ -57,6 +57,7 @@
 		<Unit filename="include/menus/Exit.h" />
 		<Unit filename="include/menus/MarcaManager.h" />
 		<Unit filename="include/menus/ProveedorManager.h" />
+		<Unit filename="include/menus/RolesManager.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AppManager.cpp" />
 		<Unit filename="src/Autoparte.cpp" />
@@ -79,6 +80,7 @@
 		<Unit filename="src/menus/Exit.cpp" />
 		<Unit filename="src/menus/MarcaManager.cpp" />
 		<Unit filename="src/menus/ProveedorManager.cpp" />
+		<Unit filename="src/menus/RolesManager.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

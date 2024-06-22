@@ -59,7 +59,6 @@ Autoparte AutoparteArchivo::leer(int index){
 }
 
 void AutoparteArchivo::leerTodos(Autoparte registros[], int cantidad){
-   bool result;
    FILE *pFile;
    pFile = fopen("autopartes.dat", "rb");
    if(pFile == nullptr){

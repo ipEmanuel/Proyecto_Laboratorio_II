@@ -1,5 +1,7 @@
 #include <iostream>
+
 using namespace std;
+
 #include <cstring>
 #include "Autoparte.h"
 
@@ -36,13 +38,11 @@ void Autoparte::setIDProveedor(int id_proveedor) {
     _id_proveedor = id_proveedor;
 }
 
-void Autoparte::setNombre(const char* nombre) {
-    if (std::strlen(nombre) < sizeof(_nombre)) {
-        std::strncpy(_nombre, nombre, sizeof(_nombre) - 1);
-        _nombre[sizeof(_nombre) - 1] = '\0';
+void Autoparte::setNombre(string nombre) {
+    if (nombre.length() < 100) {
+        strcpy(_nombre, nombre.c_str());
     } else {
-        std::strncpy(_nombre, "SIN DATOS", sizeof(_nombre) - 1);
-        _nombre[sizeof(_nombre) - 1] = '\0';
+        strcpy(_nombre, "SIN DATOS");
     }
 }
 
@@ -75,8 +75,8 @@ int Autoparte::getIDProveedor() {
     return _id_proveedor;
 }
 
-const char* Autoparte::getNombre() {
-    return _nombre;
+string Autoparte::getNombre() {
+    return string(_nombre);
 }
 
 float Autoparte::getPrecioCompra() {

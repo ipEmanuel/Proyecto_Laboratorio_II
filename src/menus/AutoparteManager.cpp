@@ -4,32 +4,25 @@ using namespace std;
 
 AutoparteManager::AutoparteManager(): MenuItem("Autopartes") {}
 
-char* AutoparteManager::obtenerNombreMarca(int cod_marca) {
+string AutoparteManager::obtenerNombreMarca(int cod_marca) {
     int index = _marcaArchivo.buscarByID(cod_marca);
     if (index != -1) {
         Marca marca = _marcaArchivo.leer(index);
-        const char* nombre = marca.getNombre();
-        char* nombre_copia = new char[strlen(nombre) + 1];
-        strcpy(nombre_copia, nombre);
-        return nombre_copia;
+        return string(marca.getNombre());
     }
-    char* desconocido = new char[60];
-    strcpy(desconocido, "Marca desconocida");
-    return desconocido;
+
+    return string("Marca desconocida");
 }
-char* AutoparteManager::obtenerNombreProveedor(int id_proveedor) {
+
+string AutoparteManager::obtenerNombreProveedor(int id_proveedor) {
     int index = _proveedorArchivo.buscarByID(id_proveedor);
     if (index != -1) {
         Proveedor proveedor = _proveedorArchivo.leer(index);
-        const char* nombre = proveedor.getNombre();
-        char* nombre_copia = new char[strlen(nombre) + 1];
-        strcpy(nombre_copia, nombre);
-        return nombre_copia;
+        return string(proveedor.getNombre());
     }
-    char* desconocido = new char[60];
-    strcpy(desconocido, "Proveedor desconocido");
-    return desconocido;
+    return string("Proveedor desconocido");
 }
+
 Autoparte AutoparteManager::crearAutoparte(){
     int id_autoparte, id_proveedor, stock, cod_marca;
     char nombre_autoparte[60], opcion;
@@ -119,13 +112,15 @@ Autoparte AutoparteManager::crearAutoparte(){
 }
 
 void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
-    int id_proveedor, stock, cod_marca;
-    char nombre_autoparte[60], opcion;
+    int id_proveedor = -1;
+    int stock, cod_marca;
+    string nombre_autoparte;
+    char opcion;
     float precio_compra, precio_venta;
 
     cin.ignore();
 
-    while (true) {
+    while (id_proveedor == -1 || _proveedorArchivo.buscarByID(id_proveedor) == -1) {
         cout << "Ingrese codigo(id) del proveedor (o 'S' para salir): ";
         cin >> id_proveedor;
 
@@ -142,16 +137,12 @@ void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
             }
         }
 
-        if (_proveedorArchivo.buscarByID(id_proveedor) != -1) {
-            break; // Salir del bucle si se encontró un proveedor válido
-        } else {
-            cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
-        }
+        cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
     }
 
     cin.ignore();
     cout << "Ingrese el Nombre de la Autoparte: ";
-    cin.getline(nombre_autoparte, sizeof(nombre_autoparte));
+    getline(cin, nombre_autoparte);
     cout << "Ingrese precio de compra: ";
     cin >> precio_compra;
     cout << "Ingrese precio de venta: ";
@@ -178,8 +169,8 @@ void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
 }
 
 void AutoparteManager::mostrarAutoparte(Autoparte reg){
-    char* nombre_marca = obtenerNombreMarca(reg.getCodMarca());
-    char* nombre_proveedor = obtenerNombreProveedor(reg.getIDProveedor());
+    string nombre_marca = obtenerNombreMarca(reg.getCodMarca());
+    string nombre_proveedor = obtenerNombreProveedor(reg.getIDProveedor());
 
     cout << "CODIGO DE AUTOPARTE: " << reg.getIDAutoparte() << endl;
     cout << "NOMBRE: " << reg.getNombre() << endl;

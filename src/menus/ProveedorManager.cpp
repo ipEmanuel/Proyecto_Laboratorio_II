@@ -3,7 +3,7 @@ using namespace std;
 #include "MenuItem.h"
 #include "ProveedorManager.h"
 
-ProveedorManager::ProveedorManager(): MenuItem("Proveedores") {}
+ProveedorManager::ProveedorManager(): MenuItem("Proveedores", 2) {}
 
 int ProveedorManager::execute(){
     int option;

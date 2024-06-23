@@ -1,5 +1,8 @@
 #pragma once
 #include "cstring"
+#include "string"
+
+
 class Marca{
     private:
         int _IDmarca;

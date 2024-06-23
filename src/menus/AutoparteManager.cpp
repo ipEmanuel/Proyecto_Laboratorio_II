@@ -168,20 +168,6 @@ void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
 
 }
 
-void AutoparteManager::mostrarAutoparte(Autoparte reg){
-    string nombre_marca = obtenerNombreMarca(reg.getCodMarca());
-    string nombre_proveedor = obtenerNombreProveedor(reg.getIDProveedor());
-
-    cout << "CODIGO DE AUTOPARTE: " << reg.getIDAutoparte() << endl;
-    cout << "NOMBRE: " << reg.getNombre() << endl;
-    cout << "PRECIO DE COMPRA: " << reg.getPrecioCompra() << endl;
-    cout << "PRECIO DE VENTA: " << reg.getPrecioVenta() << endl;
-    cout << "STOCK: " << reg.getStock() << endl;
-    cout << "MARCA: " << nombre_marca << endl;
-    cout << "PROVEEDOR: " << nombre_proveedor << endl;
-    cout << "ESTADO: " << (reg.getEstado() ? "Disponible": "Eliminado") << endl;
-}
-
 void AutoparteManager::ordenarAutopartesPorPrecioVenta(Autoparte autoparte[], int cantidad){
    int i, j;
    int posMaximo;
@@ -225,7 +211,7 @@ void AutoparteManager::listarAutoparte(bool ordenadoPorPrecio){
     for(int i=0; i<cantidad; i++){
         if(autopartes[i].getEstado()){
             cout << "--------------------------" << endl;
-            mostrarAutoparte(autopartes[i]);
+            autopartes[i].mostrar();
             cout << "--------------------------" << endl;
         }
     }
@@ -242,7 +228,7 @@ void AutoparteManager::modificarAutoparte(){
     index = _autopartesArchivo.buscarByID(idAutoparte);
     if(index != -1){
         autoparte = _autopartesArchivo.leer(index);
-        mostrarAutoparte(autoparte);
+        autoparte.mostrar();
         volverCargarAutoparte(autoparte);
         if(_autopartesArchivo.guardar(index, autoparte)){
             cout << "Se modifico con exito!" << endl;
@@ -265,7 +251,7 @@ void AutoparteManager::eliminarAutoparte(){
 
     if(index != -1){
         autoparte = _autopartesArchivo.leer(index);
-        mostrarAutoparte(autoparte);
+        autoparte.mostrar();
         cout << "Esta segudo de que quiere eliminarlo? 1-Si 0-No: ";
         cin >> eliminar;
         if(eliminar){

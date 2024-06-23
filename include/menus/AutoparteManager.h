@@ -10,11 +10,12 @@ class AutoparteManager: public MenuItem {
     public:
         AutoparteManager();
         int execute();
+        void listarAutoparte(bool ordenadoPorPrecio = false);
+
     private:
         string obtenerNombreMarca(int cod_marca);
         string obtenerNombreProveedor(int id_proveedor);
         void agregarAutoparte();
-        void listarAutoparte(bool ordenadoPorPrecio = false);
         Autoparte crearAutoparte();
         void volverCargarAutoparte(Autoparte &registro);
         void mostrarAutoparte(Autoparte registro);

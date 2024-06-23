@@ -2,6 +2,8 @@
 using namespace std;
 #include "MarcaArchivo.h"
 
+
+
 void MarcaArchivo::leerTodos(Marca registros[], int cantidad){
    FILE *pFile = fopen("marcas.dat", "rb");
    if(pFile == nullptr){
@@ -90,3 +92,14 @@ int MarcaArchivo::buscarByID(int id){
     fclose(pFile);
     return -1;
 }
+
+Marca MarcaArchivo::buscarMarcaById(int id) {
+    int index = buscarByID(id);
+    if (index != -1) {
+        Marca marca = leer(index);
+        return marca;
+    }
+
+    return Marca();
+}
+

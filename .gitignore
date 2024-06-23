@@ -33,5 +33,5 @@
 
 obj/*
 
-*.exe
-*.depend
+ProyectoLabo.depend
+ProyectoLabo.layout

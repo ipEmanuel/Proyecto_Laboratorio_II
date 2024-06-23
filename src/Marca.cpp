@@ -8,6 +8,7 @@ Marca::Marca(){
     _IDmarca = 0;
     _Estado=false;
 }
+
 void Marca::cargar(int ID){
     _IDmarca=ID;
     cin.ignore();

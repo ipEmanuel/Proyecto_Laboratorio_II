@@ -1,6 +1,8 @@
 #pragma once
 #include "string"
 #include <cstring>
+
+#include "MarcaArchivo.h"
 #include "Fecha.h"
 
 class Autoparte{
@@ -13,10 +15,13 @@ class Autoparte{
         int _stock;
         int _cod_marca;
         bool _estado;
+        MarcaArchivo _marcaArchivo;
 
     public:
         Autoparte();
         Autoparte(int id_autoparte, int id_proveedor, const char* nombre, float precio_compra, float precio_venta, int stock, int cod_marca, bool estado);
+
+        void mostrar();
 
         // Setters
         void setIDAutoparte(int id_autoparte);

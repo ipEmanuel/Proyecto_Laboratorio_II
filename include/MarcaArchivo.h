@@ -1,7 +1,7 @@
 #pragma once
 #include "Marca.h"
 class MarcaArchivo{
- public:
+    public:
         void leerTodos(Marca registros[], int cantidad);
         bool guardar(Marca registro);
         bool guardar(int index, Marca registro);
@@ -9,4 +9,5 @@ class MarcaArchivo{
         Marca leer(int index);
         int getCantidadRegistros();
         int buscarByID(int id);
+        Marca buscarMarcaById(int id);
 };

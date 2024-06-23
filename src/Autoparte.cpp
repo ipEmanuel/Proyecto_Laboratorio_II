@@ -4,6 +4,7 @@ using namespace std;
 
 #include <cstring>
 #include "Autoparte.h"
+#include "Marca.h"
 
 Autoparte::Autoparte()
 {
@@ -100,3 +101,18 @@ bool Autoparte::getEstado() {
 }
 
 
+void Autoparte::mostrar(){
+    //string nombre_marca = obtenerNombreMarca(reg.getCodMarca());
+    Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
+    //string nombre_proveedor = obtenerNombreProveedor(_id_proveedor);
+
+    cout << "CODIGO DE AUTOPARTE: " << _id_autoparte << endl;
+    cout << "NOMBRE: " << _nombre << endl;
+    cout << "PRECIO DE COMPRA: " << _precio_compra << endl;
+    cout << "PRECIO DE VENTA: " << _precio_venta << endl;
+    cout << "STOCK: " << _stock << endl;
+    //cout << "MARCA: " << nombre_marca << endl;
+    marca.mostrar();
+    //cout << "PROVEEDOR: " << nombre_proveedor << endl;
+    cout << "ESTADO: " << (_estado ? "Disponible": "Eliminado") << endl;
+}

@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1718332435 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
+1719104383 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
 	<iostream>
 	"Menu.h"
 	"AppManager.h"
@@ -8,6 +8,7 @@
 	"EmpleadoManager.h"
 	"MarcaManager.h"
 	"ProveedorManager.h"
+	"FacturaManager.h"
 	"Exit.h"
 
 1718230157 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
@@ -145,7 +146,7 @@
 	<iostream>
 	"Marca.h"
 
-1719102680 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcaarchivo.cpp
+1719103456 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marcaarchivo.cpp
 	<iostream>
 	"MarcaArchivo.h"
 
@@ -240,8 +241,9 @@
 	"Autoparte.h"
 	"Factura.h"
 
-1718552454 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\facturamanager.h
+1719104427 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\facturamanager.h
 	"Factura.h"
+	"MenuItem.h"
 
 1718737588 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\facturaarchivo.cpp
 	<iostream>
@@ -250,12 +252,16 @@
 	"FacturaArchivo.h"
 	"Autoparte.h"
 
-1718738337 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
+1719104295 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
 	<iostream>
 	<cstdlib>
 	"FacturaManager.h"
 	"FacturaArchivo.h"
 	"Factura.h"
+	"Detalle_Factura.h"
+	"Detalle_FArchivo.h"
+	"AutoparteManager.h"
+	"AutoparteArchivo.h"
 
 1719099915 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\detalle_fmanager.cpp
 	<iostream>

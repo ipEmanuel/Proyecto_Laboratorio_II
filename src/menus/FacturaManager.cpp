@@ -5,48 +5,48 @@ using namespace std;
 #include "FacturaManager.h"
 #include "FacturaArchivo.h"
 #include "Factura.h"
+#include "Detalle_Factura.h"
+#include "Detalle_FArchivo.h"
+#include "AutoparteManager.h"
+#include "AutoparteArchivo.h"
 //#include "Cliente.h"
 
-/**
-FacturaManager::FacturaManager()
-{
 
-}
-*/
+FacturaManager::FacturaManager(): MenuItem("Facturacion") {}
 
 // desde el Detalle_FManager.cpp accedo a este menú
 
-void FacturaManager::menu(){
+int FacturaManager::execute(){
     int option;
     do{
         system("cls");
         cout << "----------------------------------" << endl;
-        cout << "---------- MENU FACTURA --------- " << endl;
+        cout << " ---------- MENU FACTURA ---------" << endl;
         cout << "----------------------------------" << endl;
-        cout << "1- CREAR FACTURA " << endl;
-        cout << "2- MODIFICAR FACTURA" << endl;
-        cout << "3- LISTAR FACTURAS" << endl;
-        cout << "4- ELIMINAR FACTURA" << endl;
-        cout << "5- LISTAR POR FACTURA" << endl;
+        cout << "1- INICIAR FACTURA DE VENTA " << endl;
+        cout << "2- MOSTRAR DETALLE FACTURA" << endl; //va a solicitar el ingreso de un Nro de Factura
+        cout << "3- MODIFICAR DETALLE FACTURA" << endl; // va a solicitar el ingreso de un Nro de Factura para modificar su detalle
+        cout << "4- ELIMINAR DETALLE FACTURA" << endl; // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
+        cout << "5- LISTAR FACTURA DESDE-HASTA" << endl;
         cout << "----------------------------------" << endl;
         cout << "0- SALIR" << endl;
         cout << "Opcion: ";
         cin >> option;
         switch(option){
             case 1:
-                creacion_factura();
+                iniciar_factura_venta();
                 system("pause");
                 break;
             case 2:
-                modificar_factura();
+                mostrar_detalle_factura();
                 system("pause");
                 break;
             case 3:
-                listar_facturas();
+                //modificar_detalle_factura();
                 system("pause");
                 break;
             case 4:
-//                eliminar_factura();
+//                eliminar_detalle_factura();
                 system("pause");
                 break;
             case 5:
@@ -57,79 +57,7 @@ void FacturaManager::menu(){
         }
     }
     while(option != 0);
-}
-
-void FacturaManager::creacion_factura(){
-    Factura factura;
-    int nroFactura, idCliente;
-    Fecha fechaFactura;
-    float valorTotal;
-    Cliente cli;
-    FacturaArchivo fa;
-    bool result;
-
-    nroFactura = fa.getNuevoNroFactura();
-    cout << "Numero de factura: " << nroFactura <<endl;
-    factura.setNFactura(nroFactura);
-    cout << "Fecha de factura: " <<endl;
-    fechaFactura.cargar();
-    fechaFactura.mostrar();
-    factura.setFechaFactura(fechaFactura);
-    cout << "Valor total de factura: ";
-    cin >> valorTotal;
-    factura.setValorTotal(valorTotal);
-    cout << "Numero de cliente: ";
-    cin >> idCliente;
-    cli.setIdCliente(idCliente);
-
-    result = fa.guardar(factura);
-    system("cls");
-    if(result){
-        cout << "FACTURA CREADA CON EXITO." << endl;
-    }
-    else{
-        cout << "NO SE PUDO CREAR LA FACTURA." << endl;
-    }
-
-}
-
-void FacturaManager::modificarFactura(){
-    Factura facturaAct;
-    FacturaArchivo fa;
-    Factura f;
-    int nroFact, nroF;
-    bool result;
-
-    cout<<"-------------------------------------------"<<endl;
-    cout<<"------NUMERO DE FACTURA A MODIFICAR--------"<<endl;
-    cout<<"-------------------------------------------"<<endl;
-    cout<<"INGRESAR NUMERO DE FACTURA: ";
-    cin>>nroF;
-    facturaAct.setNFactura(nroF);
-    nroFact = facturaAct.getNFactura();
-    facturaAct = fa.leer(nroFact);
-    cout << endl;
-    cout << "DATOS DE FACTURA ACTUAL: " << endl;
-    f.mostrarFactura(facturaAct);
-    cout << endl;
-    f.modificar(facturaAct);
-    cout << endl;
-    cout << "DATOS DE FACTURA MODIFICADA:" << endl;
-    f.mostrarFactura(facturaAct);
-    if(fa.guardar(nroFact, facturaAct)){
-        cout << "FACTURA MODIFICADA CON EXITO." << endl;
-    }
-    else{
-        cout << "NO SE PUDO MODIFICAR LA FACTURA." << endl;
-    }
-
-}
-
-void FacturaManager::modificar_factura(){
-
-    system("cls");
-    modificarFactura();
-
+    return 0;
 }
 
 void FacturaManager::listar_facturas(){
@@ -144,4 +72,119 @@ void FacturaManager::listar_facturas(){
         cout << nroFactura << endl;
         pos++;
     }
+}
+
+
+int FacturaManager::mantiene_factura(int mantiene){
+    while (!(mantiene>-1 && mantiene < 2)){
+        cout << "VALOR NO VALIDO. INGRESE (1-SI / 0-NO): ";
+        cin >> mantiene;
+    }
+    return mantiene;
+}
+
+
+void FacturaManager::iniciar_factura_venta(){
+    FacturaManager fM;
+    Detalle_Factura dF;
+    Detalle_FArchivo dfA;
+    FacturaArchivo fA;
+    Factura f;
+    AutoparteArchivo aA;
+    AutoparteManager aM;
+    Autoparte a;
+
+    int nroFactura, factIngresada, pos=0, mantiene, mismaFactura, idAutoparte, idCliente;
+    float valorTotal=0.0f;
+
+    nroFactura = fA.getNuevoNroFactura();
+    f.setNFactura(nroFactura);
+//    f.getFechaFactura().Fecha();
+    do{
+        int cantidad;
+        cout << "NUMERO FACTURA: " << nroFactura << endl;
+        cout << "1-AUTOPARTE POR ID / 0-LISTADO DE AUTOPARTES: ";
+        cin >> idAutoparte;
+        do{
+            if(!(idAutoparte>-1 && idAutoparte<2)){
+                cout << "1-AUTOPARTE POR ID / 0-LISTADO DE AUTOPARTES: ";
+                cin >> idAutoparte;
+            }
+        }while(!(idAutoparte>-1 && idAutoparte<2));
+        if(idAutoparte){
+            cout << "ID AUTOPARTE: ";
+            cin >> idAutoparte;
+            if(aA.buscarByID(idAutoparte) > -1){
+                dF.setIdAutoparte(idAutoparte);
+            }
+        }
+        else{
+            aM.listarAutoparte();
+            cout << "ID AUTOPARTE: ";
+            cin >> idAutoparte;
+            do{
+                if(!(aA.buscarByID(idAutoparte)>-1)){
+                    cout << "VALOR NO VALIDO. INGRESE ID NUEVAMENTE: ";
+                    cin >> idAutoparte;
+                }
+            }while(!(aA.buscarByID(idAutoparte)>-1));
+            dF.setIdAutoparte(idAutoparte);
+        }
+        cout << "CANTIDAD: ";
+        cin >> cantidad;
+        dF.setCantidad(cantidad);
+        cout << "PRECIO: " << a.getPrecioVenta() << endl;
+        dF.setPrecio(a.getPrecioVenta());
+        valorTotal += dF.getPrecio();
+        f.setValorTotal(valorTotal);
+
+        cout << "DESEA AGREGAR MAS AUTOPARTES (1-SI / 0-NO): ";
+        cin >> mantiene;
+        mismaFactura = mantiene_factura(mantiene);
+
+    }while(mismaFactura==1);
+    bool result;
+    result = dfA.guardar(dF);
+    if(result){
+        cout << "FACTURA DE VENTA GUARDADA CON EXITO." << endl;
+    }
+    else{
+        cout << "NO SE PUDO GUARDAR LA FACTURA DE VENTA." << endl;
+    }
+    cout << "ID CLIENTE: ";
+    cin >> idCliente;
+    f.setIdCliente(idCliente);
+    result = fA.guardar(f);
+    if(result){
+        cout << "FACTURA GUARDADA CON EXITO." << endl;
+    }
+    else{
+        cout << "NO SE PUDO GUARDAR LA FACTURA." << endl;
+    }
+
+//    fM.menu();
+
+}
+
+void FacturaManager::mostrar_detalle_factura(){
+    Detalle_FArchivo dfA;
+    int nFactura, nFactBuscado;
+
+    cout << "INGRESE NUMERO DE FACTURA: ";
+    cin >> nFactBuscado;
+    nFactura = dfA.buscarPorFactura(nFactBuscado);
+    while(true){
+        if(cin.fail()){
+            cin.clear();
+            cin.ignore();
+            cout << "ENTRADA NO VALIDA. POR FAVOR INGRESE UN NUMERO VALIDO: ";
+            cin >> nFactBuscado;
+            nFactura = dfA.buscarPorFactura(nFactBuscado);
+        }
+        else{
+            break;
+        }
+    }
+    dfA.leer(nFactura).mostrarDF(nFactura);
+
 }

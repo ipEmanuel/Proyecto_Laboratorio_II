@@ -88,3 +88,17 @@ int FacturaArchivo::getNuevoNroFactura(){
         return 1;
     }
 }
+
+bool FacturaArchivo::leerTodo(Factura *factura) {
+    int cantidad = getCantidadRegistros();
+
+    Factura reg;
+    FILE *pFile;
+    pFile = fopen("facturas.dat", "rb");
+    if(pFile == nullptr){
+      return false;
+    }
+    int read = fread(factura, sizeof(Factura), cantidad, pFile);
+    fclose(pFile);
+    return read != 0;
+}

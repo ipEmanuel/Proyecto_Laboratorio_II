@@ -20,7 +20,7 @@ bool Detalle_FArchivo::guardar(Detalle_Factura df){
 bool Detalle_FArchivo::guardar(int index, Detalle_Factura reg){
    bool result;
    FILE *pFile;
-   pFile = fopen("detalle-facturas.dat", "rb+");
+   pFile = fopen("detalle-factura.dat", "rb+");
    if(pFile == nullptr){
       return false;
    }
@@ -34,7 +34,7 @@ int Detalle_FArchivo::buscarPorFactura(int nroFactura){
     Detalle_Factura reg;
     int pos = 0;
     FILE * pFile;
-    pFile = fopen("detalle-facturas.dat", "rb");
+    pFile = fopen("detalle-factura.dat", "rb");
     if(pFile == nullptr){
         return -1;
     }
@@ -47,6 +47,39 @@ int Detalle_FArchivo::buscarPorFactura(int nroFactura){
     }
     fclose(pFile);
     return -1;
+}
+
+int Detalle_FArchivo::cantidadPorFactura(int nroFactura){
+    Detalle_Factura reg;
+    int cant = 0;
+    FILE * pFile;
+    pFile = fopen("detalle-factura.dat", "rb");
+    if(pFile == nullptr){
+        return -1;
+    }
+    while(fread(&reg, sizeof(Detalle_Factura), 1, pFile)){
+        if(reg.getNroFactura() == nroFactura){
+            cant++;
+        }
+    }
+    fclose(pFile);
+    return cant;
+}
+
+bool Detalle_FArchivo::getDetallesPorFactura(int nroFactura, Detalle_Factura *detalles){
+    int cant = 0;
+    FILE * pFile;
+    pFile = fopen("detalle-factura.dat", "rb");
+    if(pFile == nullptr){
+        return false;
+    }
+    while(fread(&detalles[cant], sizeof(Detalle_Factura), 1, pFile)){
+        if(detalles[cant].getNroFactura() == nroFactura){
+            cant++;
+        }
+    }
+    fclose(pFile);
+    return true;
 }
 
 Detalle_Factura Detalle_FArchivo::leer(int index){

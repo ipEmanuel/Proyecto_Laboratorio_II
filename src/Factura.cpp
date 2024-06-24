@@ -9,7 +9,7 @@
 Factura::Factura(){
     Cliente cli;
     _nFactura = 0;
-    _fechaFactura = Fecha(1,1,1);
+    _fechaFactura = Fecha();
     _valorTotal = 0;
     _idCliente = cli.getIdCliente();
 }
@@ -70,17 +70,17 @@ void Factura::setIdCliente(int idCliente){
 
 //metodos
 
-void Factura::mostrarFactura(Factura factura){
+void Factura::mostrarFactura(){
     int nroFactura;
     Fecha fecha;
     float vT;
     int idCliente;
-    nroFactura = factura.getNFactura();
+    nroFactura = getNFactura();
     cout << "Numero de factura: " << nroFactura << endl;
-    fecha = factura.getFechaFactura();
-    vT = factura.getValorTotal();
+    fecha = getFechaFactura();
+    vT = getValorTotal();
     cout << "Valor total: " << vT << endl;
-    idCliente = factura.getIdCliente();
+    idCliente = getIdCliente();
     cout << "ID cliente: " << idCliente << endl;
 }
 

@@ -28,6 +28,6 @@ class Factura {
         void setIdCliente(int cli);
 
         //metodos
-        void mostrarFactura(Factura factura);
+        void mostrarFactura();
         void modificar(Factura &facturaAct);
 };

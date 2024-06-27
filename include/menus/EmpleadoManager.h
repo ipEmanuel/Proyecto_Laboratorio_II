@@ -13,9 +13,7 @@ class EmpleadoManager: public MenuItem {
         void agregar_empleado();
         Empleado crear_empleado();
         void listar_empleados();
-        void mostrar_empleados(Empleado registro);
         void modificar_empleado();
-        void modificar(Empleado &registro);
         void eliminar_empleado();
         void listar_por_id();
         EmpleadoArchivo _empleados_archivo;

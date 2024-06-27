@@ -12,7 +12,7 @@ bool Detalle_FArchivo::guardar(Detalle_Factura df){
         cout << "Error al guardar el registro." << endl;
         return false;
    }
-   result = fwrite(&df, sizeof (Detalle_Factura), 1, pFile);
+   result = fwrite(&df, sizeof(Detalle_Factura), 1, pFile);
    fclose(pFile);
    return result;
 }
@@ -73,8 +73,10 @@ bool Detalle_FArchivo::getDetallesPorFactura(int nroFactura, Detalle_Factura *de
     if(pFile == nullptr){
         return false;
     }
-    while(fread(&detalles[cant], sizeof(Detalle_Factura), 1, pFile)){
-        if(detalles[cant].getNroFactura() == nroFactura){
+    Detalle_Factura detalleFactura;
+    while(fread(&detalleFactura, sizeof(Detalle_Factura), 1, pFile)){
+        if(detalleFactura.getNroFactura() == nroFactura){
+            detalles[cant] = detalleFactura;
             cant++;
         }
     }

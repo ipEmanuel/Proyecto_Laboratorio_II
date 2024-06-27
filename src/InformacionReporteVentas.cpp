@@ -4,17 +4,23 @@
 #include "EmpleadoArchivo.h"
 #include "ClienteArchivo.h"
 
-InformacionReporteVentas::InformacionReporteVentas() {
+InformacionReporteVentas::InformacionReporteVentas()
+{
+    _autopartes = nullptr;
+    _detalle_factura = nullptr;
 }
 
-InformacionReporteVentas::~InformacionReporteVentas() {
-    if (_cantidad_detalles != 0 && _cantidad_detalles != -1) {
-        delete _detalle_factura;
+InformacionReporteVentas::~InformacionReporteVentas()
+{
+    if (_cantidad_detalles != 0 && _cantidad_detalles != -1 && _autopartes != nullptr)
+    {
         delete _autopartes;
+        delete _detalle_factura;
     }
 }
 
-void InformacionReporteVentas::setFactura(Factura factura) {
+void InformacionReporteVentas::setFactura(Factura factura)
+{
 
     AutoparteArchivo autoparteArchivo;
     Detalle_FArchivo detalleArchivo;
@@ -24,43 +30,55 @@ void InformacionReporteVentas::setFactura(Factura factura) {
     _factura = factura;
 
     _cantidad_detalles = detalleArchivo.cantidadPorFactura(factura.getNFactura());
-    if (_cantidad_detalles != -1 && _cantidad_detalles != 0) {
+    if (_cantidad_detalles != -1 && _cantidad_detalles != 0)
+    {
         _detalle_factura = new Detalle_Factura[_cantidad_detalles];
         detalleArchivo.getDetallesPorFactura(factura.getNFactura(), _detalle_factura);
         _autopartes = new Autoparte[_cantidad_detalles];
-        for (int i = 0; i < _cantidad_detalles; i++) {
+        if (_autopartes == nullptr) {
+            cout << "ERROR AL ASIGNAR MEMORIA";
+            return;
+        }
+        for (int i = 0; i < _cantidad_detalles; i++)
+        {
             int index = autoparteArchivo.buscarByID(_detalle_factura[i].getIdAutoparte());
             _autopartes[i] = autoparteArchivo.leer(index);
         }
     }
-
     int indexEmpleado = empleadoArchivo.buscarByID(1);
     _empleado = empleadoArchivo.leer(indexEmpleado);
 
     int indexCliente = clienteArchivo.buscarByID(factura.getIdCliente());
     _cliente = clienteArchivo.leer(indexCliente);
+
 }
 
-Factura InformacionReporteVentas::getFactura() {
+Factura InformacionReporteVentas::getFactura()
+{
     return _factura;
 }
 
-Cliente InformacionReporteVentas::getCliente() {
+Cliente InformacionReporteVentas::getCliente()
+{
     return _cliente;
 }
 
-Detalle_Factura* InformacionReporteVentas::getDetalles() {
+Detalle_Factura* InformacionReporteVentas::getDetalles()
+{
     return _detalle_factura;
 }
 
-Autoparte* InformacionReporteVentas::getAutopartes() {
+Autoparte* InformacionReporteVentas::getAutopartes()
+{
     return _autopartes;
 }
 
-int InformacionReporteVentas::getCantidadDetalles() {
+int InformacionReporteVentas::getCantidadDetalles()
+{
     return _cantidad_detalles;
 }
 
-Empleado InformacionReporteVentas::getEmpleado() {
+Empleado InformacionReporteVentas::getEmpleado()
+{
     return _empleado;
 }

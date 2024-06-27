@@ -76,19 +76,11 @@ void EmpleadoManager::listar_empleados(){
     for(int i=0; i<cantidad; i++){
         if(empleados[i].getEstado()){
             cout << "--------------------------" << endl;
-            mostrar_empleados(empleados[i]);
+            empleados[i].mostrar();
             cout << "--------------------------" << endl;
         }
     }
     delete [] empleados;
-}
-
-void EmpleadoManager::mostrar_empleados(Empleado reg){
-    cout << "ID: " << reg.getIdEmpleado() << endl;
-    reg.mostrar();
-    cout << "Nombre: " << reg.getNombre() << endl;
-    cout << "DNI: " << reg.getDNI() << endl;
-    cout << "ESTADO: " << (reg.getEstado() ? "Disponible" : "Eliminado") << endl;
 }
 
 void EmpleadoManager::modificar_empleado(){
@@ -99,8 +91,8 @@ void EmpleadoManager::modificar_empleado(){
     index = _empleados_archivo.buscarByID(id_empleado);
     if(index != -1){
         empleado = _empleados_archivo.leer(index);
-        mostrar_empleados(empleado);
-        modificar(empleado);
+        empleado.mostrar();
+        empleado.modificar();
         if(_empleados_archivo.guardar(index, empleado)){
             cout << "Se modifico con exito!" << endl;
         }else{
@@ -109,11 +101,6 @@ void EmpleadoManager::modificar_empleado(){
     }else{
         cout << "No se encuentra el empleado!" << endl;
     }
-}
-
-
-void EmpleadoManager::modificar(Empleado &registro){
-    registro.modificar();
 }
 
 void EmpleadoManager::eliminar_empleado(){
@@ -125,23 +112,23 @@ void EmpleadoManager::eliminar_empleado(){
     cin >> id_empleado;
     index = _empleados_archivo.buscarByID(id_empleado);
 
-    if(index != -1){
-        empleado = _empleados_archivo.leer(index);
-        mostrar_empleados(empleado);
-        cout << "Esta seguro de que quiere eliminar este empleado? 1-Si 0-No: ";
-        cin >> eliminar;
-        if(eliminar){
-            empleado.setEstado(false);
-            if(_empleados_archivo.guardar(index, empleado)){
-                cout << "Se elimino con exito el empleado!" << endl;            }
-            else{
-                cout << "No se pudo eliminar el empleado!" << endl;
-            }
-        }else{
-            cout << "El empleado no fue eliminado!" << endl;
-        }
-    }else{
+    if(index == -1){
         cout << "No se encuentra el empleado!" << endl;
+        return;
+    }
+    empleado = _empleados_archivo.leer(index);
+    empleado.mostrar();
+    cout << "Esta seguro de que quiere eliminar este empleado? 1-Si 0-No: ";
+    cin >> eliminar;
+    if(!eliminar){
+        cout << "El empleado no fue eliminado!" << endl;
+        return;
+    }
+    empleado.setEstado(false);
+    if(_empleados_archivo.guardar(index, empleado)){
+        cout << "Se elimino con exito el empleado!" << endl;
+    } else {
+        cout << "No se pudo eliminar el empleado!" << endl;
     }
 }
 
@@ -156,6 +143,6 @@ void EmpleadoManager::listar_por_id(){
 
     if(index != -1){
         empleado = _empleados_archivo.leer(index);
-        mostrar_empleados(empleado);
+        empleado.mostrar();
     }
 }

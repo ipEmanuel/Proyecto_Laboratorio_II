@@ -58,7 +58,8 @@ int FacturaManager::execute()
             system("pause");
             break;
         }
-    } while (option != 0);
+    }
+    while (option != 0);
     return 0;
 }
 
@@ -72,14 +73,13 @@ void FacturaManager::listar_facturas()
     Factura *facturas = new Factura[cantFacturas];
 
     fa.leerTodo(facturas);
-
     cout << "Listado de facturas: " << endl;
     for (int i = 0; i < cantFacturas; i++)
     {
         facturas[i].mostrarFactura();
     }
     mostrar_informe(facturas, cantFacturas);
-    delete facturas;
+    delete[] facturas;
 }
 
 int FacturaManager::mantiene_factura(int mantiene)
@@ -159,7 +159,8 @@ void FacturaManager::iniciar_factura_venta()
         cin >> mantiene;
         mismaFactura = mantiene_factura(mantiene);
 
-    } while (mismaFactura == 1);
+    }
+    while (mismaFactura == 1);
 
     bool result = fA.guardar(f);
     if (result)
@@ -223,8 +224,10 @@ string floatTwoPresicion(float value)
     return to_string(value).substr(0, to_string(value).find(".") + 3);
 }
 
-void showRow(InformacionReporteVentas information, char separator, int column_width)
+void showRow(Factura factura, char separator, int column_width)
 {
+    InformacionReporteVentas information = InformacionReporteVentas();
+    information.setFactura(factura);
 
     int cantidad = information.getCantidadDetalles();
 
@@ -248,25 +251,21 @@ void showRow(InformacionReporteVentas information, char separator, int column_wi
         cout << fill_with(floatTwoPresicion(information.getDetalles()[i].getPrecio()));
         cout << separator << endl;
     }
+
+    information.getAutopartes();
+}
+
+float getTotalTodasFactura(Factura facturas[], int tam) {
+    float total = 0;
+    for (int i = 0;i < tam;i++) {
+        total+=facturas[i].getValorTotal();
+    }
+    return total;
 }
 
 void FacturaManager::mostrar_informe(Factura facturas[], int tam)
 {
     system("cls");
-
-    InformacionReporteVentas *information = new InformacionReporteVentas[tam];
-
-    if (information == nullptr)
-    {
-        cout << "No se pudo asignar memoria";
-        return;
-    }
-
-    for (int i = 0; i < tam; i++)
-    {
-        information[i] = InformacionReporteVentas();
-        information[i].setFactura(facturas[i]);
-    }
 
     int COLUMN_WIDTH = 10;
     char SEPARATOR = '|';
@@ -276,10 +275,12 @@ void FacturaManager::mostrar_informe(Factura facturas[], int tam)
 
     for (int i = 0; i < tam; i++)
     {
-        showRow(information[i], SEPARATOR, COLUMN_WIDTH);
+        showRow(facturas[i], SEPARATOR, COLUMN_WIDTH);
+
     }
 
-    // cout << "TOTAL: $" << information.getFactura().getValorTotal() << endl;
 
-    delete information;
+
+    cout << "TOTAL: $" << getTotalTodasFactura(facturas, tam) << endl;
+
 }

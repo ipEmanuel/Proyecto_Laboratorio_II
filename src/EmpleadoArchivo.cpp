@@ -2,39 +2,21 @@
 using namespace std;
 #include "EmpleadoArchivo.h"
 
+EmpleadoArchivo::EmpleadoArchivo(): Archivo("empleados", sizeof(Empleado)) {
+}
+
 bool EmpleadoArchivo::leerTodos(Empleado registros[], int cantidad){
-   FILE *pFile = fopen("empleados.dat", "rb");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Leer Todos" << std::endl;
-      return false;
-   }
-   int readSize = fread(registros, sizeof(Empleado), cantidad, pFile);
-   fclose(pFile);
-   return readSize > 0;
+   bool read = Archivo::leer(0, registros, cantidad);
+   return read;
 }
 
 bool EmpleadoArchivo::guardar(Empleado reg){
-   bool result;
-   FILE *pFile = fopen("empleados.dat", "ab");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Guardar" << std::endl;
-      return false;
-   }
-   result = fwrite(&reg, sizeof (Empleado), 1, pFile);
-   fclose(pFile);
+   bool result = Archivo::guardar(&reg);
    return result;
 }
 
 bool EmpleadoArchivo::guardar(int index, Empleado reg){
-   bool result;
-   FILE *pFile = fopen("empleados.dat", "rb+");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Guardar Index" << std::endl;
-      return false;
-   }
-   fseek(pFile, sizeof(Empleado) * index, SEEK_SET);
-   result = fwrite(&reg, sizeof (Empleado), 1, pFile);
-   fclose(pFile);
+   bool result = Archivo::guardar(&reg, 1, index);
    return result;
 }
 
@@ -49,46 +31,25 @@ int EmpleadoArchivo::getNuevoID(){
 }
 
 Empleado EmpleadoArchivo::leer(int index){
-   Empleado reg;
-   FILE *pFile = fopen("empleados.dat", "rb");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Leer" << std::endl;
-      return reg;
-   }
-   fseek(pFile, index * sizeof (Empleado), SEEK_SET);
-   fread(&reg, sizeof(Empleado), 1, pFile);
-   fclose(pFile);
-   return reg;
+    Empleado reg;
+    bool result;
+    Archivo::leer(index, &reg);
+    return reg;
 }
 
 int EmpleadoArchivo::getCantidadRegistros(){
-   int tam;
-   FILE *pFile = fopen("empleados.dat", "rb");
-   if(pFile == nullptr){
-      return 0;
-   }
-   fseek(pFile, 0, SEEK_END);
-   tam = ftell(pFile) / sizeof (Empleado);
-   fclose(pFile);
-   return tam;
+    return Archivo::getCantidadRegistros();
 }
 
 int EmpleadoArchivo::buscarByID(int id){
     Empleado reg;
     int pos = 0;
-    FILE * pFile;
-    pFile = fopen("empleados.dat", "rb");
-    if(pFile == nullptr){
-        return -1;
-    }
-    while(fread(&reg, sizeof(Empleado), 1, pFile)){
+    while(Archivo::leer(pos, &reg)) {
         if(reg.getIdEmpleado() == id){
-            fclose(pFile);
             return pos;
         }
         pos++;
     }
-    fclose(pFile);
     return -1;
 }
 
@@ -104,12 +65,26 @@ bool EmpleadoArchivo::createBackup() {
         return canRead;
     }
 
-    FILE *pFile;
-    pFile = fopen("empleados.bkp", "wb");
-    if(pFile == nullptr){
-      return false;
+    return Archivo::crearBackup(cantidadReg, empleados);
+}
+
+bool EmpleadoArchivo::reestablecer() {
+    bool result;
+    setBackupMode(true);
+    int cantidadReg = getCantidadRegistros();
+
+    Empleado* empleados = new Empleado[cantidadReg];
+
+    bool canRead = leerTodos(empleados, cantidadReg);
+
+    if (!canRead) {
+        cout << "NO SE PUDO LEER EL BACKUP" << endl;
+        return canRead;
     }
-    fwrite(empleados, sizeof(Empleado), cantidadReg, pFile);
-    fclose(pFile);
+
+    setBackupMode(false);
+
+    Archivo::sobreescribirTodo(cantidadReg, empleados);
+
     return result;
 }

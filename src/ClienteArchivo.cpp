@@ -2,39 +2,21 @@
 using namespace std;
 #include "ClienteArchivo.h"
 
+ClienteArchivo::ClienteArchivo(): Archivo("clientes", sizeof(Cliente)) {
+}
+
 bool ClienteArchivo::leerTodos(Cliente registros[], int cantidad){
-   FILE *pFile = fopen("clientes.dat", "rb");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Leer Todos" << std::endl;
-      return false;
-   }
-   int readSize = fread(registros, sizeof(Cliente), cantidad, pFile);
-   fclose(pFile);
-   return readSize > 0;
+   bool read = Archivo::leer(0, registros, cantidad);
+   return read;
 }
 
 bool ClienteArchivo::guardar(Cliente reg){
-   bool result;
-   FILE *pFile = fopen("clientes.dat", "ab");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Guardar" << std::endl;
-      return false;
-   }
-   result = fwrite(&reg, sizeof (Cliente), 1, pFile);
-   fclose(pFile);
+   bool result = Archivo::guardar(&reg);
    return result;
 }
 
 bool ClienteArchivo::guardar(int index, Cliente reg){
-   bool result;
-   FILE *pFile = fopen("clientes.dat", "rb+");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Guardar Index" << std::endl;
-      return false;
-   }
-   fseek(pFile, sizeof(Cliente) * index, SEEK_SET);
-   result = fwrite(&reg, sizeof (Cliente), 1, pFile);
-   fclose(pFile);
+   bool result = Archivo::guardar(&reg, 1, index);
    return result;
 }
 
@@ -49,46 +31,25 @@ int ClienteArchivo::getNuevoID(){
 }
 
 Cliente ClienteArchivo::leer(int index){
+   bool result;
    Cliente reg;
-   FILE *pFile = fopen("clientes.dat", "rb");
-   if(pFile == nullptr){
-      std::cout << "Error al abrir el archivo FN Leer" << std::endl;
-      return reg;
-   }
-   fseek(pFile, index * sizeof (Cliente), SEEK_SET);
-   fread(&reg, sizeof(Cliente), 1, pFile);
-   fclose(pFile);
+   Archivo::leer(index, &reg);
    return reg;
 }
 
 int ClienteArchivo::getCantidadRegistros(){
-   int tam;
-   FILE *pFile = fopen("clientes.dat", "rb");
-   if(pFile == nullptr){
-      return 0;
-   }
-   fseek(pFile, 0, SEEK_END);
-   tam = ftell(pFile) / sizeof (Cliente);
-   fclose(pFile);
-   return tam;
+   return Archivo::getCantidadRegistros();
 }
 
 int ClienteArchivo::buscarByID(int id){
     Cliente reg;
     int pos = 0;
-    FILE * pFile;
-    pFile = fopen("clientes.dat", "rb");
-    if(pFile == nullptr){
-        return -1;
-    }
-    while(fread(&reg, sizeof(Cliente), 1, pFile)){
+    while(Archivo::leer(pos, &reg)) {
         if(reg.getIdCliente() == id){
-            fclose(pFile);
             return pos;
         }
         pos++;
     }
-    fclose(pFile);
     return -1;
 }
 
@@ -104,13 +65,26 @@ bool ClienteArchivo::crearBackup() {
         return canRead;
     }
 
-    FILE *pFile;
-    pFile = fopen("clientes.bkp", "wb");
-    if(pFile == nullptr){
-      return false;
-    }
-    fwrite(clientes, sizeof(Cliente), cantidadReg, pFile);
-    fclose(pFile);
-    return result;
+    return Archivo::crearBackup(cantidadReg, clientes);
 }
 
+bool ClienteArchivo::reestablecer() {
+    bool result;
+    setBackupMode(true);
+    int cantidadReg = getCantidadRegistros();
+
+    Cliente* clientes = new Cliente[cantidadReg];
+
+    bool canRead = leerTodos(clientes, cantidadReg);
+
+    if (!canRead) {
+        cout << "NO SE PUDO LEER EL BACKUP" << endl;
+        return canRead;
+    }
+
+    setBackupMode(false);
+
+    Archivo::sobreescribirTodo(cantidadReg, clientes);
+
+    return result;
+}

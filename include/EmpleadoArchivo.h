@@ -1,9 +1,11 @@
 #pragma once
 #include "Empleado.h"
+#include "Archivo.h"
 
-class EmpleadoArchivo
+class EmpleadoArchivo: public Archivo
 {
    public:
+        EmpleadoArchivo();
         bool leerTodos(Empleado registros[], int cantidad);
         bool guardar(Empleado registro);
         bool guardar(int index, Empleado registro);
@@ -12,4 +14,5 @@ class EmpleadoArchivo
         int getCantidadRegistros();
         int buscarByID(int id);
         bool createBackup();
+        bool reestablecer();
 };

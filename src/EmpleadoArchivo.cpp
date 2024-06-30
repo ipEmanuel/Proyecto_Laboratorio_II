@@ -2,14 +2,15 @@
 using namespace std;
 #include "EmpleadoArchivo.h"
 
-void EmpleadoArchivo::leerTodos(Empleado registros[], int cantidad){
+bool EmpleadoArchivo::leerTodos(Empleado registros[], int cantidad){
    FILE *pFile = fopen("empleados.dat", "rb");
    if(pFile == nullptr){
       std::cout << "Error al abrir el archivo FN Leer Todos" << std::endl;
-      return;
+      return false;
    }
-   fread(registros, sizeof(Empleado), cantidad, pFile);
+   int readSize = fread(registros, sizeof(Empleado), cantidad, pFile);
    fclose(pFile);
+   return readSize > 0;
 }
 
 bool EmpleadoArchivo::guardar(Empleado reg){
@@ -89,4 +90,26 @@ int EmpleadoArchivo::buscarByID(int id){
     }
     fclose(pFile);
     return -1;
+}
+
+bool EmpleadoArchivo::createBackup() {
+    bool result;
+    int cantidadReg = getCantidadRegistros();
+
+    Empleado* empleados = new Empleado[cantidadReg];
+
+    bool canRead = leerTodos(empleados, cantidadReg);
+
+    if (!canRead) {
+        return canRead;
+    }
+
+    FILE *pFile;
+    pFile = fopen("empleados.bkp", "wb");
+    if(pFile == nullptr){
+      return false;
+    }
+    fwrite(empleados, sizeof(Empleado), cantidadReg, pFile);
+    fclose(pFile);
+    return result;
 }

@@ -89,7 +89,7 @@ int FacturaArchivo::getNuevoNroFactura(){
     }
 }
 
-bool FacturaArchivo::leerTodo(Factura *factura) {
+bool FacturaArchivo::leerTodos(Factura *factura) {
     int cantidad = getCantidadRegistros();
 
     Factura reg;
@@ -101,4 +101,27 @@ bool FacturaArchivo::leerTodo(Factura *factura) {
     int read = fread(factura, sizeof(Factura), cantidad, pFile);
     fclose(pFile);
     return read != 0;
+}
+
+
+bool FacturaArchivo::crearBackup() {
+    bool result;
+    int cantidadReg = getCantidadRegistros();
+
+    Factura* facturas = new Factura[cantidadReg];
+
+    bool canRead = leerTodos(facturas);
+
+    if (!canRead) {
+        return canRead;
+    }
+
+    FILE *pFile;
+    pFile = fopen("facturas.bkp", "wb");
+    if(pFile == nullptr){
+      return false;
+    }
+    fwrite(facturas, sizeof(Factura), cantidadReg, pFile);
+    fclose(pFile);
+    return result;
 }

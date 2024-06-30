@@ -112,14 +112,38 @@ int Detalle_FArchivo::getCantidadRegistros(){
    return tam;
 }
 
-/*
-int Detalle_FArchivo::getNuevoNroFactura(){
+bool Detalle_FArchivo::leerTodos(Detalle_Factura *detallesFacturas) {
     int cantidad = getCantidadRegistros();
-    if(cantidad>0){
-        return leer(cantidad-1).getNFactura()+1;
+
+    Factura reg;
+    FILE *pFile;
+    pFile = fopen("detalle-factura.dat", "rb");
+    if(pFile == nullptr){
+      return false;
     }
-    else{
-        return 1;
-    }
+    int read = fread(detallesFacturas, sizeof(Detalle_Factura), cantidad, pFile);
+    fclose(pFile);
+    return read != 0;
 }
-*/
+
+bool Detalle_FArchivo::createBackup() {
+    bool result;
+    int cantidadReg = getCantidadRegistros();
+
+    Detalle_Factura* detallesFacturas = new Detalle_Factura[cantidadReg];
+
+    bool canRead = leerTodos(detallesFacturas);
+
+    if (!canRead) {
+        return canRead;
+    }
+
+    FILE *pFile;
+    pFile = fopen("detalle-factura.bkp", "wb");
+    if(pFile == nullptr){
+      return false;
+    }
+    fwrite(detallesFacturas, sizeof(Detalle_Factura), cantidadReg, pFile);
+    fclose(pFile);
+    return result;
+}

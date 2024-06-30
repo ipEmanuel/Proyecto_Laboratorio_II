@@ -72,7 +72,7 @@ void FacturaManager::listar_facturas()
 
     Factura *facturas = new Factura[cantFacturas];
 
-    fa.leerTodo(facturas);
+    fa.leerTodos(facturas);
     cout << "Listado de facturas: " << endl;
     for (int i = 0; i < cantFacturas; i++)
     {

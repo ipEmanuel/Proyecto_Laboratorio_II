@@ -2,14 +2,15 @@
 using namespace std;
 #include "ClienteArchivo.h"
 
-void ClienteArchivo::leerTodos(Cliente registros[], int cantidad){
+bool ClienteArchivo::leerTodos(Cliente registros[], int cantidad){
    FILE *pFile = fopen("clientes.dat", "rb");
    if(pFile == nullptr){
       std::cout << "Error al abrir el archivo FN Leer Todos" << std::endl;
-      return;
+      return false;
    }
-   fread(registros, sizeof(Cliente), cantidad, pFile);
+   int readSize = fread(registros, sizeof(Cliente), cantidad, pFile);
    fclose(pFile);
+   return readSize > 0;
 }
 
 bool ClienteArchivo::guardar(Cliente reg){
@@ -90,3 +91,26 @@ int ClienteArchivo::buscarByID(int id){
     fclose(pFile);
     return -1;
 }
+
+bool ClienteArchivo::crearBackup() {
+    bool result;
+    int cantidadReg = getCantidadRegistros();
+
+    Cliente* clientes = new Cliente[cantidadReg];
+
+    bool canRead = leerTodos(clientes, cantidadReg);
+
+    if (!canRead) {
+        return canRead;
+    }
+
+    FILE *pFile;
+    pFile = fopen("clientes.bkp", "wb");
+    if(pFile == nullptr){
+      return false;
+    }
+    fwrite(clientes, sizeof(Cliente), cantidadReg, pFile);
+    fclose(pFile);
+    return result;
+}
+

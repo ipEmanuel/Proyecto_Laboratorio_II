@@ -16,5 +16,6 @@ class FacturaArchivo
         int getNuevoNroFactura();
         int buscarPorFactura(int nroFactura);
         Factura recorreArchivoFacturas();
-        bool leerTodo(Factura *facturas);
+        bool leerTodos(Factura *facturas);
+        bool crearBackup();
 };

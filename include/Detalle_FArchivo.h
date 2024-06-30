@@ -16,4 +16,6 @@ class Detalle_FArchivo
         bool getDetallesPorFactura(int nroFactura, Detalle_Factura *detalles);
         Detalle_Factura leer(int index);
         int getCantidadRegistros();
+        bool leerTodos(Detalle_Factura* detalle_factura);
+        bool createBackup();
 };

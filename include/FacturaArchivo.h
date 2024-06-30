@@ -17,4 +17,6 @@ public:
     bool leerTodos(Factura *facturas);
     bool crearBackup();
     bool reestablecer();
+    int getCantidadFacturasPorLegajo(int legajo);
+    bool leerFacturasPorLegajo(Factura *facturas, int legajo);
 };

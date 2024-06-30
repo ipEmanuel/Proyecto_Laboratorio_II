@@ -106,3 +106,37 @@ bool FacturaArchivo::reestablecer()
 
     return result;
 }
+
+int FacturaArchivo::getCantidadFacturasPorLegajo(int legajo) {
+    int cont = 0;
+    int index = 0;
+
+    Factura factura;
+
+    while (Archivo::leer(index, &factura, 1)) {
+        if (factura.getIdEmpleado() == legajo) {
+            cont++;
+        }
+        index++;
+    }
+    return cont;
+}
+
+
+bool FacturaArchivo::leerFacturasPorLegajo(Factura *facturas, int legajo) {
+    int cont = 0;
+    int index = 0;
+
+    int largoVector = sizeof(facturas) / sizeof(Factura);
+
+    Factura factura;
+
+    while (Archivo::leer(index, &factura, 1)) {
+        if (factura.getIdEmpleado() == legajo) {
+            facturas[cont] = factura;
+            cont++;
+        }
+        index++;
+    }
+    return largoVector == cont;
+}

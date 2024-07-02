@@ -36,7 +36,8 @@ int Detalle_FArchivo::buscarPorFactura(int nroFactura)
 int Detalle_FArchivo::cantidadPorFactura(int nroFactura)
 {
     Detalle_Factura reg;
-    int cant = 0, pos = 0;
+    int cant = 0;
+    int pos = 0;
     FILE *pFile;
     while (Archivo::leer(pos, &reg))
     {
@@ -45,6 +46,7 @@ int Detalle_FArchivo::cantidadPorFactura(int nroFactura)
             cant++;
         }
         pos++;
+
     }
     return cant;
 }
@@ -110,17 +112,21 @@ bool Detalle_FArchivo::reestablecer()
 
     Detalle_Factura *detalles = new Detalle_Factura[cantidadReg];
 
-    bool canRead = leerTodos(detalles);
+    bool canRead = true;
+
+    if (cantidadReg != 0) {
+        canRead = leerTodos(detalles);
+    }
 
     if (!canRead)
     {
-        cout << "NO SE PUDO LEER EL BACKUP" << endl;
+        cout << "NO SE PUDO LEER EL BACKUP" << endl << cantidadReg;
         return canRead;
     }
 
     setBackupMode(false);
 
-    Archivo::sobreescribirTodo(cantidadReg, detalles);
+    result = Archivo::sobreescribirTodo(cantidadReg, detalles);
 
     return result;
 }

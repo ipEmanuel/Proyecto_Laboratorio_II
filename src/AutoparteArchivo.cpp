@@ -84,7 +84,7 @@ bool AutoparteArchivo::reestablecer() {
 
     setBackupMode(false);
 
-    Archivo::sobreescribirTodo(cantidadReg, autopartes);
+    result = Archivo::sobreescribirTodo(cantidadReg, autopartes);
 
     return result;
 }

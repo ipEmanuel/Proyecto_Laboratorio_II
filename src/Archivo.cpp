@@ -11,7 +11,6 @@ Archivo::Archivo(string nombre_archivo, size_t classSize, bool backup_mode)
 
 Archivo::~Archivo()
 {
-    //dtor
 }
 
 void Archivo::setBackupMode(bool active) {
@@ -50,9 +49,9 @@ bool Archivo::sobreescribirTodo(int cantReg, const void* data) {
     if(pFile == nullptr){
       return false;
     }
-    int write = fwrite(data, _class_size, cantReg, pFile);
+    fwrite(data, _class_size, cantReg, pFile);
     fclose(pFile);
-    return write > 0;
+    return true;
 }
 
 int Archivo::getCantidadRegistros(){
@@ -83,7 +82,7 @@ bool Archivo::leer(int index, void* puntero, int cantidad){
 bool Archivo::guardar(const void* reg, int cantidad, int index){
     bool result;
     FILE *pFile;
-    pFile = fopen(obtenerNombreArchivo(), "rb+");
+    pFile = fopen(obtenerNombreArchivo(), "ab");
     if(pFile == nullptr){
       return false;
     }

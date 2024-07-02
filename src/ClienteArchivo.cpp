@@ -69,7 +69,6 @@ bool ClienteArchivo::crearBackup() {
 }
 
 bool ClienteArchivo::reestablecer() {
-    bool result;
     setBackupMode(true);
     int cantidadReg = getCantidadRegistros();
 
@@ -84,7 +83,5 @@ bool ClienteArchivo::reestablecer() {
 
     setBackupMode(false);
 
-    Archivo::sobreescribirTodo(cantidadReg, clientes);
-
-    return result;
+    return Archivo::sobreescribirTodo(cantidadReg, clientes);
 }

@@ -11,7 +11,8 @@
 #include "BackupManager.h"
 #include "Exit.h"
 
-int main() {
+int main()
+{
 
     Menu menu;
 
@@ -36,7 +37,7 @@ int main() {
     menu.addMenuItem(&exit);
 
     menu.createMenuLoop();
-    //AppManager app;
-    //app.menu();
+    // AppManager app;
+    // app.menu();
     return 0;
 }

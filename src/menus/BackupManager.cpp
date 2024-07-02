@@ -28,6 +28,16 @@ void BackupManager::crearBackups()
     cout << "BACKUP COMPLETO...";
 }
 
+void BackupManager::mostrarResultado(string archivo, bool result) {
+
+    if (result) {
+        cout << archivo << " fue reestablecido con exito" << endl;
+    } else {
+        cout << "Ocurrio un error al reestablecer " << archivo << endl;
+    }
+
+}
+
 void BackupManager::reestablecerBackups()
 {
     AutoparteArchivo autoparteArchivo;
@@ -36,11 +46,13 @@ void BackupManager::reestablecerBackups()
     FacturaArchivo facturaArchivo;
     Detalle_FArchivo detalleFacturaArchivo;
 
-    autoparteArchivo.reestablecer();
-    clienteArchivo.reestablecer();
-    empleadoArchivo.reestablecer();
-    facturaArchivo.reestablecer();
-    detalleFacturaArchivo.reestablecer();
+    bool result;
+
+    mostrarResultado("autopartes", autoparteArchivo.reestablecer());
+    mostrarResultado("clientes", clienteArchivo.reestablecer());
+    mostrarResultado("empleados", empleadoArchivo.reestablecer());
+    mostrarResultado("facturas", facturaArchivo.reestablecer());
+    mostrarResultado("detalles de facturas", detalleFacturaArchivo.reestablecer());
 
     cout << "REESTABLECIMIENTO COMPLETO...";
 }
@@ -50,13 +62,17 @@ int BackupManager::execute()
 
     int option = -1;
 
-    while (option != 0)
+    while (cin.fail() || option != 0)
     {
+        cin.clear();
+        fflush(stdin);
         system("cls");
         cout << "Tener en cuenta que para reestablecer debe haber por lo menos un archivo de cada .dat en formato .bkp. Los puedes generar todos realizando un backup completo" << endl;
         cout << "1 - Realizar backup completo" << endl;
         cout << "2 - Reestablecer desde backup" << endl;
         cout << "0 - Volver" << endl;
+
+        cout << "OPCION: ";
 
         cin >> option;
 
@@ -68,8 +84,12 @@ int BackupManager::execute()
         case 2:
             reestablecerBackups();
             break;
+        case 0:
+            break;
+        default:
+            cout << "Por favor ingresar una opcion valida" << endl;
+            break;
         }
-
         system("pause");
     }
 

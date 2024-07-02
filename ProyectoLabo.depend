@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1719104383 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
+1719887990 source:e:\carpetas\c++\proyecto_laboratorio_ii\main.cpp
 	<iostream>
 	"Menu.h"
 	"AppManager.h"
@@ -9,6 +9,7 @@
 	"MarcaManager.h"
 	"ProveedorManager.h"
 	"FacturaManager.h"
+	"BackupManager.h"
 	"Exit.h"
 
 1718230157 e:\carpetas\c++\proyecto_laboratorio_ii\include\menu.h
@@ -39,7 +40,7 @@
 	"ProveedorArchivo.h"
 	"MarcaArchivo.h"
 
-1719160659 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
+1719522650 e:\carpetas\c++\proyecto_laboratorio_ii\include\autoparte.h
 	"string"
 	<cstring>
 	"MarcaArchivo.h"
@@ -49,8 +50,9 @@
 	<ctime>
 	<string>
 
-1718229810 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
+1719689280 e:\carpetas\c++\proyecto_laboratorio_ii\include\autopartearchivo.h
 	"Autoparte.h"
+	"Archivo.h"
 
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
 	"Proveedor.h"
@@ -77,16 +79,18 @@
 	"Fecha.h"
 	"cstring"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientearchivo.h
+1719778452 e:\carpetas\c++\proyecto_laboratorio_ii\include\clientearchivo.h
 	"Cliente.h"
+	"Archivo.h"
 
-1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\empleadomanager.h
+1719448248 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\empleadomanager.h
 	"MenuItem.h"
 	"EmpleadoArchivo.h"
 	"Empleado.h"
 
-1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleadoarchivo.h
+1719778957 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleadoarchivo.h
 	"Empleado.h"
+	"Archivo.h"
 
 1717337013 e:\carpetas\c++\proyecto_laboratorio_ii\include\empleado.h
 	"Persona.h"
@@ -109,31 +113,32 @@
 	"AppManager.h"
 	<iostream>
 
-1719160660 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
+1719522659 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
 	<iostream>
 	<cstring>
 	"Autoparte.h"
 	"Marca.h"
 
-1718318143 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
+1719884173 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autopartearchivo.cpp
 	"AutoparteArchivo.h"
+	"iostream"
 
 1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\cliente.cpp
 	<limits>
 	"iostream"
 	"Cliente.h"
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientearchivo.cpp
+1719884186 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\clientearchivo.cpp
 	<iostream>
 	"ClienteArchivo.h"
 
-1719099787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
+1719448276 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
 	"iostream"
 	<cstring>
 	<limits>
 	"Empleado.h"
 
-1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
+1719778958 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
 	<iostream>
 	"EmpleadoArchivo.h"
 
@@ -164,7 +169,7 @@
 	<iostream>
 	"ClienteManager.h"
 
-1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
+1719448269 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
 	<iostream>
 	"EmpleadoManager.h"
 
@@ -203,32 +208,33 @@
 	<iostream>
 	"ProveedorArchivo.h"
 
-1719160575 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_factura.cpp
+1719522663 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_factura.cpp
 	<iostream>
 	<cstdlib>
 	"Detalle_Factura.h"
 	"AutoparteArchivo.h"
 	"Detalle_FArchivo.h"
 
-1719160571 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_factura.h
+1719522653 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_factura.h
 	"Autoparte.h"
 	"AutoparteArchivo.h"
 
-1719157964 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_farchivo.h
+1719779574 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_farchivo.h
 	"Factura.h"
 	"Detalle_Factura.h"
+	"Archivo.h"
 
-1719155223 e:\carpetas\c++\proyecto_laboratorio_ii\include\factura.h
+1719787914 e:\carpetas\c++\proyecto_laboratorio_ii\include\factura.h
 	"Fecha.h"
 	"Cliente.h"
 
-1719165078 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_farchivo.cpp
+1719889093 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_farchivo.cpp
 	<iostream>
 	<cstdlib>
 	"Detalle_FArchivo.h"
 	"Detalle_Factura.h"
 
-1719155223 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\factura.cpp
+1719787898 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\factura.cpp
 	<iostream>
 	"Factura.h"
 	"Cliente.h"
@@ -236,23 +242,22 @@
 	"FacturaArchivo.h"
 	"FacturaManager.h"
 
-1719155185 e:\carpetas\c++\proyecto_laboratorio_ii\include\facturaarchivo.h
+1719788619 e:\carpetas\c++\proyecto_laboratorio_ii\include\facturaarchivo.h
 	<iostream>
-	"Autoparte.h"
 	"Factura.h"
+	"Archivo.h"
 
 1719153726 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\facturamanager.h
 	"Factura.h"
 	"MenuItem.h"
 
-1719155185 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\facturaarchivo.cpp
+1719788619 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\facturaarchivo.cpp
 	<iostream>
 	<cstdlib>
 	"Factura.h"
 	"FacturaArchivo.h"
-	"Autoparte.h"
 
-1719165684 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
+1719889190 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
 	<iostream>
 	<cstdlib>
 	<string>
@@ -281,16 +286,36 @@
 1719082852 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\detalle_fmanager.h
 	"FacturaArchivo.h"
 
-1719165520 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\informacionreporteventas.cpp
+1719889190 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\informacionreporteventas.cpp
 	"InformacionReporteVentas.h"
 	"iostream"
 	"Detalle_FArchivo.h"
 	"EmpleadoArchivo.h"
 	"ClienteArchivo.h"
 
-1719165520 e:\carpetas\c++\proyecto_laboratorio_ii\include\informacionreporteventas.h
+1719889404 e:\carpetas\c++\proyecto_laboratorio_ii\include\informacionreporteventas.h
 	"Factura.h"
 	"Detalle_Factura.h"
 	"Empleado.h"
 	"Cliente.h"
+
+1719884034 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\backupmanager.cpp
+	"BackupManager.h"
+	"AutoparteArchivo.h"
+	"ClienteArchivo.h"
+	"EmpleadoArchivo.h"
+	"FacturaArchivo.h"
+	"Detalle_FArchivo.h"
+
+1719883766 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\backupmanager.h
+	"MenuItem.h"
+	"string"
+
+1719690246 e:\carpetas\c++\proyecto_laboratorio_ii\include\archivo.h
+	"string"
+
+1719889203 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\archivo.cpp
+	"Archivo.h"
+	"iostream"
+	"cstring"
 

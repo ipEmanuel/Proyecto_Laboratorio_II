@@ -226,11 +226,9 @@ string floatTwoPresicion(float value)
 
 void showRow(Factura factura, char separator, int column_width)
 {
-    InformacionReporteVentas information = InformacionReporteVentas();
-    information.setFactura(factura);
-
+    InformacionReporteVentas information = InformacionReporteVentas(factura);
+    //information.setFactura(factura);
     int cantidad = information.getCantidadDetalles();
-
     for (int i = 0; i < cantidad; i++)
     {
         cout << separator;
@@ -276,10 +274,7 @@ void FacturaManager::mostrar_informe(Factura facturas[], int tam)
     for (int i = 0; i < tam; i++)
     {
         showRow(facturas[i], SEPARATOR, COLUMN_WIDTH);
-
     }
-
-
 
     cout << "TOTAL: $" << getTotalTodasFactura(facturas, tam) << endl;
 

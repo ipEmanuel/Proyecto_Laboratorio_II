@@ -9,6 +9,7 @@
 #include "ProveedorManager.h"
 #include "FacturaManager.h"
 #include "BackupManager.h"
+#include "InformesManager.h"
 #include "Exit.h"
 
 int main() {
@@ -24,6 +25,7 @@ int main() {
     ProveedorManager proveedorManager;
     FacturaManager facturaManager;
     BackupManager backupManager;
+    InformesManager informeManager;
     Exit exit;
 
     menu.addMenuItem(&autoparteManager);
@@ -33,6 +35,7 @@ int main() {
     menu.addMenuItem(&proveedorManager);
     menu.addMenuItem(&facturaManager);
     menu.addMenuItem(&backupManager);
+    menu.addMenuItem(&informeManager);
     menu.addMenuItem(&exit);
 
     menu.createMenuLoop();

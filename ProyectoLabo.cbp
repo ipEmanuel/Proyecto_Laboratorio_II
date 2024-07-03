@@ -37,6 +37,7 @@
 			<Add option="-fexceptions" />
 		</Compiler>
 		<Unit filename="include/AppManager.h" />
+		<Unit filename="include/Archivo.h" />
 		<Unit filename="include/Autoparte.h" />
 		<Unit filename="include/AutoparteArchivo.h" />
 		<Unit filename="include/Cliente.h" />
@@ -57,16 +58,19 @@
 		<Unit filename="include/Proveedor.h" />
 		<Unit filename="include/ProveedorArchivo.h" />
 		<Unit filename="include/menus/AutoparteManager.h" />
+		<Unit filename="include/menus/BackupManager.h" />
 		<Unit filename="include/menus/ClienteManager.h" />
 		<Unit filename="include/menus/Detalle_FManager.h" />
 		<Unit filename="include/menus/EmpleadoManager.h" />
 		<Unit filename="include/menus/Exit.h" />
 		<Unit filename="include/menus/FacturaManager.h" />
+		<Unit filename="include/menus/InformesManager.h" />
 		<Unit filename="include/menus/MarcaManager.h" />
 		<Unit filename="include/menus/ProveedorManager.h" />
 		<Unit filename="include/menus/RolesManager.h" />
 		<Unit filename="main.cpp" />
 		<Unit filename="src/AppManager.cpp" />
+		<Unit filename="src/Archivo.cpp" />
 		<Unit filename="src/Autoparte.cpp" />
 		<Unit filename="src/AutoparteArchivo.cpp" />
 		<Unit filename="src/Cliente.cpp" />
@@ -87,11 +91,13 @@
 		<Unit filename="src/Proveedor.cpp" />
 		<Unit filename="src/ProveedorArchivo.cpp" />
 		<Unit filename="src/menus/AutoparteManager.cpp" />
+		<Unit filename="src/menus/BackupManager.cpp" />
 		<Unit filename="src/menus/ClienteManager.cpp" />
 		<Unit filename="src/menus/Detalle_FManager.cpp" />
 		<Unit filename="src/menus/EmpleadoManager.cpp" />
 		<Unit filename="src/menus/Exit.cpp" />
 		<Unit filename="src/menus/FacturaManager.cpp" />
+		<Unit filename="src/menus/InformesManager.cpp" />
 		<Unit filename="src/menus/MarcaManager.cpp" />
 		<Unit filename="src/menus/ProveedorManager.cpp" />
 		<Unit filename="src/menus/RolesManager.cpp" />

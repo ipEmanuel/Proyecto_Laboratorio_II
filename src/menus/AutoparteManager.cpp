@@ -1,5 +1,6 @@
 #include <iostream>
 #include "AutoparteManager.h"
+#include <algorithm>
 using namespace std;
 
 AutoparteManager::AutoparteManager(): MenuItem("Autopartes") {}
@@ -186,7 +187,35 @@ void AutoparteManager::ordenarAutopartesPorPrecioVenta(Autoparte autoparte[], in
    }
 }
 
+bool AutoparteManager::compararNombres(const Autoparte& a1, const Autoparte& a2)const{
+    return strcmp(a1.getNombre(), a2.getNombre()) < 0;
+}
+
 ////DEL MENU////
+void AutoparteManager::listarOrdenadoPorNombre(){
+    int cantidad = _autopartesArchivo.getCantidadRegistros();
+    Autoparte *autopartes = new Autoparte[cantidad];
+
+    if(autopartes == nullptr){
+        cout << "No se pudo pedir memoria... " << endl;
+        return;
+    }
+    _autopartesArchivo.leerTodos(autopartes, cantidad);
+
+    sort(autopartes, autopartes + cantidad,[this](const Autoparte& a, const Autoparte& b) {
+        return compararNombres(a, b);
+    });
+
+    for(int i=0; i<cantidad; i++){
+        if(autopartes[i].getEstado()){
+            autopartes[i].mostrar();
+            cout<<"-------------------------------"<<endl;
+        }
+    }
+    delete[] autopartes;
+}
+
+
 void AutoparteManager::agregarAutoparte(){
     if(_autopartesArchivo.guardar(crearAutoparte())){
         cout << "La autoparte fue guardado con exito!" << endl;
@@ -281,9 +310,10 @@ int AutoparteManager::execute(){
         cout << "3- MODIFICAR AUTOPARTE          " << endl;
         cout << "4- ELIMINAR AUTOPARTE           " << endl;
         cout << "5- LISTAR ORDENADOS POR PRECIO  " << endl;
+        cout << "6- LISTAR ORDENADOS POR NOMBRE  " << endl;
         cout << "________________________________" << endl;
         cout << "0- SALIR" << endl;
-        cout << "Opcion: "<< endl;
+        cout << "Opcion: ";
         cin >> option;
 
         switch(option){
@@ -309,6 +339,10 @@ int AutoparteManager::execute(){
 
             case 5:
                 listarAutoparte(true);
+                system("pause");
+             break;
+            case 6:
+                listarOrdenadoPorNombre();
                 system("pause");
              break;
         }

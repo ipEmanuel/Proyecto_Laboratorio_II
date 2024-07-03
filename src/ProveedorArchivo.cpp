@@ -90,3 +90,13 @@ int ProveedorArchivo::buscarByID(int id){
     fclose(pFile);
     return -1;
 }
+
+Proveedor ProveedorArchivo::buscarProveedorById(int id) {
+    int index = buscarByID(id);
+    if (index != -1) {
+        Proveedor proveedor = leer(index);
+        return proveedor;
+    }
+
+    return Proveedor();
+}

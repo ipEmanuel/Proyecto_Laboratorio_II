@@ -1,7 +1,7 @@
 #pragma once
 #include "string"
 #include <cstring>
-
+#include "ProveedorArchivo.h"
 #include "MarcaArchivo.h"
 #include "Fecha.h"
 
@@ -16,6 +16,7 @@ class Autoparte{
         int _cod_marca;
         bool _estado;
         MarcaArchivo _marcaArchivo;
+        ProveedorArchivo _proveedorArchivo;
 
     public:
         Autoparte();
@@ -36,7 +37,7 @@ class Autoparte{
         // Getters
         int getIDAutoparte();
         int getIDProveedor();
-        string getNombre();
+        const char* getNombre() const;
         float getPrecioCompra();
         float getPrecioVenta();
         int getStock();

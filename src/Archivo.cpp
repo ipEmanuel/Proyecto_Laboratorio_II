@@ -9,11 +9,6 @@ Archivo::Archivo(string nombre_archivo, size_t classSize, bool backup_mode)
     _backup_mode = backup_mode;
 }
 
-Archivo::~Archivo()
-{
-    //dtor
-}
-
 void Archivo::setBackupMode(bool active) {
     _backup_mode = active;
 }
@@ -50,9 +45,9 @@ bool Archivo::sobreescribirTodo(int cantReg, const void* data) {
     if(pFile == nullptr){
       return false;
     }
-    int write = fwrite(data, _class_size, cantReg, pFile);
+    fwrite(data, _class_size, cantReg, pFile);
     fclose(pFile);
-    return write > 0;
+    return true;
 }
 
 int Archivo::getCantidadRegistros(){
@@ -68,31 +63,29 @@ int Archivo::getCantidadRegistros(){
 }
 
 bool Archivo::leer(int index, void* puntero, int cantidad){
-   bool result;
-   FILE *pFile;
-   pFile = fopen(obtenerNombreArchivo(), "rb");
-   if(pFile == nullptr){
+    bool result;
+    FILE *pFile;
+    pFile = fopen(obtenerNombreArchivo(), "rb");
+    if(pFile == nullptr){
       return false;
-   }
-   fseek(pFile, index * _class_size, SEEK_SET);
-   int read = fread(puntero, _class_size, cantidad, pFile);
-   fclose(pFile);
-   return read > 0;
+    }
+    fseek(pFile, index * _class_size, SEEK_SET);
+    int read = fread(puntero, _class_size, cantidad, pFile);
+    fclose(pFile);
+    return read > 0;
 }
 
 bool Archivo::guardar(const void* reg, int cantidad, int index){
     bool result;
     FILE *pFile;
-    pFile = fopen(obtenerNombreArchivo(), "rb+");
+    pFile = fopen(obtenerNombreArchivo(), "ab");
     if(pFile == nullptr){
       return false;
     }
-    if (index = -1) {
-        fseek(pFile, 0, SEEK_END);
-    } else {
+    if (index != -1) {
         fseek(pFile, _class_size * index, SEEK_SET);
     }
-   result = fwrite(reg, _class_size, cantidad, pFile);
-   fclose(pFile);
-   return result > 0;
+    result = fwrite(reg, _class_size, cantidad, pFile);
+    fclose(pFile);
+    return result > 0;
 }

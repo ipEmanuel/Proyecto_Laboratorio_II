@@ -16,6 +16,20 @@ Detalle_Factura::Detalle_Factura(int nroFactura, int idAutoparte, int cantidad, 
 }
 */
 
+Detalle_Factura::Detalle_Factura() {}
+
+Detalle_Factura::Detalle_Factura(const Detalle_Factura& otro) {
+    _nroFactura = otro._nroFactura;
+    _idAutoparte = otro._idAutoparte;
+    _cantidad = otro._cantidad;
+    _precio = otro._precio;
+}
+
+Detalle_Factura::~Detalle_Factura() {
+    //cout << this << " D " << endl << this->getNroFactura() << getIdAutoparte() << endl;
+    //system("pause");
+}
+
 //GETTERS
 int Detalle_Factura::getNroFactura(){
     return _nroFactura;
@@ -78,6 +92,7 @@ void Detalle_Factura::mostrarDF(int nroFactura){
 
 void Detalle_Factura::modificarDF(Detalle_Factura &dF){
     Detalle_FArchivo dfA;
+    AutoparteArchivo autoparteArchivo;
     int idAutoparte, nFactura;
 
     cout<<"-------------------------------------------------"<<endl;
@@ -103,14 +118,14 @@ void Detalle_Factura::modificarDF(Detalle_Factura &dF){
 
     cout<<"INGRESAR ID AUTOPARTE: ";
     cin>>_idAutoparte;
-    idAutoparte = _autoparteArchivo.buscarByID(_idAutoparte);
+    idAutoparte = autoparteArchivo.buscarByID(_idAutoparte);
     while(!(idAutoparte != -1 && idAutoparte > 0)){
         if(cin.fail()){
             cin.clear();
             cin.ignore();
             cout << "ENTRADA NO VALIDA. POR FAVOR INGRESE UN NUMERO VALIDO: ";
             cin >> _idAutoparte;
-            idAutoparte = _autoparteArchivo.buscarByID(_idAutoparte);
+            idAutoparte = autoparteArchivo.buscarByID(_idAutoparte);
         }
         else{
             break;

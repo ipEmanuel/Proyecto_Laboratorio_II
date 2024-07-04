@@ -3,11 +3,45 @@
 #include "Detalle_FArchivo.h"
 #include "EmpleadoArchivo.h"
 #include "ClienteArchivo.h"
+#include "AutoparteArchivo.h"
 
-InformacionReporteVentas::InformacionReporteVentas()
+InformacionReporteVentas::InformacionReporteVentas(Factura factura)
 {
-    _autopartes = nullptr;
-    _detalle_factura = nullptr;
+    Detalle_FArchivo detalleArchivo;
+
+    _factura = factura;
+    _cantidad_detalles = detalleArchivo.cantidadPorFactura(factura.getNFactura());
+
+    if (_cantidad_detalles != -1 && _cantidad_detalles != 0)
+    {
+        _detalle_factura = new Detalle_Factura[_cantidad_detalles];
+        if (_detalle_factura == nullptr) {
+            cout << "ERROR AL ASIGNAR MEMORIA";
+            return;
+        }
+        detalleArchivo.getDetallesPorFactura(factura.getNFactura(), _detalle_factura);
+        _autopartes = new Autoparte[_cantidad_detalles];
+        if (_autopartes == nullptr) {
+            cout << "ERROR AL ASIGNAR MEMORIA";
+            return;
+        }
+
+        AutoparteArchivo autoparteArchivo;
+        for (int i = 0; i < _cantidad_detalles; i++)
+        {
+            int index = autoparteArchivo.buscarByID(_detalle_factura[i].getIdAutoparte());
+            _autopartes[i] = autoparteArchivo.leer(index);
+        }
+    }
+
+    EmpleadoArchivo empleadoArchivo;
+    int indexEmpleado = empleadoArchivo.buscarByID(1);
+    _empleado = empleadoArchivo.leer(indexEmpleado);
+
+    ClienteArchivo clienteArchivo;
+    int indexCliente = clienteArchivo.buscarByID(factura.getIdCliente());
+    _cliente = clienteArchivo.leer(indexCliente);
+
 }
 
 InformacionReporteVentas::~InformacionReporteVentas()
@@ -17,40 +51,6 @@ InformacionReporteVentas::~InformacionReporteVentas()
         delete _autopartes;
         delete _detalle_factura;
     }
-}
-
-void InformacionReporteVentas::setFactura(Factura factura)
-{
-
-    AutoparteArchivo autoparteArchivo;
-    Detalle_FArchivo detalleArchivo;
-    EmpleadoArchivo empleadoArchivo;
-    ClienteArchivo clienteArchivo;
-
-    _factura = factura;
-
-    _cantidad_detalles = detalleArchivo.cantidadPorFactura(factura.getNFactura());
-    if (_cantidad_detalles != -1 && _cantidad_detalles != 0)
-    {
-        _detalle_factura = new Detalle_Factura[_cantidad_detalles];
-        detalleArchivo.getDetallesPorFactura(factura.getNFactura(), _detalle_factura);
-        _autopartes = new Autoparte[_cantidad_detalles];
-        if (_autopartes == nullptr) {
-            cout << "ERROR AL ASIGNAR MEMORIA";
-            return;
-        }
-        for (int i = 0; i < _cantidad_detalles; i++)
-        {
-            int index = autoparteArchivo.buscarByID(_detalle_factura[i].getIdAutoparte());
-            _autopartes[i] = autoparteArchivo.leer(index);
-        }
-    }
-    int indexEmpleado = empleadoArchivo.buscarByID(1);
-    _empleado = empleadoArchivo.leer(indexEmpleado);
-
-    int indexCliente = clienteArchivo.buscarByID(factura.getIdCliente());
-    _cliente = clienteArchivo.leer(indexCliente);
-
 }
 
 Factura InformacionReporteVentas::getFactura()

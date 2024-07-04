@@ -1,6 +1,6 @@
 #pragma once
 #include <iostream>
-#include <cstdlib>
+//#include <cstdlib>
 #include "Detalle_FArchivo.h"
 #include "Detalle_Factura.h"
 
@@ -35,17 +35,20 @@ int Detalle_FArchivo::buscarPorFactura(int nroFactura)
 
 int Detalle_FArchivo::cantidadPorFactura(int nroFactura)
 {
-    Detalle_Factura reg;
-    int cant = 0, pos = 0;
-    FILE *pFile;
-    while (Archivo::leer(pos, &reg))
+    int cant = 0;
+
+    int cantidadTodos = Archivo::getCantidadRegistros();
+
+    for (int i = 0; i < cantidadTodos; i++)
     {
+        Detalle_Factura reg;
+        Archivo::leer(i, &reg, 1);
         if (reg.getNroFactura() == nroFactura)
         {
             cant++;
         }
-        pos++;
     }
+
     return cant;
 }
 
@@ -57,7 +60,8 @@ bool Detalle_FArchivo::getDetallesPorFactura(int nroFactura, Detalle_Factura *de
     {
         if (reg.getNroFactura() == nroFactura)
         {
-            detalles[cant] = reg;
+            Detalle_Factura reg2 = reg;
+            detalles[cant] = reg2;
             cant++;
         }
         pos++;
@@ -110,17 +114,21 @@ bool Detalle_FArchivo::reestablecer()
 
     Detalle_Factura *detalles = new Detalle_Factura[cantidadReg];
 
-    bool canRead = leerTodos(detalles);
+    bool canRead = true;
+
+    if (cantidadReg != 0) {
+        canRead = leerTodos(detalles);
+    }
 
     if (!canRead)
     {
-        cout << "NO SE PUDO LEER EL BACKUP" << endl;
+        cout << "NO SE PUDO LEER EL BACKUP" << endl << cantidadReg;
         return canRead;
     }
 
     setBackupMode(false);
 
-    Archivo::sobreescribirTodo(cantidadReg, detalles);
+    result = Archivo::sobreescribirTodo(cantidadReg, detalles);
 
     return result;
 }

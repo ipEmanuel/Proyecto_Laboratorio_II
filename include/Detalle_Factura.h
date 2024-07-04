@@ -1,6 +1,5 @@
 #pragma once
 #include "Autoparte.h"
-#include "AutoparteArchivo.h"
 
 class Detalle_Factura
 {
@@ -9,9 +8,11 @@ class Detalle_Factura
         int _idAutoparte;
         int _cantidad;
         float _precio;
-        AutoparteArchivo _autoparteArchivo;
 
     public:
+        Detalle_Factura();
+        Detalle_Factura(const Detalle_Factura& otro);
+        ~Detalle_Factura();
         //GETTERS
         int getNroFactura();
         int getIdAutoparte();

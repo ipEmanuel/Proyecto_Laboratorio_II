@@ -8,7 +8,7 @@
 class InformacionReporteVentas
 {
     public:
-        InformacionReporteVentas();
+        InformacionReporteVentas(Factura factura);
         ~InformacionReporteVentas();
         void setFactura(Factura factura);
         Factura getFactura();
@@ -22,7 +22,7 @@ class InformacionReporteVentas
 
     private:
         Factura _factura;
-        int _cantidad_detalles = 0;
+        int _cantidad_detalles;
         Detalle_Factura *_detalle_factura;
         Autoparte *_autopartes;
         Empleado _empleado;

@@ -76,9 +76,10 @@ int Autoparte::getIDProveedor() {
     return _id_proveedor;
 }
 
-string Autoparte::getNombre() {
-    return string(_nombre);
+const char* Autoparte::getNombre() const{
+    return _nombre;
 }
+
 
 float Autoparte::getPrecioCompra() {
     return _precio_compra;
@@ -102,17 +103,15 @@ bool Autoparte::getEstado() {
 
 
 void Autoparte::mostrar(){
-    //string nombre_marca = obtenerNombreMarca(reg.getCodMarca());
-    Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
-    //string nombre_proveedor = obtenerNombreProveedor(_id_proveedor);
+   Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
+    Proveedor provedor = _proveedorArchivo.buscarProveedorById(_id_proveedor);
 
     cout << "CODIGO DE AUTOPARTE: " << _id_autoparte << endl;
     cout << "NOMBRE: " << _nombre << endl;
     cout << "PRECIO DE COMPRA: " << _precio_compra << endl;
     cout << "PRECIO DE VENTA: " << _precio_venta << endl;
     cout << "STOCK: " << _stock << endl;
-    //cout << "MARCA: " << nombre_marca << endl;
     marca.mostrar();
-    //cout << "PROVEEDOR: " << nombre_proveedor << endl;
+    cout << "PROVEEDOR: " << provedor.getNombre() << endl;
     cout << "ESTADO: " << (_estado ? "Disponible": "Eliminado") << endl;
 }

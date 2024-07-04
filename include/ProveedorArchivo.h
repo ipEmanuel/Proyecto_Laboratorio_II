@@ -9,4 +9,5 @@ class ProveedorArchivo{
         Proveedor leer(int index);
         int getCantidadRegistros();
         int buscarByID(int id);
+        Proveedor buscarProveedorById(int id);
 };

@@ -11,6 +11,8 @@ class AutoparteManager: public MenuItem {
         AutoparteManager();
         int execute();
         void listarAutoparte(bool ordenadoPorPrecio = false);
+        bool compararNombres(const Autoparte&, const Autoparte&)const;
+        void listarOrdenadoPorNombre();
 
     private:
         string obtenerNombreMarca(int cod_marca);

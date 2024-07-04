@@ -64,6 +64,7 @@
 		<Unit filename="include/menus/EmpleadoManager.h" />
 		<Unit filename="include/menus/Exit.h" />
 		<Unit filename="include/menus/FacturaManager.h" />
+		<Unit filename="include/menus/InformesManager.h" />
 		<Unit filename="include/menus/MarcaManager.h" />
 		<Unit filename="include/menus/ProveedorManager.h" />
 		<Unit filename="include/menus/RolesManager.h" />
@@ -96,6 +97,7 @@
 		<Unit filename="src/menus/EmpleadoManager.cpp" />
 		<Unit filename="src/menus/Exit.cpp" />
 		<Unit filename="src/menus/FacturaManager.cpp" />
+		<Unit filename="src/menus/InformesManager.cpp" />
 		<Unit filename="src/menus/MarcaManager.cpp" />
 		<Unit filename="src/menus/ProveedorManager.cpp" />
 		<Unit filename="src/menus/RolesManager.cpp" />

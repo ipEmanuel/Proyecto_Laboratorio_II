@@ -227,7 +227,7 @@ string floatTwoPresicion(float value)
 void showRow(Factura factura, char separator, int column_width)
 {
     InformacionReporteVentas information = InformacionReporteVentas(factura);
-    //information.setFactura(factura);
+
     int cantidad = information.getCantidadDetalles();
     for (int i = 0; i < cantidad; i++)
     {

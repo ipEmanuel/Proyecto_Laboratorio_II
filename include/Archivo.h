@@ -8,7 +8,6 @@ class Archivo
     public:
         Archivo();
         Archivo(string nombre_archivo, size_t classSize, bool default_backup_mode = false);
-        virtual ~Archivo();
 
     protected:
         const char* obtenerNombreArchivo();

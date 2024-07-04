@@ -46,6 +46,13 @@
 	"MarcaArchivo.h"
 	"Fecha.h"
 
+1719103395 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcaarchivo.h
+	"Marca.h"
+
+1719103431 e:\carpetas\c++\proyecto_laboratorio_ii\include\marca.h
+	"cstring"
+	"string"
+
 1717336418 e:\carpetas\c++\proyecto_laboratorio_ii\include\fecha.h
 	<ctime>
 	<string>
@@ -54,18 +61,14 @@
 	"Autoparte.h"
 	"Archivo.h"
 
+1719970741 e:\carpetas\c++\proyecto_laboratorio_ii\include\archivo.h
+	"string"
+
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedorarchivo.h
 	"Proveedor.h"
 
 1717334692 e:\carpetas\c++\proyecto_laboratorio_ii\include\proveedor.h
 	<cstring>
-
-1719103395 e:\carpetas\c++\proyecto_laboratorio_ii\include\marcaarchivo.h
-	"Marca.h"
-
-1719103431 e:\carpetas\c++\proyecto_laboratorio_ii\include\marca.h
-	"cstring"
-	"string"
 
 1718211780 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\clientemanager.h
 	"MenuItem.h"
@@ -106,12 +109,29 @@
 	"Proveedor.h"
 	"ProveedorArchivo.h"
 
+1719153726 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\facturamanager.h
+	"Factura.h"
+	"MenuItem.h"
+
+1719787914 e:\carpetas\c++\proyecto_laboratorio_ii\include\factura.h
+	"Fecha.h"
+	"Cliente.h"
+
+1719883766 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\backupmanager.h
+	"MenuItem.h"
+	"string"
+
 1717557047 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\exit.h
 	"MenuItem.h"
 
 1718229810 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\appmanager.cpp
 	"AppManager.h"
 	<iostream>
+
+1720134681 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\archivo.cpp
+	"Archivo.h"
+	"iostream"
+	"cstring"
 
 1719522659 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\autoparte.cpp
 	<iostream>
@@ -132,6 +152,26 @@
 	<iostream>
 	"ClienteArchivo.h"
 
+1720134598 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_factura.cpp
+	<iostream>
+	<cstdlib>
+	"Detalle_Factura.h"
+	"AutoparteArchivo.h"
+	"Detalle_FArchivo.h"
+
+1720134572 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_factura.h
+	"Autoparte.h"
+
+1719969805 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_farchivo.h
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Archivo.h"
+
+1720134688 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_farchivo.cpp
+	<iostream>
+	"Detalle_FArchivo.h"
+	"Detalle_Factura.h"
+
 1719448276 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\empleado.cpp
 	"iostream"
 	<cstring>
@@ -142,9 +182,42 @@
 	<iostream>
 	"EmpleadoArchivo.h"
 
+1719787898 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\factura.cpp
+	<iostream>
+	"Factura.h"
+	"Cliente.h"
+	"Fecha.h"
+	"FacturaArchivo.h"
+	"FacturaManager.h"
+
+1719788619 e:\carpetas\c++\proyecto_laboratorio_ii\include\facturaarchivo.h
+	<iostream>
+	"Factura.h"
+	"Archivo.h"
+
+1719788619 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\facturaarchivo.cpp
+	<iostream>
+	<cstdlib>
+	"Factura.h"
+	"FacturaArchivo.h"
+
 1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\fecha.cpp
 	"Fecha.h"
 	<iostream>
+
+1720134760 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\informacionreporteventas.cpp
+	"InformacionReporteVentas.h"
+	"iostream"
+	"Detalle_FArchivo.h"
+	"EmpleadoArchivo.h"
+	"ClienteArchivo.h"
+	"AutoparteArchivo.h"
+
+1719889404 e:\carpetas\c++\proyecto_laboratorio_ii\include\informacionreporteventas.h
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Empleado.h"
+	"Cliente.h"
 
 1719103421 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\marca.cpp
 	"cstring"
@@ -165,9 +238,33 @@
 	<iostream>
 	"AutoparteManager.h"
 
+1719884034 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\backupmanager.cpp
+	"BackupManager.h"
+	"AutoparteArchivo.h"
+	"ClienteArchivo.h"
+	"EmpleadoArchivo.h"
+	"FacturaArchivo.h"
+	"Detalle_FArchivo.h"
+
 1717557513 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\clientemanager.cpp
 	<iostream>
 	"ClienteManager.h"
+
+1719099915 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\detalle_fmanager.cpp
+	<iostream>
+	<cstdlib>
+	"Detalle_FManager.h"
+	"Detalle_FArchivo.h"
+	"Detalle_Factura.h"
+	"Factura.h"
+	"Autoparte.h"
+	"FacturaArchivo.h"
+	"FacturaManager.h"
+	"AutoparteArchivo.h"
+	"AutoparteManager.h"
+
+1719082852 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\detalle_fmanager.h
+	"FacturaArchivo.h"
 
 1719448269 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
 	<iostream>
@@ -176,6 +273,19 @@
 1718229787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\exit.cpp
 	"Exit.h"
 	"MenuItem.h"
+
+1720011123 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	"FacturaManager.h"
+	"FacturaArchivo.h"
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Detalle_FArchivo.h"
+	"AutoparteManager.h"
+	"AutoparteArchivo.h"
+	"InformacionReporteVentas.h"
 
 1719099787 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
 	"cstring"
@@ -207,115 +317,4 @@
 1717334692 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\proveedorarchivo.cpp
 	<iostream>
 	"ProveedorArchivo.h"
-
-1719522663 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_factura.cpp
-	<iostream>
-	<cstdlib>
-	"Detalle_Factura.h"
-	"AutoparteArchivo.h"
-	"Detalle_FArchivo.h"
-
-1719522653 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_factura.h
-	"Autoparte.h"
-	"AutoparteArchivo.h"
-
-1719779574 e:\carpetas\c++\proyecto_laboratorio_ii\include\detalle_farchivo.h
-	"Factura.h"
-	"Detalle_Factura.h"
-	"Archivo.h"
-
-1719787914 e:\carpetas\c++\proyecto_laboratorio_ii\include\factura.h
-	"Fecha.h"
-	"Cliente.h"
-
-1719889093 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\detalle_farchivo.cpp
-	<iostream>
-	<cstdlib>
-	"Detalle_FArchivo.h"
-	"Detalle_Factura.h"
-
-1719787898 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\factura.cpp
-	<iostream>
-	"Factura.h"
-	"Cliente.h"
-	"Fecha.h"
-	"FacturaArchivo.h"
-	"FacturaManager.h"
-
-1719788619 e:\carpetas\c++\proyecto_laboratorio_ii\include\facturaarchivo.h
-	<iostream>
-	"Factura.h"
-	"Archivo.h"
-
-1719153726 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\facturamanager.h
-	"Factura.h"
-	"MenuItem.h"
-
-1719788619 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\facturaarchivo.cpp
-	<iostream>
-	<cstdlib>
-	"Factura.h"
-	"FacturaArchivo.h"
-
-1719889190 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
-	<iostream>
-	<cstdlib>
-	<string>
-	"FacturaManager.h"
-	"FacturaArchivo.h"
-	"Factura.h"
-	"Detalle_Factura.h"
-	"Detalle_FArchivo.h"
-	"AutoparteManager.h"
-	"AutoparteArchivo.h"
-	"InformacionReporteVentas.h"
-
-1719099915 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\detalle_fmanager.cpp
-	<iostream>
-	<cstdlib>
-	"Detalle_FManager.h"
-	"Detalle_FArchivo.h"
-	"Detalle_Factura.h"
-	"Factura.h"
-	"Autoparte.h"
-	"FacturaArchivo.h"
-	"FacturaManager.h"
-	"AutoparteArchivo.h"
-	"AutoparteManager.h"
-
-1719082852 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\detalle_fmanager.h
-	"FacturaArchivo.h"
-
-1719889190 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\informacionreporteventas.cpp
-	"InformacionReporteVentas.h"
-	"iostream"
-	"Detalle_FArchivo.h"
-	"EmpleadoArchivo.h"
-	"ClienteArchivo.h"
-
-1719889404 e:\carpetas\c++\proyecto_laboratorio_ii\include\informacionreporteventas.h
-	"Factura.h"
-	"Detalle_Factura.h"
-	"Empleado.h"
-	"Cliente.h"
-
-1719884034 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\menus\backupmanager.cpp
-	"BackupManager.h"
-	"AutoparteArchivo.h"
-	"ClienteArchivo.h"
-	"EmpleadoArchivo.h"
-	"FacturaArchivo.h"
-	"Detalle_FArchivo.h"
-
-1719883766 e:\carpetas\c++\proyecto_laboratorio_ii\include\menus\backupmanager.h
-	"MenuItem.h"
-	"string"
-
-1719690246 e:\carpetas\c++\proyecto_laboratorio_ii\include\archivo.h
-	"string"
-
-1719889203 source:e:\carpetas\c++\proyecto_laboratorio_ii\src\archivo.cpp
-	"Archivo.h"
-	"iostream"
-	"cstring"
 

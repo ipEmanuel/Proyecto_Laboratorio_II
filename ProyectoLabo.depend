@@ -653,3 +653,339 @@
 	<iostream>
 	"ProveedorArchivo.h"
 
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\main.cpp
+	<iostream>
+	"Menu.h"
+	"AppManager.h"
+	"AutoparteManager.h"
+	"ClienteManager.h"
+	"EmpleadoManager.h"
+	"MarcaManager.h"
+	"ProveedorManager.h"
+	"FacturaManager.h"
+	"BackupManager.h"
+	"InformesManager.h"
+	"Exit.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menu.h
+	<MenuItem.h>
+	<RolesManager.h>
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menuitem.h
+	<iostream>
+	<string.h>
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\rolesmanager.h
+	<string>
+	<MenuItem.h>
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\appmanager.h
+	"MenuItem.h"
+	"AutoparteManager.h"
+	"ClienteManager.h"
+	"EmpleadoManager.h"
+	"MarcaManager.h"
+	"ProveedorManager.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\autopartemanager.h
+	"string"
+	"MenuItem.h"
+	"Autoparte.h"
+	"AutoparteArchivo.h"
+	"ProveedorArchivo.h"
+	"MarcaArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\autoparte.h
+	"string"
+	<cstring>
+	"ProveedorArchivo.h"
+	"MarcaArchivo.h"
+	"Fecha.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\proveedorarchivo.h
+	"Proveedor.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\proveedor.h
+	<cstring>
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\marcaarchivo.h
+	"Marca.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\marca.h
+	"cstring"
+	"string"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\fecha.h
+	<ctime>
+	<string>
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\autopartearchivo.h
+	"Autoparte.h"
+	"Archivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\archivo.h
+	"string"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\clientemanager.h
+	"MenuItem.h"
+	"Cliente.h"
+	"ClienteArchivo.h"
+
+1721856052 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\cliente.h
+	"Persona.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\persona.h
+	"Fecha.h"
+	"cstring"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\clientearchivo.h
+	"Cliente.h"
+	"Archivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\empleadomanager.h
+	"MenuItem.h"
+	"EmpleadoArchivo.h"
+	"Empleado.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\empleadoarchivo.h
+	"Empleado.h"
+	"Archivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\empleado.h
+	"Persona.h"
+	"Fecha.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\marcamanager.h
+	"MenuItem.h"
+	"Marca.h"
+	"MarcaArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\proveedormanager.h
+	"MenuItem.h"
+	"Proveedor.h"
+	"ProveedorArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\facturamanager.h
+	"Factura.h"
+	"MenuItem.h"
+	"EmpleadoArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\factura.h
+	"Fecha.h"
+	"Cliente.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\backupmanager.h
+	"MenuItem.h"
+	"string"
+
+1721852718 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\informesmanager.h
+	"MenuItem.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\exit.h
+	"MenuItem.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\appmanager.cpp
+	"AppManager.h"
+	<iostream>
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\archivo.cpp
+	"Archivo.h"
+	"iostream"
+	"cstring"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\autoparte.cpp
+	<iostream>
+	<iomanip>
+	<cstring>
+	"Autoparte.h"
+	"Marca.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\autopartearchivo.cpp
+	"AutoparteArchivo.h"
+	"iostream"
+
+1721856124 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\cliente.cpp
+	<limits>
+	"iostream"
+	"Cliente.h"
+	"ClienteArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\clientearchivo.cpp
+	<iostream>
+	"ClienteArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\detalle_factura.cpp
+	<iostream>
+	<cstdlib>
+	"Detalle_Factura.h"
+	"AutoparteArchivo.h"
+	"Detalle_FArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\detalle_factura.h
+	"Autoparte.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\detalle_farchivo.h
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Archivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\detalle_farchivo.cpp
+	<iostream>
+	"Detalle_FArchivo.h"
+	"Detalle_Factura.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\empleado.cpp
+	"iostream"
+	<cstring>
+	<limits>
+	"Empleado.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\empleadoarchivo.cpp
+	<iostream>
+	"EmpleadoArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\factura.cpp
+	<iostream>
+	<iomanip>
+	"Factura.h"
+	"Cliente.h"
+	"Fecha.h"
+	"FacturaArchivo.h"
+	"FacturaManager.h"
+
+1721853021 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\facturaarchivo.h
+	<iostream>
+	"Factura.h"
+	"Archivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\fecha.cpp
+	"Fecha.h"
+	<iostream>
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\informacionreporteventas.cpp
+	"InformacionReporteVentas.h"
+	"iostream"
+	"Detalle_FArchivo.h"
+	"EmpleadoArchivo.h"
+	"ClienteArchivo.h"
+	"AutoparteArchivo.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\informacionreporteventas.h
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Empleado.h"
+	"Cliente.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\marca.cpp
+	"cstring"
+	<iostream>
+	"Marca.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\marcaarchivo.cpp
+	<iostream>
+	"MarcaArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menu.cpp
+	"Menu.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menuitem.cpp
+	"MenuItem.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\autopartemanager.cpp
+	<iostream>
+	<iomanip>
+	"AutoparteManager.h"
+	<algorithm>
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\backupmanager.cpp
+	"BackupManager.h"
+	"AutoparteArchivo.h"
+	"ClienteArchivo.h"
+	"EmpleadoArchivo.h"
+	"FacturaArchivo.h"
+	"Detalle_FArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\clientemanager.cpp
+	<iostream>
+	"ClienteManager.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\detalle_fmanager.cpp
+	<iostream>
+	<cstdlib>
+	"Detalle_FManager.h"
+	"Detalle_FArchivo.h"
+	"Detalle_Factura.h"
+	"Factura.h"
+	"Autoparte.h"
+	"FacturaArchivo.h"
+	"FacturaManager.h"
+	"AutoparteArchivo.h"
+	"AutoparteManager.h"
+
+1721851991 d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\include\menus\detalle_fmanager.h
+	"FacturaArchivo.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\empleadomanager.cpp
+	<iostream>
+	"EmpleadoManager.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\exit.cpp
+	"Exit.h"
+	"MenuItem.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\facturamanager.cpp
+	<iostream>
+	<cstdlib>
+	<string>
+	"FacturaManager.h"
+	"FacturaArchivo.h"
+	"Factura.h"
+	"Detalle_Factura.h"
+	"Detalle_FArchivo.h"
+	"AutoparteManager.h"
+	"AutoparteArchivo.h"
+	"InformacionReporteVentas.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\marcamanager.cpp
+	"cstring"
+	<iostream>
+	"MenuItem.h"
+	"MarcaManager.h"
+	"Marca.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\proveedormanager.cpp
+	<iostream>
+	"MenuItem.h"
+	"ProveedorManager.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\rolesmanager.cpp
+	"RolesManager.h"
+	<iostream>
+	<MenuItem.h>
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\persona.cpp
+	"iostream"
+	<cstring>
+	<limits>
+	"Persona.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\proveedor.cpp
+	"iostream"
+	"Proveedor.h"
+
+1721851991 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\proveedorarchivo.cpp
+	<iostream>
+	"ProveedorArchivo.h"
+
+1721853021 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\facturaarchivo.cpp
+	<iostream>
+	<iomanip>
+	<cstdlib>
+	"Factura.h"
+	"FacturaArchivo.h"
+
+1721852803 source:d:\usuarios\usuario\escritorio\tup\labo2\proyecto\proyecto cambios 24.7\proyecto_laboratorio_ii\src\menus\informesmanager.cpp
+	<iostream>
+	"InformesManager.h"
+	"FacturaArchivo.h"
+

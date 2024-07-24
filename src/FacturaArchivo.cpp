@@ -172,3 +172,30 @@ void FacturaArchivo::mostrarPorVendedor(int legajo){
     cout << "Valor Total: " << cont << endl;
 }
 
+bool FacturaArchivo::leerFacturaPorAnio(int index, int anio, Factura &factura) {
+    if (!Archivo::leer(index, &factura, 1)) {
+        return false;
+    }
+    return factura.getFechaFactura().getAnio() == anio;
+}
+void FacturaArchivo::mostrarPorAnio(int anio){
+    Factura factura;
+    int tam = getCantidadRegistros();
+    int cont = 0;
+
+    cout << "ANIO : " << anio << endl;
+    cout << left << setw(20) << "NUMERO FACTURA"
+         << setw(15) << "FECHA"
+         << setw(15) << "VALOR TOTAL"
+         << setw(15) << "ID CLIENTE"
+         << endl;
+
+    for (int i = 0; i < tam; i++) {
+        if (leerFacturaPorAnio(i, anio, factura)) {
+            factura.mostrarFactura();
+            cont += factura.getValorTotal();
+        }
+    }
+
+    cout << "Valor Total: " << cont << endl;
+}

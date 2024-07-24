@@ -22,4 +22,6 @@ public:
     ////////////////////////
     bool leerFacturaPorLegajo(int index, int legajo, Factura &factura);
     void mostrarPorVendedor(int legajo);
+    void mostrarPorAnio(int anio);
+    bool leerFacturaPorAnio(int index, int anio, Factura &factura);
 };

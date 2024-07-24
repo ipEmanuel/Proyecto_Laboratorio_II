@@ -6,4 +6,5 @@ public:
     InformesManager();
     int execute();
     void recaudacionPorEmpleado();
+    void recaudacionPorAnio();
 };

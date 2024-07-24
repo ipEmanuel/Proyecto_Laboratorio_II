@@ -22,6 +22,7 @@ class Cliente : public Persona {
         void modificar();
         void cargar(int id);
         void mostrar();
+        bool verificarDNIunico(int dni);
 };
 
 

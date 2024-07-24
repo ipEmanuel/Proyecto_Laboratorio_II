@@ -103,8 +103,10 @@ bool Autoparte::getEstado() {
 
 
 void Autoparte::mostrar(){
-   Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
-    Proveedor provedor = _proveedorArchivo.buscarProveedorById(_id_proveedor);
+    MarcaArchivo marcaArchivo;
+    ProveedorArchivo proveedorArchivo;
+    Marca marca = marcaArchivo.buscarMarcaById(_cod_marca);
+    Proveedor provedor = proveedorArchivo.buscarProveedorById(_id_proveedor);
 
     cout << "CODIGO DE AUTOPARTE: " << _id_autoparte << endl;
     cout << "NOMBRE: " << _nombre << endl;

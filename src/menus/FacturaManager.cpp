@@ -177,24 +177,31 @@ void FacturaManager::iniciar_factura_venta()
 
 void FacturaManager::mostrar_detalle_factura()
 {
-    Detalle_FArchivo dfA;
-    int nFactura, nFactBuscado;
+    FacturaArchivo facturaArchivo;
+    int index, nFactBuscado;
 
     cout << "INGRESE NUMERO DE FACTURA: ";
     cin >> nFactBuscado;
-    nFactura = dfA.buscarPorFactura(nFactBuscado);
+    index = facturaArchivo.buscarPorFactura(nFactBuscado);
     while (cin.fail())
     {
         cin.clear();
         cin.ignore();
         cout << "ENTRADA NO VALIDA. POR FAVOR INGRESE UN NUMERO VALIDO: ";
         cin >> nFactBuscado;
-        nFactura = dfA.buscarPorFactura(nFactBuscado);
+        index = facturaArchivo.buscarPorFactura(nFactBuscado);
     }
-    dfA.leer(nFactura).mostrarDF(nFactura);
+
+    Factura *facturas = new Factura[1];
+
+    facturas[0] = facturaArchivo.leer(index);
+
+    mostrar_informe(facturas, 1);
+
+    delete[] facturas;
 }
 
-string fill_with(string original, char character = ' ', int length = 10)
+string fill_with(string original, char character = ' ', int length = 15)
 {
     int string_length = original.length();
     if (string_length >= length)
@@ -229,6 +236,7 @@ void showRow(Factura factura, char separator, int column_width)
     InformacionReporteVentas information = InformacionReporteVentas(factura);
 
     int cantidad = information.getCantidadDetalles();
+
     for (int i = 0; i < cantidad; i++)
     {
         cout << separator;
@@ -250,7 +258,6 @@ void showRow(Factura factura, char separator, int column_width)
         cout << separator << endl;
     }
 
-    information.getAutopartes();
 }
 
 float getTotalTodasFactura(Factura facturas[], int tam) {
@@ -265,7 +272,7 @@ void FacturaManager::mostrar_informe(Factura facturas[], int tam)
 {
     system("cls");
 
-    int COLUMN_WIDTH = 10;
+    int COLUMN_WIDTH = 15;
     char SEPARATOR = '|';
     showColumns(SEPARATOR, COLUMN_WIDTH);
 

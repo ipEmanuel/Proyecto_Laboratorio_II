@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
 #include <cstdlib>
 #include "Factura.h"
 #include "FacturaArchivo.h"
@@ -140,3 +141,34 @@ bool FacturaArchivo::leerFacturasPorLegajo(Factura *facturas, int legajo) {
     }
     return largoVector == cont;
 }
+
+////////////////////////////////////////////////
+bool FacturaArchivo::leerFacturaPorLegajo(int index, int legajo, Factura &factura) {
+    if (!Archivo::leer(index, &factura, 1)) {
+        return false;
+    }
+    return factura.getIdEmpleado() == legajo;
+}
+
+void FacturaArchivo::mostrarPorVendedor(int legajo){
+    Factura factura;
+    int tam = getCantidadRegistros();
+    int cont = 0;
+
+    cout << "LEGAJO DEL EMPLEADO : " << legajo << endl;
+    cout << left << setw(20) << "NUMERO FACTURA"
+         << setw(15) << "FECHA"
+         << setw(15) << "VALOR TOTAL"
+         << setw(15) << "ID CLIENTE"
+         << endl;
+
+    for (int i = 0; i < tam; i++) {
+        if (leerFacturaPorLegajo(i, legajo, factura)) {
+            factura.mostrarFactura();
+            cont += factura.getValorTotal();
+        }
+    }
+
+    cout << "Valor Total: " << cont << endl;
+}
+

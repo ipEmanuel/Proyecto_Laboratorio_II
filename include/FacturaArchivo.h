@@ -19,4 +19,7 @@ public:
     bool reestablecer();
     int getCantidadFacturasPorLegajo(int legajo);
     bool leerFacturasPorLegajo(Factura *facturas, int legajo);
+    ////////////////////////
+    bool leerFacturaPorLegajo(int index, int legajo, Factura &factura);
+    void mostrarPorVendedor(int legajo);
 };

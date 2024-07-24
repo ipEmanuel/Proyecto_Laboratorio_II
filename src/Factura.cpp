@@ -1,5 +1,7 @@
 #pragma once
 #include <iostream>
+#include <iomanip>
+
 #include "Factura.h"
 #include "Cliente.h"
 #include "Fecha.h"
@@ -84,13 +86,19 @@ void Factura::mostrarFactura(){
     Fecha fecha;
     float vT;
     int idCliente;
+
     nroFactura = getNFactura();
-    cout << "Numero de factura: " << nroFactura << endl;
     fecha = getFechaFactura();
     vT = getValorTotal();
-    cout << "Valor total: " << vT << endl;
     idCliente = getIdCliente();
-    cout << "ID cliente: " << idCliente << endl;
+
+
+     cout << left << setw(20) << nroFactura
+     << setw(15) << fecha.toString()
+     << setw(15) << vT
+     << setw(15) << idCliente
+     << endl;
+
 }
 
 /*

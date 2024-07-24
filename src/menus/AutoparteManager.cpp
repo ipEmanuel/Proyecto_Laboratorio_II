@@ -1,4 +1,5 @@
 #include <iostream>
+#include <iomanip>
 #include "AutoparteManager.h"
 #include <algorithm>
 using namespace std;
@@ -206,10 +207,20 @@ void AutoparteManager::listarOrdenadoPorNombre(){
         return compararNombres(a, b);
     });
 
+    cout << left << setw(15) << "ID_AUTOPARTE"
+    << setw(15) << "ID_PROVEEDOR"
+    << setw(20) << "NOMBRE"
+    << setw(20) << "PRECIO COMPRA"
+    << setw(20) << "PRECIO VENTA"
+    << setw(10) << "STOCK"
+    << setw(15) << "ESTADO"
+    << setw(15) << "COD_MARCA"
+    << setw(20) << "PROVEEDOR"
+    << endl;
+
     for(int i=0; i<cantidad; i++){
         if(autopartes[i].getEstado()){
             autopartes[i].mostrar();
-            cout<<"-------------------------------"<<endl;
         }
     }
     delete[] autopartes;
@@ -233,15 +244,26 @@ void AutoparteManager::listarAutoparte(bool ordenadoPorPrecio){
         cout << "No se pudo pedir memoria... " << endl;
         return;
     }
+
     _autopartesArchivo.leerTodos(autopartes, cantidad);
     if (ordenadoPorPrecio){
       ordenarAutopartesPorPrecioVenta(autopartes, cantidad);
     }
+
+    cout << left << setw(15) << "ID_AUTOPARTE"
+    << setw(15) << "ID_PROVEEDOR"
+    << setw(20) << "NOMBRE"
+    << setw(20) << "PRECIO COMPRA"
+    << setw(20) << "PRECIO VENTA"
+    << setw(10) << "STOCK"
+    << setw(15) << "ESTADO"
+    << setw(15) << "COD_MARCA"
+    << setw(20) << "PROVEEDOR"
+    << endl;
+
     for(int i=0; i<cantidad; i++){
         if(autopartes[i].getEstado()){
-            cout << "--------------------------" << endl;
             autopartes[i].mostrar();
-            cout << "--------------------------" << endl;
         }
     }
     delete [] autopartes;

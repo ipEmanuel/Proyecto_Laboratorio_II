@@ -1,5 +1,5 @@
 #include <iostream>
-
+#include  <iomanip>
 using namespace std;
 
 #include <cstring>
@@ -103,15 +103,20 @@ bool Autoparte::getEstado() {
 
 
 void Autoparte::mostrar(){
-   Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
-    Proveedor provedor = _proveedorArchivo.buscarProveedorById(_id_proveedor);
 
-    cout << "CODIGO DE AUTOPARTE: " << _id_autoparte << endl;
-    cout << "NOMBRE: " << _nombre << endl;
-    cout << "PRECIO DE COMPRA: " << _precio_compra << endl;
-    cout << "PRECIO DE VENTA: " << _precio_venta << endl;
-    cout << "STOCK: " << _stock << endl;
-    marca.mostrar();
-    cout << "PROVEEDOR: " << provedor.getNombre() << endl;
-    cout << "ESTADO: " << (_estado ? "Disponible": "Eliminado") << endl;
+
+    Marca marca = _marcaArchivo.buscarMarcaById(_cod_marca);
+    Proveedor proveedor = _proveedorArchivo.buscarProveedorById(_id_proveedor);
+
+
+
+    cout << left << setw(15) << _id_autoparte
+         << setw(15) << _id_proveedor
+         << setw(20) << _nombre
+         << setw(20) << _precio_compra
+         << setw(20) << _precio_venta
+         << setw(10) << _stock
+         << setw(15) << (_estado ? "Disponible" : "Eliminado")
+         << setw(10) << _cod_marca
+         << setw(15) << proveedor.getNombre() << endl;
 }

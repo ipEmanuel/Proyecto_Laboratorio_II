@@ -10,7 +10,7 @@ void InformesManager::recaudacionPorEmpleado(){
     cout<<"INGRESE EL LEGAJO DEL VENDEDOR: ";
     cin >>legajo;
     FacturaArchivo facturaArchivo;
-    //facturaArchivo.mostrarPorVendedor(legajo);
+    facturaArchivo.mostrarPorVendedor(legajo);
 }
 
 int InformesManager::execute() {

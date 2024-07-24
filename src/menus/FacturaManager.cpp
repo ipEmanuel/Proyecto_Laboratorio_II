@@ -103,7 +103,7 @@ void FacturaManager::iniciar_factura_venta()
     AutoparteManager aM;
     Autoparte autoparte;
 
-    int nroFactura, factIngresada, pos = 0, mantiene, mismaFactura, idAutoparte, idCliente;
+    int nroFactura, factIngresada, pos = 0, mantiene, mismaFactura, idAutoparte, idCliente, idEmpleado;
     float valorTotal = 0.0f;
 
     nroFactura = fA.getNuevoNroFactura();
@@ -113,6 +113,22 @@ void FacturaManager::iniciar_factura_venta()
     cout << "ID CLIENTE: ";
     cin >> idCliente;
     f.setIdCliente(idCliente);
+
+    cout << "ID EMPLEADO: ";
+    cin >> idEmpleado;
+////
+    while(true){
+      if (_empleadoArchivo.buscarByID(idEmpleado) != -1) {
+            f.setIdEmpleado(idEmpleado);
+            break; // Salir del bucle si se encontró un proveedor válido
+        } else {
+            cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
+            system("pause");
+           cout << "ID EMPLEADO: ";
+            cin >> idEmpleado;
+        }
+    }
+
     do
     {
         int cantidad;
@@ -236,7 +252,8 @@ void showRow(Factura factura, char separator, int column_width)
         cout << separator;
         cout << fill_with(information.getFactura().getFechaFactura().toString());
         cout << separator;
-        cout << fill_with("Gustavito");
+      ///
+         cout << fill_with(to_string(information.getFactura().getIdEmpleado()));
         cout << separator;
         cout << fill_with(information.getAutopartes()[i].getNombre());
         cout << separator;

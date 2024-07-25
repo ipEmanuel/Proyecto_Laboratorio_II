@@ -10,7 +10,7 @@ Empleado::Empleado(){
 }
 
 void Empleado::mostrar(){
-    cout << "ID: " << getIdEmpleado() << endl;
+    cout << "LEGAJO EMPLEADO: " << getIdEmpleado() << endl;
     cout<<"SUELDO DE EMPLEADO: "<<_sueldo<<endl;
     Persona::mostrar();
 }

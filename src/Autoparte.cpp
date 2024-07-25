@@ -115,6 +115,6 @@ void Autoparte::mostrar(){
          << setw(20) << _precio_venta
          << setw(10) << _stock
          << setw(15) << (_estado ? "Disponible" : "Eliminado")
-         << setw(10) << _cod_marca
-         << setw(15) << proveedor.getNombre() << endl;
+         << setw(15) << _cod_marca
+         << setw(20) << proveedor.getNombre() << endl;
 }

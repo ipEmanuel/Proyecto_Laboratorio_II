@@ -14,10 +14,10 @@ int EmpleadoManager::execute(){
         cout << "----- MENU DE EMPLEADOS ------ " << endl;
         cout << "-----------------------------" << endl;
         cout << "1- AGREGAR EMPLEADO " << endl;
-        cout << "2- LISTAR" << endl;
+        cout << "2- LISTAR EMPLEADOS " << endl;
         cout << "3- MODIFICAR " << endl;
         cout << "4- ELIMINAR" << endl;
-        cout << "5- LISTAR POR ID" << endl;
+        cout << "5- LISTAR POR LEGAJO" << endl;
         cout << "-----------------------------" << endl;
         cout << "0- SALIR" << endl;
         cout << "Opcion: ";
@@ -137,7 +137,7 @@ void EmpleadoManager::listar_por_id(){
     Empleado empleado;
     //bool eliminar;
 
-    cout << "Ingrese id del empleado: ";
+    cout << "Ingrese legajo del empleado: ";
     cin >> id_empleado;
     index = _empleados_archivo.buscarByID(id_empleado);
 

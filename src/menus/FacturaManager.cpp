@@ -28,8 +28,8 @@ int FacturaManager::execute()
         cout << "----------------------------------" << endl;
         cout << "1- INICIAR FACTURA DE VENTA " << endl;
         cout << "2- MOSTRAR DETALLE FACTURA" << endl;   // va a solicitar el ingreso de un Nro de Factura
-        cout << "3- ELIMINAR DETALLE FACTURA" << endl;  // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
-        cout << "4- LISTAR FACTURA DESDE-HASTA" << endl;
+        cout << "3- ELIMINAR FACTURA" << endl;  // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
+        cout << "4- LISTAR TODAS LAS FACTURAS" << endl;
         cout << "----------------------------------" << endl;
         cout << "0- SALIR" << endl;
         cout << "Opcion: ";
@@ -148,7 +148,7 @@ void FacturaManager::iniciar_factura_venta()
             f.setIdEmpleado(idEmpleado);
             break; // Salir del bucle si se encontró un proveedor válido
         } else {
-            cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
+            cout << "ERROR: Empleado No Valido. Intente nuevamente." << endl;
             system("pause");
            cout << "ID EMPLEADO: ";
             cin >> idEmpleado;
@@ -303,7 +303,7 @@ void showRow(Factura factura, char separator, int column_width)
         cout << separator;
         cout << fill_with(to_string(information.getDetalles()[i].getCantidad()));
         cout << separator;
-        cout << fill_with(floatTwoPresicion(information.getDetalles()[i].getPrecio()));
+        cout << fill_with(floatTwoPresicion(information.getDetalles()[i].getPrecio()*information.getDetalles()[i].getCantidad()));
         cout << separator << endl;
     }
 

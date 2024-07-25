@@ -53,7 +53,7 @@ bool Archivo::sobreescribirTodo(int cantReg, const void* data) {
 int Archivo::getCantidadRegistros(){
    FILE *pFile = fopen(obtenerNombreArchivo(), "rb");
    if(pFile == nullptr){
-        cout << "ERROR ABRIENDO: " << obtenerNombreArchivo() << endl;
+
         return 0;
    }
    fseek(pFile, 0, SEEK_END);
@@ -87,8 +87,27 @@ bool Archivo::guardar(const void* reg, int cantidad, int index){
     }
     if (index != -1) {
         fseek(pFile, _class_size * index, SEEK_SET);
+    } else {
+        fseek(pFile, 0, SEEK_END);
     }
     result = fwrite(reg, _class_size, cantidad, pFile);
     fclose(pFile);
     return result > 0;
 }
+
+   // bool result;
+   // FILE *pFile;
+   // pFile = fopen(obtenerNombreArchivo(), "rb+");
+   // if(pFile == nullptr){
+   //     pFile = fopen(obtenerNombreArchivo(), "wb+");
+   //     if (pFile == nullptr) {
+   //         return false; // No se pudo abrir ni crear el archivo
+   //     }
+   // }
+   // if (index != -1) {
+   //     fseek(pFile, _class_size * index, SEEK_SET);
+   // }
+   // result = fwrite(reg, _class_size, cantidad, pFile);
+   // fclose(pFile);
+   // return result > 0;
+

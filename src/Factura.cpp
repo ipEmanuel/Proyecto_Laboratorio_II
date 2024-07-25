@@ -137,8 +137,9 @@ void Factura::modificar(Factura &facturaAct){
     cout<<"INGRESAR VALOR TOTAL: $";
     cin>>_valorTotal;
     facturaAct.setValorTotal(_valorTotal);
-    cout<<"INGRESAR NUMERO DE CLIETNE: ";
+    cout<<"INGRESAR NUMERO DE CLIENTE: ";
     cin>>_idCliente;
     facturaAct.setIdCliente(_idCliente);
+
 
 }

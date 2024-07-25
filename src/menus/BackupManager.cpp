@@ -7,7 +7,7 @@
 
 using namespace std;
 
-BackupManager::BackupManager() : MenuItem("Copia de seguridad")
+BackupManager::BackupManager() : MenuItem("Copia de seguridad", 2)
 {
 }
 

@@ -113,7 +113,7 @@ void InformesManager::recaudacionPorAutoparte()
         if (detalle.getIdAutoparte() == idAutoparte) {
             //detalle.mostrarDF();
             mostrarPorAutoparte(detalle);
-            total =+ detalle.getCantidad() * detalle.getPrecio();
+            total += detalle.getCantidad() * detalle.getPrecio();
         }
     }
 

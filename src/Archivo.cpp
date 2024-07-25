@@ -78,12 +78,14 @@ bool Archivo::leer(int index, void* puntero, int cantidad){
 bool Archivo::guardar(const void* reg, int cantidad, int index){
     bool result;
     FILE *pFile;
-    pFile = fopen(obtenerNombreArchivo(), "ab+");
+    pFile = fopen(obtenerNombreArchivo(), "rb+");
     if(pFile == nullptr){
-        return false; // No se pudo abrir ni crear el archivo
+        pFile = fopen(obtenerNombreArchivo(), "wb+");
+        if (pFile == nullptr) {
+            return false; // No se pudo abrir ni crear el archivo
+        }
     }
     if (index != -1) {
-        cout << "INDEX" << index << endl;
         fseek(pFile, _class_size * index, SEEK_SET);
     }
     result = fwrite(reg, _class_size, cantidad, pFile);

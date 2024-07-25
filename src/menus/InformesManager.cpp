@@ -55,19 +55,19 @@ void InformesManager::mostrarPorAnio(int anio){
 }
 
 void InformesManager::mostrarPorAutoparte(Detalle_Factura detalle){
-    Factura factura;
-    FacturaArchivo facturaArchivo;
-    int tam = facturaArchivo.getCantidadRegistros();
-    int cont = 0;
+   ///Factura factura;
+   ///FacturaArchivo facturaArchivo;
+   ///int tam = facturaArchivo.getCantidadRegistros();
+   ///int cont = 0;
 
-     cout << setw(16) << detalle.getNroFactura()
+     cout << setw(20) << detalle.getNroFactura()
      << setw(15) << detalle.getIdAutoparte()
      << setw(15) << detalle.getCantidad()
      << setw(15) << detalle.getPrecio()
      << endl;
 
 }
-
+///////////////////RECAUDACIONES//////////////////
 void InformesManager::recaudacionPorEmpleado()
 {
     int legajo;
@@ -97,26 +97,22 @@ void InformesManager::recaudacionPorAutoparte()
     }
 
     Detalle_FArchivo detalleArchivo;
-
     int cantidadDetalles = detalleArchivo.getCantidadRegistros();
 
-    cout << setw(16) << "NUMERO DE FACTURA"
+    //cout << setw(16) << "NUMERO DE FACTURA"
+    cout << left << setw(20) << "NUMERO FACTURA"
          << setw(15) << "ID AUTOPARTE"
          << setw(15) << "CANTIDAD"
-         << setw(15) << "PRECIO"
+         << setw(15) << "PRECIO UNITARIO"
          << endl;
-
 
     for (int i = 0; i < cantidadDetalles; i++) {
         Detalle_Factura detalle = detalleArchivo.leer(i);
-
         if (detalle.getIdAutoparte() == idAutoparte) {
-            //detalle.mostrarDF();
             mostrarPorAutoparte(detalle);
             total += detalle.getCantidad() * detalle.getPrecio();
         }
     }
-
     cout << "Valor Total: " << total << endl;
 }
 

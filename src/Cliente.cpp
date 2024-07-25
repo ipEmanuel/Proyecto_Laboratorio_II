@@ -49,8 +49,6 @@ void Cliente::cargar(int id){
 void Cliente::mostrar(){
     if(_estado==true){
         cout<<"ID CLIENTE "<<_id_cliente<<endl;
-        cout<<"DESCUENTO: "<<_descuento<<endl;
-        cout<<"CATEGORIA "<<_categoria<<endl;
         cout<<"------------------------------"<<endl;
         Persona::mostrar();
     }

@@ -116,7 +116,7 @@ Autoparte AutoparteManager::crearAutoparte(){
 void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
     int id_proveedor = -1;
     int stock, cod_marca;
-    string nombre_autoparte;
+    char nombre_autoparte[60];
     char opcion;
     float precio_compra, precio_venta;
 
@@ -126,7 +126,7 @@ void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
         cout << "Ingrese codigo(id) del proveedor (o 'S' para salir): ";
         cin >> id_proveedor;
 
-        if (cin.fail()) {  // verificar si la entrada no es un número
+        if (cin.fail()) {  // verifica si la entrada no es un número
             cin.clear();
             cin >> opcion;
             if (opcion == 'S' || opcion == 's') {
@@ -138,13 +138,22 @@ void AutoparteManager::volverCargarAutoparte(Autoparte &registro){
                 continue;
             }
         }
-
-        cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
+/////////////esaaaaaaa
+        if (_proveedorArchivo.buscarByID(id_proveedor) != -1) {
+            break; // Salir del bucle si se encontró un proveedor válido
+        } else {
+            cout << "ERROR: Proveedor No Valido. Intente nuevamente." << endl;
+        }
     }
 
     cin.ignore();
     cout << "Ingrese el Nombre de la Autoparte: ";
-    getline(cin, nombre_autoparte);
+    cin.getline(nombre_autoparte, sizeof(nombre_autoparte));
+
+    //cin.ignore();
+    //cout << "Ingrese el Nombre de la Autoparte: ";
+    //getline(cin, nombre_autoparte);
+
     cout << "Ingrese precio de compra: ";
     cin >> precio_compra;
     cout << "Ingrese precio de venta: ";
@@ -279,8 +288,23 @@ void AutoparteManager::modificarAutoparte(){
     index = _autopartesArchivo.buscarByID(idAutoparte);
     if(index != -1){
         autoparte = _autopartesArchivo.leer(index);
-        autoparte.mostrar();
-        volverCargarAutoparte(autoparte);
+
+        ///////////////////////////
+         cout << left << setw(15) << "ID_AUTOPARTE"
+    << setw(15) << "ID_PROVEEDOR"
+    << setw(20) << "NOMBRE"
+    << setw(20) << "PRECIO COMPRA"
+    << setw(20) << "PRECIO VENTA"
+    << setw(10) << "STOCK"
+    << setw(15) << "ESTADO"
+    << setw(15) << "COD_MARCA"
+    << setw(20) << "PROVEEDOR"
+    << endl;
+    autoparte.mostrar();
+
+    cout<<endl<<"MODIFICAR AUTOPARTE"<<endl;
+    //////////////////////////////////////
+    volverCargarAutoparte(autoparte);
         if(_autopartesArchivo.guardar(index, autoparte)){
             cout << "Se modifico con exito!" << endl;
         }else{

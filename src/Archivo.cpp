@@ -83,6 +83,7 @@ bool Archivo::guardar(const void* reg, int cantidad, int index){
         return false; // No se pudo abrir ni crear el archivo
     }
     if (index != -1) {
+        cout << "INDEX" << index << endl;
         fseek(pFile, _class_size * index, SEEK_SET);
     }
     result = fwrite(reg, _class_size, cantidad, pFile);

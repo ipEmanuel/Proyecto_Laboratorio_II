@@ -13,49 +13,6 @@
 
 //Desde la AppManager ingreso a éste menú
 
-void Detalle_FManager::menu(){
-    int option;
-    do{
-        system("cls");
-        cout << "----------------------------------" << endl;
-        cout << " ---------- MENU FACTURA ---------" << endl;
-        cout << "----------------------------------" << endl;
-        cout << "1- INICIAR FACTURA DE VENTA " << endl;
-        cout << "2- MOSTRAR DETALLE FACTURA" << endl; //va a solicitar el ingreso de un Nro de Factura
-        cout << "3- MODIFICAR DETALLE FACTURA" << endl; // va a solicitar el ingreso de un Nro de Factura para modificar su detalle
-        cout << "4- ELIMINAR DETALLE FACTURA" << endl; // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
-        cout << "5- LISTAR FACTURA DESDE-HASTA" << endl;
-        cout << "----------------------------------" << endl;
-        cout << "0- SALIR" << endl;
-        cout << "Opcion: ";
-        cin >> option;
-        switch(option){
-            case 1:
-                iniciar_factura_venta();
-                system("pause");
-                break;
-            case 2:
-                mostrar_detalle_factura();
-                system("pause");
-                break;
-            case 3:
-                modificar_detalle_factura();
-                system("pause");
-                break;
-            case 4:
-//                eliminar_detalle_factura();
-                system("pause");
-                break;
-            case 5:
-//                listar_por_factura();
-                system("pause");
-            break;
-
-        }
-    }
-    while(option != 0);
-}
-
 int Detalle_FManager::mantiene_factura(int mantiene){
     do{
         if(!(mantiene>-1 && mantiene < 2)){
@@ -149,28 +106,6 @@ void Detalle_FManager::iniciar_factura_venta(){
 
 }
 
-void Detalle_FManager::mostrar_detalle_factura(){
-    Detalle_FArchivo dfA;
-    int nFactura, nFactBuscado;
-
-    cout << "INGRESE NUMERO DE FACTURA: ";
-    cin >> nFactBuscado;
-    nFactura = dfA.buscarPorFactura(nFactBuscado);
-    while(true){
-        if(cin.fail()){
-            cin.clear();
-            cin.ignore();
-            cout << "ENTRADA NO VALIDA. POR FAVOR INGRESE UN NUMERO VALIDO: ";
-            cin >> nFactBuscado;
-            nFactura = dfA.buscarPorFactura(nFactBuscado);
-        }
-        else{
-            break;
-        }
-    }
-    dfA.leer(nFactura).mostrarDF(nFactura);
-
-}
 
 void Detalle_FManager::modificar_detalle_factura(){
     Detalle_FArchivo dfA;
@@ -197,7 +132,7 @@ void Detalle_FManager::modificar_detalle_factura(){
     cout<<"---------------------------------------------"<<endl;
     cout<<"------DATOS DE DETALLE FACTURA ACTUAL--------"<<endl;
     cout<<"---------------------------------------------"<<endl;
-    dF.mostrarDF(nFactura);
+    dF.mostrarDF();
     cout << endl;
 
     if(dfA.buscarPorFactura(nFactura) != -1 && dfA.buscarPorFactura(nFactura) > 0){

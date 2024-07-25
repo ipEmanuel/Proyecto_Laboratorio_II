@@ -28,9 +28,8 @@ int FacturaManager::execute()
         cout << "----------------------------------" << endl;
         cout << "1- INICIAR FACTURA DE VENTA " << endl;
         cout << "2- MOSTRAR DETALLE FACTURA" << endl;   // va a solicitar el ingreso de un Nro de Factura
-        cout << "3- MODIFICAR DETALLE FACTURA" << endl; // va a solicitar el ingreso de un Nro de Factura para modificar su detalle
-        cout << "4- ELIMINAR DETALLE FACTURA" << endl;  // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
-        cout << "5- LISTAR FACTURA DESDE-HASTA" << endl;
+        cout << "3- ELIMINAR DETALLE FACTURA" << endl;  // va a solicitar el ingreso de un Nro de Factura para eliminar -> se elimina, tambien, detalle
+        cout << "4- LISTAR FACTURA DESDE-HASTA" << endl;
         cout << "----------------------------------" << endl;
         cout << "0- SALIR" << endl;
         cout << "Opcion: ";
@@ -46,14 +45,10 @@ int FacturaManager::execute()
             system("pause");
             break;
         case 3:
-            // modificar_detalle_factura();
+            eliminar_detalle_factura();
             system("pause");
             break;
         case 4:
-            //                eliminar_detalle_factura();
-            system("pause");
-            break;
-        case 5:
             listar_facturas();
             system("pause");
             break;
@@ -61,6 +56,41 @@ int FacturaManager::execute()
     }
     while (option != 0);
     return 0;
+}
+
+void FacturaManager::eliminar_detalle_factura(){
+    int nro_factura, index;
+    Factura factura;
+    bool eliminar;
+
+    cout << "Ingrese id del factura: ";
+    cin >> nro_factura;
+    FacturaArchivo facturaArchivo;
+
+    index = facturaArchivo.buscarPorFactura(nro_factura);
+
+    if(index == -1){
+        //cout << "No se encuentra!" << endl;
+        cout << "No se encuentra!" << endl;
+        return;
+    }
+
+    factura = facturaArchivo.leer(index);
+    cout << "Esta seguro de que quiere eliminar esta factura con ID: " << factura.getNFactura() << "? 1-Si 0-No: ";
+    cin >> eliminar;
+
+    if(!eliminar){
+        cout << "No fue eliminado!" << endl;
+        return;
+    }
+
+    factura.setEstado(false);
+
+    if(facturaArchivo.guardar(index, factura)){
+        cout << "Se elimino con exito!" << endl;
+    } else {
+        cout << "No se pudo eliminar!" << endl;
+    }
 }
 
 void FacturaManager::listar_facturas()
@@ -74,10 +104,6 @@ void FacturaManager::listar_facturas()
 
     fa.leerTodos(facturas);
     cout << "Listado de facturas: " << endl;
-    for (int i = 0; i < cantFacturas; i++)
-    {
-        facturas[i].mostrarFactura();
-    }
     mostrar_informe(facturas, cantFacturas);
     delete[] facturas;
 }
@@ -173,6 +199,12 @@ void FacturaManager::iniciar_factura_venta()
         }
         cout << "DESEA AGREGAR MAS AUTOPARTES (1-SI / 0-NO): ";
         cin >> mantiene;
+        while (cin.fail() || (mantiene != 0 && mantiene != 1)) {
+            cin.clear();
+            cout << "DESEA AGREGAR MAS AUTOPARTES (1-SI / 0-NO): " << endl;
+            cin >> mantiene;
+        }
+
         mismaFactura = mantiene_factura(mantiene);
 
     }
@@ -193,24 +225,31 @@ void FacturaManager::iniciar_factura_venta()
 
 void FacturaManager::mostrar_detalle_factura()
 {
-    Detalle_FArchivo dfA;
-    int nFactura, nFactBuscado;
+    FacturaArchivo facturaArchivo;
+    int index, nFactBuscado;
 
     cout << "INGRESE NUMERO DE FACTURA: ";
     cin >> nFactBuscado;
-    nFactura = dfA.buscarPorFactura(nFactBuscado);
+    index = facturaArchivo.buscarPorFactura(nFactBuscado);
     while (cin.fail())
     {
         cin.clear();
         cin.ignore();
         cout << "ENTRADA NO VALIDA. POR FAVOR INGRESE UN NUMERO VALIDO: ";
         cin >> nFactBuscado;
-        nFactura = dfA.buscarPorFactura(nFactBuscado);
+        index = facturaArchivo.buscarPorFactura(nFactBuscado);
     }
-    dfA.leer(nFactura).mostrarDF(nFactura);
+
+    Factura *facturas = new Factura[1];
+
+    facturas[0] = facturaArchivo.leer(index);
+
+    mostrar_informe(facturas, 1);
+
+    delete[] facturas;
 }
 
-string fill_with(string original, char character = ' ', int length = 10)
+string fill_with(string original, char character = ' ', int length = 15)
 {
     int string_length = original.length();
     if (string_length >= length)
@@ -245,6 +284,7 @@ void showRow(Factura factura, char separator, int column_width)
     InformacionReporteVentas information = InformacionReporteVentas(factura);
 
     int cantidad = information.getCantidadDetalles();
+
     for (int i = 0; i < cantidad; i++)
     {
         cout << separator;
@@ -267,13 +307,14 @@ void showRow(Factura factura, char separator, int column_width)
         cout << separator << endl;
     }
 
-    information.getAutopartes();
 }
 
 float getTotalTodasFactura(Factura facturas[], int tam) {
     float total = 0;
     for (int i = 0;i < tam;i++) {
-        total+=facturas[i].getValorTotal();
+        if (facturas[i].getEstado()) {
+            total+=facturas[i].getValorTotal();
+        }
     }
     return total;
 }
@@ -282,7 +323,7 @@ void FacturaManager::mostrar_informe(Factura facturas[], int tam)
 {
     system("cls");
 
-    int COLUMN_WIDTH = 10;
+    int COLUMN_WIDTH = 15;
     char SEPARATOR = '|';
     showColumns(SEPARATOR, COLUMN_WIDTH);
 
@@ -290,7 +331,9 @@ void FacturaManager::mostrar_informe(Factura facturas[], int tam)
 
     for (int i = 0; i < tam; i++)
     {
-        showRow(facturas[i], SEPARATOR, COLUMN_WIDTH);
+        if (facturas[i].getEstado()) {
+            showRow(facturas[i], SEPARATOR, COLUMN_WIDTH);
+        }
     }
 
     cout << "TOTAL: $" << getTotalTodasFactura(facturas, tam) << endl;

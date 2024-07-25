@@ -12,28 +12,6 @@ InformacionReporteVentas::InformacionReporteVentas(Factura factura)
     _factura = factura;
     _cantidad_detalles = detalleArchivo.cantidadPorFactura(factura.getNFactura());
 
-    if (_cantidad_detalles != -1 && _cantidad_detalles != 0)
-    {
-        _detalle_factura = new Detalle_Factura[_cantidad_detalles];
-        if (_detalle_factura == nullptr) {
-            cout << "ERROR AL ASIGNAR MEMORIA";
-            return;
-        }
-        detalleArchivo.getDetallesPorFactura(factura.getNFactura(), _detalle_factura);
-        _autopartes = new Autoparte[_cantidad_detalles];
-        if (_autopartes == nullptr) {
-            cout << "ERROR AL ASIGNAR MEMORIA";
-            return;
-        }
-
-        AutoparteArchivo autoparteArchivo;
-        for (int i = 0; i < _cantidad_detalles; i++)
-        {
-            int index = autoparteArchivo.buscarByID(_detalle_factura[i].getIdAutoparte());
-            _autopartes[i] = autoparteArchivo.leer(index);
-        }
-    }
-
     EmpleadoArchivo empleadoArchivo;
     int indexEmpleado = empleadoArchivo.buscarByID(1);
     _empleado = empleadoArchivo.leer(indexEmpleado);
@@ -42,14 +20,20 @@ InformacionReporteVentas::InformacionReporteVentas(Factura factura)
     int indexCliente = clienteArchivo.buscarByID(factura.getIdCliente());
     _cliente = clienteArchivo.leer(indexCliente);
 
+    _detalle_factura = nullptr;
+    _autopartes = nullptr;
 }
 
 InformacionReporteVentas::~InformacionReporteVentas()
 {
-    if (_cantidad_detalles != 0 && _cantidad_detalles != -1 && _autopartes != nullptr)
+    if (_cantidad_detalles != 0 && _cantidad_detalles != -1)
     {
-        delete _autopartes;
-        delete _detalle_factura;
+        if (_autopartes != nullptr) {
+            delete[] _autopartes;
+        }
+        if (_detalle_factura != nullptr) {
+            delete[] _detalle_factura;
+        }
     }
 }
 
@@ -65,11 +49,40 @@ Cliente InformacionReporteVentas::getCliente()
 
 Detalle_Factura* InformacionReporteVentas::getDetalles()
 {
+    if (_cantidad_detalles != -1 && _cantidad_detalles != 0 && _detalle_factura == nullptr)
+    {
+        Detalle_FArchivo detalleArchivo;
+
+        _detalle_factura = new Detalle_Factura[_cantidad_detalles];
+        if (_detalle_factura == nullptr) {
+            cout << "ERROR AL ASIGNAR MEMORIA";
+            return nullptr;
+        }
+
+        detalleArchivo.getDetallesPorFactura(_factura.getNFactura(), _detalle_factura);
+
+    }
+
     return _detalle_factura;
 }
 
 Autoparte* InformacionReporteVentas::getAutopartes()
 {
+    if (_cantidad_detalles != -1 && _cantidad_detalles != 0 && _autopartes == nullptr)
+    {
+        _autopartes = new Autoparte[_cantidad_detalles];
+        if (_autopartes == nullptr) {
+            cout << "ERROR AL ASIGNAR MEMORIA";
+            return nullptr;
+        }
+
+        AutoparteArchivo autoparteArchivo;
+        for (int i = 0; i < _cantidad_detalles; i++)
+        {
+            int index = autoparteArchivo.buscarByID(getDetalles()[i].getIdAutoparte());
+            _autopartes[i] = autoparteArchivo.leer(index);
+        }
+    }
     return _autopartes;
 }
 

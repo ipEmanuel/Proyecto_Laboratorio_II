@@ -13,22 +13,20 @@ void Persona::cargar() {
         cout << "INGRESE DNI: ";
         cin >> _dni;
         while (cin.fail() || _dni == 0) {
-        cin.clear();
-        cin.ignore(numeric_limits<streamsize>::max(), '\n');
-        cout << "DNI NO VALIDO. POR FAVOR INTENTE DE NUEVO." << endl;
-        cout << "INGRESE DNI: ";
-        cin >> _dni;
-
-
+            cin.clear();
+            cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            cout << "DNI NO VALIDO. POR FAVOR INTENTE DE NUEVO." << endl;
+            cout << "INGRESE DNI: ";
+            cin >> _dni;
         }
+
         cin.ignore();
             cout << "INGRESE NOMBRE: ";
             cin.getline(_nombre, 60);
      while (strlen(_nombre) == 0) {
-            cout << "NOMBRE NO PUEDE ESTAR VACIO. POR FAVOR INTENTE DE NUEVO."<<endl;;
+            cout << "NOMBRE NO PUEDE ESTAR VACIO. POR FAVOR INTENTE DE NUEVO."<<endl;
             cout << "INGRESE NOMBRE: ";
             cin.getline(_nombre, 60);
-
         }
 
             cout << "INGRESE APELLIDO: ";

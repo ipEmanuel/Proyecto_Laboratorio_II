@@ -22,6 +22,7 @@ class Factura {
         float getValorTotal();
         int getIdCliente();
         int getIdEmpleado();
+        bool getEstado();
 
         //setters
         void setNFactura(int nroFactura);
@@ -29,6 +30,7 @@ class Factura {
         void setValorTotal(float valorTotal);
         void setIdCliente(int cli);
         void setIdEmpleado(int idEmpleado);
+        void setEstado(bool estado);
 
         //metodos
         void mostrarFactura();

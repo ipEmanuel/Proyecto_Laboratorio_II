@@ -15,8 +15,6 @@ class Autoparte{
         int _stock;
         int _cod_marca;
         bool _estado;
-        MarcaArchivo _marcaArchivo;
-        ProveedorArchivo _proveedorArchivo;
 
     public:
         Autoparte();

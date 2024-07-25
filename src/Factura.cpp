@@ -14,6 +14,7 @@ Factura::Factura(){
     _fechaFactura = Fecha();
     _valorTotal = 0;
     _idCliente = cli.getIdCliente();
+    _estado = true;
 }
 
 Factura::Factura(int nFactura, Fecha fechaFact, float valorTotal, int id_Cliente, int idEmpleado){
@@ -22,6 +23,7 @@ Factura::Factura(int nFactura, Fecha fechaFact, float valorTotal, int id_Cliente
     setValorTotal(valorTotal);
     setIdCliente(id_Cliente);
     setIdEmpleado(idEmpleado);
+    setEstado(true);
 }
 
 //getters
@@ -43,6 +45,10 @@ int Factura::getIdCliente(){
 
 int Factura::getIdEmpleado() {
     return _idEmpleado;
+}
+
+bool Factura::getEstado() {
+    return _estado;
 }
 
 //setters
@@ -76,6 +82,10 @@ void Factura::setIdCliente(int idCliente){
 
 void Factura::setIdEmpleado(int idEmpleado) {
     _idEmpleado = idEmpleado;
+}
+
+void Factura::setEstado(bool estado) {
+    _estado = estado;
 }
 
 

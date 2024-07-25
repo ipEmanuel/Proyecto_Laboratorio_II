@@ -17,8 +17,7 @@ class FacturaManager: public MenuItem
         void iniciar_factura_venta();
         void mostrar_detalle_factura();
         void listar_facturas();
-        void eliminar_factura();
         void listar_por_factura();
-
+        void eliminar_detalle_factura();
 
 };

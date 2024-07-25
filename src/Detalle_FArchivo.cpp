@@ -54,18 +54,31 @@ int Detalle_FArchivo::cantidadPorFactura(int nroFactura)
 
 bool Detalle_FArchivo::getDetallesPorFactura(int nroFactura, Detalle_Factura *detalles)
 {
-    int cant = 0, pos = 0;
-    Detalle_Factura reg;
-    while (Archivo::leer(pos, &reg))
+    int cant = 0;
+    bool result;
+    int cantidadReg = getCantidadRegistros();
+
+    Detalle_Factura *detallesFacturas = new Detalle_Factura[cantidadReg];
+
+    bool canRead = leerTodos(detallesFacturas);
+
+    if (!canRead)
     {
-        if (reg.getNroFactura() == nroFactura)
+        return canRead;
+    }
+
+    for (int i = 0; i < cantidadReg; i++)
+    {
+        if (detallesFacturas[i].getNroFactura() == nroFactura)
         {
-            Detalle_Factura reg2 = reg;
-            detalles[cant] = reg2;
+            //Detalle_Factura reg2 = Detalle_Factura(reg);
+            detalles[cant] = detallesFacturas[i];
             cant++;
         }
-        pos++;
     }
+
+    delete[] detallesFacturas;
+
     return true;
 }
 

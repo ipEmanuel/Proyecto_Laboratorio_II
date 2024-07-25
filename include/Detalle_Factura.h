@@ -28,7 +28,7 @@ class Detalle_Factura
 
         //METODOS
         Detalle_Factura crearDF();
-        void mostrarDF(int nroFactura);
+        void mostrarDF();
         void modificarDF(Detalle_Factura &dF);
 
 };

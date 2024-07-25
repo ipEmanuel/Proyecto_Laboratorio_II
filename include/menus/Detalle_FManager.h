@@ -13,7 +13,4 @@ class Detalle_FManager
 //        void listar_por_factura();
 //        FacturaArchivo _facturaArchivo;
 
-    public:
-        void menu();
-
 };

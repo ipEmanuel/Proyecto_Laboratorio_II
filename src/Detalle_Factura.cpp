@@ -82,12 +82,11 @@ void Detalle_Factura::setPrecio(float precio){
     _precio = precio;
 }
 
-void Detalle_Factura::mostrarDF(int nroFactura){
-    Detalle_FArchivo dfA;
-    cout << "NUMERO DE FACTURA: " << dfA.leer(nroFactura).getNroFactura() << endl;
-    cout << "ID AUTOPARTE: " << dfA.leer(nroFactura).getIdAutoparte() << endl;
-    cout << "CANTIDAD: " << dfA.leer(nroFactura).getCantidad() << endl;
-    cout << "PRECIO: " << dfA.leer(nroFactura).getPrecio() << endl;
+void Detalle_Factura::mostrarDF(){
+    cout << "NUMERO DE FACTURA: " << getNroFactura() << endl;
+    cout << "ID AUTOPARTE: " << getIdAutoparte() << endl;
+    cout << "CANTIDAD: " << getCantidad() << endl;
+    cout << "PRECIO: " << getPrecio() << endl;
 }
 
 void Detalle_Factura::modificarDF(Detalle_Factura &dF){
